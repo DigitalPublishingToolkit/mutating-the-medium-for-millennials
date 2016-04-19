@@ -1,0 +1,145 @@
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+ body {
+   padding-top: 50px;
+   padding-bottom: 20px;
+ }
+
+a {}
+a:hover{}
+a:active, a:focus{}
+
+img{width: 100%;}
+
+hr {
+  border-color: #333;
+  -moz-transform: rotate(0.8deg);
+  -o-transform: rotate(0.8deg);
+  -webkit-transform: rotate(0.8deg);
+  -ms-transform: rotate(0.8deg);
+  transform: rotate(0.8deg);
+}
+
+.menu-hr{
+  -moz-transform: rotate(-0.8deg);
+  -o-transform: rotate(-0.8deg);
+  -webkit-transform: rotate(-0.8deg);
+  -ms-transform: rotate(-0.8deg);
+  transform: rotate(-0.8deg);
+}
+
+
+/* ==========================================================================
+   Structure
+   ========================================================================== */
+
+/* Nav */
+
+#myNavBar{
+  clear: both;
+  margin-top: 90px;
+  font-weight: bold;
+}
+
+/*#myNavBar ul{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  list-style: none;
+}*/
+
+/*#myNavBar ul li{
+  -webkit-flex: 1;
+  flex: 1;
+}*/
+
+#myNavBar ul li.current{
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+
+#myNavBar ul li.uneven{
+  /*-webkit-flex: 3;
+  flex: 3;*/
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+
+.fullnav{width: 100%;}
+
+.fullnav > li {
+    width: 132px;
+}
+.fullnav > li.uneven{
+  float: right;
+  text-align: right;
+}
+
+/* Content */
+
+#main-content{margin-top: 150px;}
+
+.no-title{margin-top: 65px;}
+
+/* Footer */
+
+footer{margin-top: 3em;}
+
+#footer-menu{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#footer-menu li{
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+#footer-menu li.copy{
+  -webkit-flex: 3;
+  flex: 3;
+}
+
+/* ==========================================================================
+  Boostrap overwritten rules
+  ========================================================================== */
+
+.navbar .navbar-toggle .icon-bar {
+    background-color: #333;
+}
+
+
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+
+@media screen and (max-width:991px){
+
+  /* you can remove the line below, put here to make it easier to 'see' the breakpoint */
+  body{background-color: green;}
+
+  /* try commenting it out to see what happens */
+  .fullnav > li {
+      width: 92px;
+  }
+
+}/* end max-width 991 */
+
+@media screen and (max-width:767px){
+
+  /* you can remove the line below, put here to make it easier to 'see' the breakpoint */
+  body{background-color: red;}
+
+}/* end max-width 767 */
