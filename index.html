@@ -118,6 +118,23 @@
 
       <hr>
 
+      <!-- rotating a <hr> seems to work fine in most cases, but if you prefer to use svg... -->
+      <svg
+         width="100%"
+         height="40px"
+         viewBox="0 0 100 100"
+         preserveAspectRatio="none"
+         id="svg3">
+         <!-- width and height will define the size of the svg element on the page -->
+         <!-- viewbox will define the format (scale/stretch) of the svg ref. to the container element -->
+         <!-- for further info, check http://svgpocketguide.com/book/#section-3 -->
+
+        <g id="layer2" >
+          <path d="M 0,3 100,38" stroke-dasharray="2,1,1,1" id="footer-line"  />
+        </g>
+
+      </svg>
+
       <footer>
         <ul id="footer-menu">
           <li class="copy">&copy; even up</li>
