@@ -129,6 +129,11 @@ footer{margin-top: 3em;}
 #svg3{
   background-color: green;
   /* for didatic purposes only ;) this background-color can be removed */
+  /* the id given to this element is arbitrary - it could/should be more informative */
+  /*
+  width:100%;
+  height:40px;
+  */
 }
 #footer-line{
   fill:none;

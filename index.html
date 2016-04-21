@@ -125,11 +125,16 @@
          viewBox="0 0 100 100"
          preserveAspectRatio="none"
          id="svg3">
-         <!-- width and height will define the size of the svg element on the page -->
+         <!-- width and height will define the size of the svg element on the page. they could also be defined in the css file -->
          <!-- viewbox will define the format (scale/stretch) of the svg ref. to the container element -->
          <!-- for further info, check http://svgpocketguide.com/book/#section-3 -->
 
-        <g id="layer2" >
+         <!-- the <g> element is not strictly necessary in this case -->
+         <g id="layer2" >
+          <!-- would be equivalent to
+          <line x1="0" y1="3" x2="100" y2="38" stroke-dasharray="2,1,1,1" id="footer-line"  />
+          -->
+          <!-- for more info, check http://svgpocketguide.com/book/#section-2 -->
           <path d="M 0,3 100,38" stroke-dasharray="2,1,1,1" id="footer-line"  />
         </g>
 
