@@ -1,0 +1,80 @@
+
+
+#account-icon{
+	width: 100px;
+}
+
+.hello{ font-family: Theinhardt-Bold;
+font-size: 30px;
+color: #0C2443;
+line-height: 30px;}
+
+.email{
+font-family: Theinhardt-Regular;
+font-size: 16px;
+line-height: 30px;
+}
+
+.tags-account li{ 
+  font-size: 18px;
+  font-weight: lighter;
+  color: #929090;
+  list-style: none;
+  float:left;
+  margin-right: 12px;
+
+   }
+
+.tags-account{
+padding-bottom: 50px;
+   }
+
+.tags-account a li:hover{
+    font-weight: bold;
+  color: #265AD9;
+}
+
+
+.edit{
+	margin-top: 20px;
+	font-size: 12px;
+	float: right;
+}
+
+.feature-icons li{
+	display: inline-block;
+
+}
+
+.feature-icons a img{
+width: 120px;
+}
+
+.feature-title{
+	text-align: center;
+	max-width: 100px;
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+
+.middle-line:hover{
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+
+.middle-line:hover{
+    cursor: default;
+    transform: rotate(20deg);
+    transition: all 0.9s ease-in-out 0s;
+}
+
+.upgrade{
+	float: right;
+	text-align: right;
+	font-weight: bold;
+	font-size: 12px;
+}
+.upgrade img {
+	width: 50px;
+}

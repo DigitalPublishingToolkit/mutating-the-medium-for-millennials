@@ -46,10 +46,12 @@ hr {
 .article {
           margin: auto;}
 .article-heading{ 
+
           font-size: 40px; 
           line-height: 1.2;
           font-weight: bold;
           margin-bottom: 10px;
+          margin-top: 10px;
         }
 
 .article-sub-heading{
@@ -58,6 +60,7 @@ hr {
            font-weight: bold;
            margin-bottom: 10px;
            line-height: 1.2em;
+           margin-top: 10px;
         }
 
 .article-text{
@@ -69,6 +72,39 @@ hr {
     font-weight: lighter;
 
 }    
+
+.about-text{
+  font-size: 19px;
+  line-height: 1.6em;
+  font-family: Stanley;
+  opacity: .8;
+    font-weight: lighter;
+margin-bottom: 50px;
+}    
+
+.staff-name{
+  font-size: 22px;
+  line-height: 1.2em;
+
+} 
+
+.staff-text{
+  font-size: 14px;
+  line-height: 1.2em;
+  font-family: Stanley;
+  margin-top: 20px;
+  opacity: .8;
+    font-weight: lighter;
+margin-bottom: 50px;
+}    
+
+.team {
+  font-family: Theinhardt-Bold;
+font-size: 30px;
+color: #0C2443;
+line-height: 30px;
+margin-bottom:30px;
+}
 
 .create-account{
   border: solid 1px #0C2443;
@@ -99,6 +135,7 @@ a .create-account:hover{
           font-size: 24px;
           font-weight: bold;
           line-height: 1.2;
+          margin-top: 10px;
         }
 
 .article_icons{
@@ -147,9 +184,11 @@ margin-top: 60px;
 
 #facebook-icon:hover{
     fill:#265AD9;
-       stroke-width:3px;
 }
 
+#comment:hover{   
+ fill:#265AD9;
+       stroke-width:3px;}
 .tags a li:hover{
     font-weight: bold;
   color: #265AD9;
@@ -173,6 +212,8 @@ margin-top: 60px;
    ========================================================================== */
 
 /* Nav */
+
+
 
 .navbar .navbar-fixed-top{
   background-color: #FAFAFA;
@@ -233,6 +274,10 @@ hr{margin-top: 0;
   transform: rotate(6deg);
 }
 
+#myNavBar ul li.tilt:hover > ul.dropdown-menu {
+display: block;
+}
+
 .fullnav{width: 100%;}
 
 .fullnav > li {
@@ -278,6 +323,39 @@ footer{margin-top: 3em;}
 /* ==========================================================================
   Boostrap overwritten rules
   ========================================================================== */
+ul.dropdown-menu {
+  background-color: rgb(252, 252, 252);
+   -webkit-background-clip: padding-box; 
+   background-clip: padding-box; 
+   border: 0; 
+   border-radius: 0; 
+   -webkit-box-shadow: 0 0 0; 
+   box-shadow: 0 0 0; 
+   font-family: Stanley;
+}
+ul.dropdown-menu a{
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom:5px; 
+}
+
+li.menu-box ul{
+  border: 1px solid;
+}
+.nav .open>a:focus {
+
+    background-color: transparent; 
+     border-color: transparent; 
+}
+
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    color: #265AD9;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: transparent;
+
+}
 
 .navbar .navbar-toggle .icon-bar {
     background-color: ;
@@ -300,6 +378,22 @@ background-color: transparent;
 .nav li a {font-size: 16px;}
 
 
+p.meta{
+  font-family: Stanley;
+  color: #7E7980;
+  margin-top: 10px;
+}
+.meta_article{
+  font-family: Stanley;
+  color: #7E7980;
+}
+
+.image-caption{
+  font-family: Stanley;
+  color: #7E7980;
+  margin-top: 10px;
+  font-size: 12px;
+}
 /* ==========================================================================
    SVG
    ==========================================================================
@@ -375,11 +469,29 @@ transition: transform 1s;
 .top-arrow{ 
  margin: auto;
   margin-top: 50px;
+    margin-left: 35%;
+
  }
 
 .top-arrow:hover{ 
     stroke-width:2px;
  }
+
+
+#fischliweiss:hover{
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+
+#fischliweiss:hover{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.9s ease-in-out 0s;
+}
+
+
+
+
 /* ==========================================================================
    Media queries
    ========================================================================== */
