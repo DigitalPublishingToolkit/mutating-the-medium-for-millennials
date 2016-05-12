@@ -38,6 +38,10 @@ hr {
   transform: rotate(-0.8deg);
 }
 
+#topHeader{
+  width: 100%;
+}
+
 
 /* ==========================================================================
    article page
@@ -213,7 +217,9 @@ margin-top: 60px;
 
 /* Nav */
 
-
+.current .main-menu{
+  color: #265AD9;
+}
 
 .navbar .navbar-fixed-top{
   background-color: #FAFAFA;
@@ -238,6 +244,16 @@ hr{margin-top: 0;
   clear: both;
   margin-top: 20px;
   font-weight: bold;
+}
+
+#notCollapsible{
+  float: right;
+}
+
+#notCollapsible li{
+  display: inline !important;
+  position: static;
+  float: left;
 }
 
 .glyphicon .glyphicon-user
@@ -357,8 +373,17 @@ li.menu-box ul{
 
 }
 
+.main-menu{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .navbar .navbar-toggle .icon-bar {
-    background-color: ;
+    background-color: black;
+}
+
+button.navbar-toggle:nth-child(1) {
+  transform: rotate(20deg);
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
@@ -375,7 +400,7 @@ background-color: transparent;
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
   margin-top: -20px;
 }
-.nav li a {font-size: 16px;}
+.nav li a {font-size: 15px;}
 
 
 p.meta{
@@ -504,6 +529,9 @@ transition: transform 1s;
   /* try commenting it out to see what happens */
   .fullnav > li {
       width: 92px;
+  }
+  .main-menu a:hover{
+/*figure out*/
   }
 
 }/* end max-width 991 */

@@ -26,6 +26,8 @@
 
         <!-- you will write your style rules in the file below -->
         <link rel="stylesheet" href="css/main.css">
+<script src="js/vendor/jquery-1.11.2.min.js"></script>        
+<script src="js/vendor/bootstrap.min.js"></script> 
 
         <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
@@ -35,94 +37,134 @@
     <nav id="main_top" class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
         <div id="gray-box">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false" aria-controls="navbar">
+        <div class="navbar-header" id="topHeader">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"> </span>
             <span class="icon-bar"> </span>
             <span class="icon-bar"> </span>
           </button>
           <a class="navbar-brand" href="index.html"><img src="content/img/logo.svg" alt="even up" title="even up" /></a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <!-- just some default icons. you can use other ones, of course -->
-          <!-- but most importantly: we need to work on this navbar structure, as it's not working perfectly fine as it is now -->
-          
 
-          <li><a href="#"><svg version="1.1" id="search" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28" height="28"
-   viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve">
-<g transform="matrix( 1, 0, 0, 1, 0,0) ">
-    <g id="a">
-      <path d="M27.8,26.7c0-0.3-0.1-0.5-0.3-0.7l-7.7-7.6c1.5-1.8,2.3-3.8,2.2-6.2c0-2.7-1-5.1-3-7c-1.9-1.9-4.3-2.9-7.1-2.9
-        c-2.8,0-5.2,1-7.1,2.9C2.9,7.1,2,9.4,2,12.2c0,2.7,1,5.1,2.9,7c2,1.9,4.3,2.9,7.1,2.9c2.4,0,4.5-0.7,6.3-2.2l7.7,7.6
-        c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.5-0.1,0.7-0.3C27.7,27.3,27.8,27,27.8,26.7 M17.6,6.6C19.2,8.1,20,10,20,12.2
-        c0,2.2-0.8,4-2.3,5.5l0,0C16.1,19.2,14.2,20,12,20c-2.2,0-4.1-0.8-5.6-2.3c-1.5-1.5-2.3-3.3-2.3-5.5c0-2.2,0.8-4,2.3-5.5
-        C7.9,5.1,9.8,4.3,12,4.3C14.2,4.3,16.1,5.1,17.6,6.6z"/>
-    </g>
-</g>
-</svg>
-</span>
-</a>
-</li>
-<li><a href="account.html">
-         <svg version="1.1" id="bindi" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30"
-   viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
-<g>
-  <circle cx="21.9" cy="10.5" r="1.4"/>
-  <path d="M23.2,25.9h-2.5c-0.7,0-1,0.5-1,1s0.5,1,1,1h2.5c0.7,0,1-0.5,1-1S23.8,25.9,23.2,25.9z"/>
-  <path d="M33.9,38.3h-2.2c-1.9,0-3.2-1.5-3.2-3.2v-3.7c1.2-1.2,2.2-2.5,2.5-4.2c2.7-0.3,4.7-2.5,4.7-5.3c0-2.5-1.9-4.7-4.2-5.3v-3
-    c0-2.5-1-5.1-2.9-6.8c-1.9-1.9-4.2-2.9-6.8-2.9c-5.4,0-9.7,4.4-9.7,9.7v2.9C9.9,16.9,8,19.1,8,21.7c0,2.7,2,5.1,4.7,5.3
-    c0.5,1.5,1.4,2.9,2.4,4.1l0.2,0.2v3.7c0,1.9-1.5,3.2-3.2,3.2H9.9c-0.7,0-1,0.5-1,1s0.5,1,1,1h2.2c3,0,5.4-2.4,5.4-5.4v-2.2
-    c1.4,0.7,2.9,1.2,4.6,1.2s3.2-0.3,4.6-1.2v2.2c0,3,2.4,5.4,5.4,5.4h2.2c0.7,0,1-0.5,1-1C34.9,38.8,34.6,38.3,33.9,38.3z M31.5,24.4
-    v-5.6c1.2,0.5,2.2,1.7,2.2,3c0,1.4-0.8,2.5-2.2,3C31.5,24.6,31.5,24.6,31.5,24.4z M10,21.7c0-1.4,0.8-2.5,2.2-3v5.6
-    c0,0.2,0,0.3,0,0.5C10.9,24.4,10,23.2,10,21.7z M29.3,16.4h-3.9v-0.7c0-0.5,0.8-1,1.9-1c1,0,1.9,0.5,1.9,1L29.3,16.4L29.3,16.4z
-     M14.4,15.8c0-0.3,1-1,2.5-1s2.5,0.7,2.5,1v0.7h-5.1V15.8L14.4,15.8z M21.9,31.8c-2,0-3.9-0.8-5.3-2.2c-1-1-1.7-2.4-2-3.9
-    c-0.2-0.5-0.2-1-0.2-1.5v-5.8h5.1V23c0,0.7,0.5,1,1,1h2.5c0.7,0,1-0.5,1-1c0-0.7-0.5-1-1-1h-1.5v-6.3c0-1.9-2-3.2-4.7-3.2
-    c-1,0-1.9,0.2-2.5,0.5c0.3-3.9,3.6-6.9,7.5-6.9c2,0,3.9,0.8,5.3,2.2c1.2,1.2,2,2.9,2.2,4.6c-0.5-0.2-1.2-0.3-1.9-0.3
-    c-2.4,0-4.1,1.4-4.1,3.2v1.7c0,0.7,0.5,1,1,1h4.9v5.8c0,0.5,0,1-0.2,1.5C28.5,29.3,25.4,31.8,21.9,31.8z"/>
-</g>
-<g>
-  <path d="M9,23.6"/>
-</g>
-</svg>
-</a>
-</li>
-</ul>
-
+        <ul id="notCollapsible"  class="nav navbar-nav">
+          <li><a href="#">
+          <svg version="1.1" id="search" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
+             viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve">
+              <g transform="matrix( 1, 0, 0, 1, 0,0) ">
+                <g id="a">
+                  <path d="M27.8,26.7c0-0.3-0.1-0.5-0.3-0.7l-7.7-7.6c1.5-1.8,2.3-3.8,2.2-6.2c0-2.7-1-5.1-3-7c-1.9-1.9-4.3-2.9-7.1-2.9
+                    c-2.8,0-5.2,1-7.1,2.9C2.9,7.1,2,9.4,2,12.2c0,2.7,1,5.1,2.9,7c2,1.9,4.3,2.9,7.1,2.9c2.4,0,4.5-0.7,6.3-2.2l7.7,7.6
+                    c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.5-0.1,0.7-0.3C27.7,27.3,27.8,27,27.8,26.7 M17.6,6.6C19.2,8.1,20,10,20,12.2
+                    c0,2.2-0.8,4-2.3,5.5l0,0C16.1,19.2,14.2,20,12,20c-2.2,0-4.1-0.8-5.6-2.3c-1.5-1.5-2.3-3.3-2.3-5.5c0-2.2,0.8-4,2.3-5.5
+                    C7.9,5.1,9.8,4.3,12,4.3C14.2,4.3,16.1,5.1,17.6,6.6z"/>
+                </g>
+            </g>
+          </svg>
+          </a></li>
+          <li><a href="account.html">
+          <svg version="1.1" id="bindi" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35" height="35"
+          viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+          <g>
+            <circle cx="21.9" cy="10.5" r="1.4"/>
+            <path d="M23.2,25.9h-2.5c-0.7,0-1,0.5-1,1s0.5,1,1,1h2.5c0.7,0,1-0.5,1-1S23.8,25.9,23.2,25.9z"/>
+            <path d="M33.9,38.3h-2.2c-1.9,0-3.2-1.5-3.2-3.2v-3.7c1.2-1.2,2.2-2.5,2.5-4.2c2.7-0.3,4.7-2.5,4.7-5.3c0-2.5-1.9-4.7-4.2-5.3v-3
+              c0-2.5-1-5.1-2.9-6.8c-1.9-1.9-4.2-2.9-6.8-2.9c-5.4,0-9.7,4.4-9.7,9.7v2.9C9.9,16.9,8,19.1,8,21.7c0,2.7,2,5.1,4.7,5.3
+              c0.5,1.5,1.4,2.9,2.4,4.1l0.2,0.2v3.7c0,1.9-1.5,3.2-3.2,3.2H9.9c-0.7,0-1,0.5-1,1s0.5,1,1,1h2.2c3,0,5.4-2.4,5.4-5.4v-2.2
+              c1.4,0.7,2.9,1.2,4.6,1.2s3.2-0.3,4.6-1.2v2.2c0,3,2.4,5.4,5.4,5.4h2.2c0.7,0,1-0.5,1-1C34.9,38.8,34.6,38.3,33.9,38.3z M31.5,24.4
+              v-5.6c1.2,0.5,2.2,1.7,2.2,3c0,1.4-0.8,2.5-2.2,3C31.5,24.6,31.5,24.6,31.5,24.4z M10,21.7c0-1.4,0.8-2.5,2.2-3v5.6
+              c0,0.2,0,0.3,0,0.5C10.9,24.4,10,23.2,10,21.7z M29.3,16.4h-3.9v-0.7c0-0.5,0.8-1,1.9-1c1,0,1.9,0.5,1.9,1L29.3,16.4L29.3,16.4z
+               M14.4,15.8c0-0.3,1-1,2.5-1s2.5,0.7,2.5,1v0.7h-5.1V15.8L14.4,15.8z M21.9,31.8c-2,0-3.9-0.8-5.3-2.2c-1-1-1.7-2.4-2-3.9
+              c-0.2-0.5-0.2-1-0.2-1.5v-5.8h5.1V23c0,0.7,0.5,1,1,1h2.5c0.7,0,1-0.5,1-1c0-0.7-0.5-1-1-1h-1.5v-6.3c0-1.9-2-3.2-4.7-3.2
+              c-1,0-1.9,0.2-2.5,0.5c0.3-3.9,3.6-6.9,7.5-6.9c2,0,3.9,0.8,5.3,2.2c1.2,1.2,2,2.9,2.2,4.6c-0.5-0.2-1.2-0.3-1.9-0.3
+              c-2.4,0-4.1,1.4-4.1,3.2v1.7c0,0.7,0.5,1,1,1h4.9v5.8c0,0.5,0,1-0.2,1.5C28.5,29.3,25.4,31.8,21.9,31.8z"/>
+          </g>
+          <g>
+            <path d="M9,23.6"/>
+          </g>
+          </svg>
+          </a></li>
+        </ul><!-- end notCollapsible -->
+        </div><!-- end topHeader -->
         <div id="myNavBar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav fullnav">
-            <li  class="tilt" class="active"><a href="#">body <span class="sr-only">(current)</span></a></li>
-            <li class="tilt"><a href="#">mind</a></li>
-            <li class="tilt"><a href="#">nature</a></li>
-            <li class="tilt"><a href="#">more</a></li>
-            <!-- <li class="current"><a href="#">more</a></li> -->
-            <!-- use class="current" when the page refers to a menu item -->
-            <!-- then define in the main.css how it looks like -->
-            <li class="tilt"><a href="#">watch</a></li>
-            <li class="tilt uneven"><a href="#">uneven</a></li>
+          <ul class="nav navbar-nav fullnav"> 
+
+              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">yoga</a></li>
+                <li><a href="#">running</a></li>
+                <li><a href="#">body care</a></li>
+              </ul>
+            </li>
+             <li class="current active dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">psychology</a></li>
+                <li><a href="#">mental health</a></li>
+                <li><a href="#">relationships</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth </span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">climate change</a></li>
+                <li><a href="#">wildlife</a></li>
+                <li><a href="#">energy</a></li>
+              </ul>
+            </li>          
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">even more </span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">art therapy</a></li>
+                <li><a href="#">photography</a></li>
+                <li><a href="#">education</a></li>
+                <li><a href="#">home &amp; garden</a></li>
+              </ul>
+            </li>  
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">Yoga</a></li>
+                <li><a href="#">DIY</a></li>
+                <li><a href="#">food</a></li>
+              </ul>
+            </li>  
+            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
+                <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></li>
+                <li><a href="#">guided meditation</a><img src="content/icons/audio.svg" height="40px"></li>
+                <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
+
+              </ul>
+            </li>  
+
           </ul>
         </div><!-- end .navbar-collapse -->
 </div>
 
-<svg version="1.1" id="top-line" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="100%" height="35px" xml:space="preserve">
-<g>
-  <polygon class="st0" fill="#FAFAFA" points="1140,9 0,16 0,0 1140,0  "/>
-  <line id="myPath" class="st1" fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="16" x2="1140" y2="9"/>
-</g>
+
+<svg version="1.1" id="top-line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" viewBox="0 0 1140 35" enable-background="new 0 0 1140 35" xml:space="preserve">
+<polygon fill="#FAFAFA" points="1140,7.5 0,16 0,0 1140,0 "/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="16" x2="1140" y2="7.2"/>
 </svg>
 
-
-<!-- <hr class="menu-hr"> -->
       </div><!-- end .container -->
     </nav>
-
 
     <div id="main-content" class="container">
       <!-- use rows to create horizontal groups of columns -->
    
-   <div class="col-sm-2"><div class="meta_article">Rick Paulas<br> 
-12th April 2016</div></div>
+   <div class="col-sm-2">
+   <div class="meta_article">Rick Paulas<br> 
+12th April 2016</div>
+<a href="#">
+<svg id="comment" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   x="0px" y="0px" width="25px" height="25px" viewBox="97 0 192 200" xml:space="preserve">
+<path d="M205.2,170.1v-30.7h-64.2c-8,0-14.4-6.4-14.4-14.4V48.8c0-8,6.4-14.4,14.4-14.4h107.2c8,0,14.4,6.4,14.4,14.4V125
+  c0,8-6.4,14.4-14.4,14.4h-12.2L205.2,170.1z M141.1,40.8c-4.5,0-8,3.5-8,8V125c0,4.5,3.5,8,8,8h70.6v21.8l21.8-21.8h14.9
+  c4.5,0,8-3.5,8-8V48.8c0-4.5-3.5-8-8-8C248.3,40.8,141.1,40.8,141.1,40.8z"/>
+</svg>
+</a>
+
+</div>
 
      <div class="col-sm-7">
 
@@ -130,48 +172,48 @@
      Meditation and creativity: should we believe the hype?
 </div>
      <div class="article-sub-heading">Best of the Web is a chance for us to procrastinate while pretending we are really doing work. This week’s edition covers everything from online harassment to the fees that celebs receive for nightclub appearances. Listed below are the articles and videos that have caught the attention of.</div>
-<img src="content/img/munchies1.jpg">
+<img src="content/img/home-1.png">
+<div class="image-caption">Illustration: Christoper DeLorenzo</div>
   <div class="article-text">
 The Friends of Abe has acted as a clandestine club for Hollywood conservatives for more than a decade, hosting secret events where they could vent rightwing views and hear speeches from visiting Tea Party luminaries.
-
+<br><br>
 But on Thursday the organisation – which counts Jon Voight, Jerry Bruckheimer and Kelsey Grammer among its 1,500 members – made an abrupt announcement: it was dissolving.
-
+<br><br>
 “Effective immediately, we are going to begin to wind down the 501 c3 organization, bring the Sustaining Membership dues to an end, and do away with the costly infrastructure and the abespal.com website,” the executive director, Jeremy Boreing, told members in an email, a copy of which the Guardian has seen.
-
+<br><br>
 “Today, because we have been successful in creating a community that extends far beyond our events, people just don’t feel as much of a need to show up for every speaker or bar night, and fewer people pay the dues that help us maintain that large infrastructure.”
-
+<br><br>
 The announcement caught members by surprise and fueled speculation that infighting over Donald Trump’s candidacy, among other factors, had drained commitment. Others said the group had been losing steam for years.
-
+<br><br>
 Instead of electrifying the organisation, California’s 7 June primary, a final and potentially decisive showdown between Trump and his GOP rivals Ted Cruz and John Kasich, appeared to frazzle it.
-
-
+<br><br>
 Why California is Republicans' best bet to stop Trump
  Read more
 Lionel Chetwynd, a producer and screenwriter and co-founder of the FOA, recently spoke of the primary campaign causing a “civil war in slow motion”, which fractured friendships and shredded solidarity.
-
+<br><br>
 Boreing, a director and producer, put a positive gloss on the announcement, saying the initial hunger for fellowship had prompted the group to build an expensive website, rent offices and hire staff, including lawyers and accountants.
-
+<br><br>
 “It’s time to change how we do it. As our group has grown in size and success, many of the structures that helped us grow have become less useful. ... It means an end to the standing organization, but not an end to the mission or the fellowship.”
-
+<br><br>
 Boreing vowed to maintain the mailing list and stage events, but without the infrastructure, staff or budget requirements.
-
+<br><br>
 “We will still get together for drinks and speakers, but we may reassess how we approach those events logistically. In short, FOA will return to its roots. It will be a passion project, like it was in the beginning. ... We’ll still be a private organization that protects the names of our members at all costs.”
-
+<br><br>
 Boreing did not immediately respond to interview requests.
-
+<br><br>
 Members expressed surprise and dismay at the weakening, and perhaps loss, of a refuge from what they see as Hollywood’s bullying liberal ethos.
-
+<br><br>
 It was the one place where many of its members – actors, producers, writers and technicians – felt safe from liberal sneers and potential retribution.
-
+<br><br>
 “As a conservative, if you expressed your political views at work you would be weeded out,” said Jack Marino, a film-maker. “At Abe events we could get together over dinner and hang out with our own kind and speak freely.”
-
+<br><br>
 Another member, speaking on condition of anonymity, expressed bafflement and disappointment at the group’s winding down.
-
+<br><br>
 John Kasich clings to hope with Philadelphia rally – as it happened
 Follow live updates from the campaign trail as Clinton meets with families of gun violence victims and John Kasich holds a rally in Philadelphia
  Read more
 Formed in 2005, high-profile supporters include Clint Eastwood, Gary Sinise and Patricia Heaton, who played Debra Barone in the sitcom Everybody Loves Raymond.
-
+<br><br>
 The group, named after Abraham Lincoln, swore members to secrecy by adopting a line from the film Fight Club: the first rule of the Friends of Abe is you do not talk about the Friends of Abe.
 
 For a time it ran a tightly controlled Facebook page and banned members from talking to the press, taking pictures or tweeting at events – rules occasionally breached.
@@ -644,7 +686,7 @@ It became more widely known – and a rallying point for Republicans – when ne
         <ul id="footer-menu">
           <li class="copy">&copy; even up</li>
           <li><a href="#">Info</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#">Terms & Conditions</a></li>
           <li><a href="#">Privacy Policy & Cookies</a></li>
         </ul>
@@ -659,15 +701,7 @@ It became more widely known – and a rallying point for Republicans – when ne
 
         <script src="js/main.js"></script> -->
 
-<div id="foo"><img src="content/icons/pin.svg" alt=""></div>
 
 
-        <script>
-  var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-15)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-15)+'px)';
-},false);    
-</script>
     </body>
 </html>
