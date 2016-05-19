@@ -10,9 +10,7 @@ $("#slider").on("input change", function(){
   thumbPos = ((this.value - this.min / this.max - this.min) / this.max) * $(this).width();
   origin = thumbPos + 10;
   originPerc = origin / $(this).width() * 100;
-  //$('output').text( thumbPos );
-  //$('#cross').css('left', origin); // 10 is half of the thumb width, defined in CSS
-
+  
   degToRotate = scale(originPerc);
   //console.log(originPerc, degToRotate);
 
