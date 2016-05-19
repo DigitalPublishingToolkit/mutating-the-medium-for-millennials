@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+
+  <!-- about browserconfig.xml -->
+  <!-- see https://msdn.microsoft.com/en-us/library/dn320426%28v=vs.85%29.aspx -->
+
+  <!-- for further info: http://www.w3schools.com/css/css_rwd_viewport.asp -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/rotating-slider.css">
+</head>
+<body>
+  <div id="content">
+    <svg
+      width="100%"
+      height="80px"
+      id="mainSVG">
+      <line x1="2%" y1="33" x2="98%" y2="33" id="rotatingLine"  />
+      <circle cx="0" cy="0" r="9" id="movingCircle" />
+    </svg>
+
+    <hr>
+    <div id="form-container">
+    <form style="min-height: 200px;">
+      <input id="slider" name="slider" type="range" step="1" value="1" min="1" max="30" />
+      <output for="slider" onforminput="value = slider.value;"></output>
+    </form>
+    <!-- <div id="cross"></div> -->
+  </div>
+
+
+  </div>
+
+  <script src="js/rotating-slider.js"></script>
+</body>
+</html>
