@@ -10,6 +10,7 @@ html,body{
   margin-top: 30px;
   background-color: #f0f0f0;
   padding: 20px;
+  height: 21em;
 }
 
 /* cross-browser styling of range input
@@ -84,7 +85,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: red;
+  background: #ccc;
   outline: 0;
 }
 
@@ -95,6 +96,10 @@ input[type=range]::-moz-range-track {
   background: #ccc;
   outline: 0;
 }
+/*removes the dotted line in FF*/
+input[type=range]::-moz-focus-outer {
+    border: 0;
+    }
 
 input[type=range]::-ms-track {
   width: 100%;
@@ -123,3 +128,5 @@ input[type=range]::-ms-fill-upper {
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
+
+output{font-family: sans-serif; color: #999; position: relative; top: 2em; }
