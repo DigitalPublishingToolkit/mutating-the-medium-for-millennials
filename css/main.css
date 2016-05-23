@@ -2,10 +2,12 @@
 /* ==========================================================================
    Custom styles
    ========================================================================== */
+
+
  body {
    padding-top: 50px;
    padding-bottom: 20px;
-   font-family: Theinhardt;
+  font-family: "museo-sans";
    color: #0C2443;
    background-color: #FAFAFA;
  }
@@ -17,7 +19,9 @@
 
 a {color: #0C2443;}
 a:hover{ color: #265AD9; }
-a:active, a:focus{}
+a:active, a:focus, a:link {
+  text-decoration: none;
+}
 
 img{width: 100%;}
 
@@ -50,8 +54,7 @@ hr {
 .article {
           margin: auto;}
 .article-heading{ 
-
-          font-size: 40px; 
+           font-size: 38px; 
           line-height: 1.2;
           font-weight: bold;
           margin-bottom: 10px;
@@ -59,18 +62,17 @@ hr {
         }
 
 .article-sub-heading{
-          font-family: Stanley;
-          font-size: 19px;
-           font-weight: bold;
+           font-family: "freight-text-pro";
+          font-size: 18px;
            margin-bottom: 10px;
-           line-height: 1.2em;
+           line-height: 1.4em;
            margin-top: 10px;
         }
 
 .article-text{
-  font-size: 19px;
-  line-height: 1.6em;
-  font-family: Stanley;
+  font-size: 18.5px;
+  line-height: 1.36em;
+  font-family: "freight-text-pro";
   margin-top: 20px;
   opacity: .8;
     font-weight: lighter;
@@ -80,7 +82,7 @@ hr {
 .about-text{
   font-size: 19px;
   line-height: 1.6em;
-  font-family: Stanley;
+  font-family: "freight-text-pro";
   opacity: .8;
     font-weight: lighter;
 margin-bottom: 50px;
@@ -95,7 +97,7 @@ margin-bottom: 50px;
 .staff-text{
   font-size: 14px;
   line-height: 1.2em;
-  font-family: Stanley;
+  font-family: "freight-text-pro";
   margin-top: 20px;
   opacity: .8;
     font-weight: lighter;
@@ -103,7 +105,6 @@ margin-bottom: 50px;
 }    
 
 .team {
-  font-family: Theinhardt-Bold;
 font-size: 30px;
 color: #0C2443;
 line-height: 30px;
@@ -129,12 +130,39 @@ a .create-account:hover{
 .comments-title{
  font-size: 30px;
  line-height: 1.2;
- font-weight: bold;
- margin-top: 40px;  
+ margin-top: 40px; 
+ margin-bottom: 20px; 
 }
 
-.most-recent{}
-.most-popular{}
+.most-popular{ 
+  float: right;
+  font-size: 24px;
+  padding-bottom: 6px;
+/*  border-bottom: 1px solid #0C2443;
+*/
+}
+
+.may-missed{ 
+    float: right;
+  font-size: 24px;
+  padding-bottom: 6px;
+/*  border-bottom: 1px solid #0C2443;
+*/}
+.pop-line{
+  margin-top: -15px;
+  margin-bottom:-5px;
+}
+
+.pop-line:hover{
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+
+.pop-line:hover{
+    cursor: default;
+    transform: rotate(20deg);
+    transition: all 0.9s ease-in-out 0s;
+}
 .small-article-heading{
           font-size: 24px;
           font-weight: bold;
@@ -142,8 +170,8 @@ a .create-account:hover{
           margin-top: 10px;
         }
 
+
 .article_icons{
-  
   list-style: none;
   /*float:right;*/
   width: 100%;
@@ -191,25 +219,28 @@ margin-top: 60px;
 }
 
 #comment:hover{   
- fill:#265AD9;
-       stroke-width:3px;}
+  fill:#265AD9;
+  stroke-width:3px;
+}
+
 .tags a li:hover{
-    font-weight: bold;
+  font-weight: 500;
   color: #265AD9;
 }
 
 .tags {
     margin-top: 20px;
 }
-.tags li{ 
-  font-size: 12px;
-  font-weight: lighter;
-  color: #929090;
-  display: inline-block;
-  list-style: none;
-  float:left;
-  margin-right: 8px;
-   }
+.tags li {
+    font-size: 12px;
+    font-family: "museo-sans-condensed";
+    color: #929090;
+    display: inline-block;
+    list-style: none;
+    float: left;
+    margin-right: 8px;
+    letter-spacing: 1px;
+}
 
 /* ==========================================================================
    Structure
@@ -294,6 +325,19 @@ hr{margin-top: 0;
 display: block;
 }
 
+
+
+/*#notCollapsible{
+  float: right;
+}
+
+#notCollapsible li{
+  display: inline !important;
+  position: static;
+  float: left;
+}*/
+
+
 .fullnav{width: 100%;}
 
 .fullnav > li {
@@ -308,11 +352,16 @@ display: block;
 
 #main-content{margin-top: 100px;}
 
-.no-title{margin-top: 65px;}
 
 /* Footer */
 
-footer{margin-top: 3em;}
+footer {
+
+  margin-top: 3em;
+}
+#footer-menu li a:link{
+    text-decoration: none;
+}
 
 #footer-menu{
   display: -webkit-flex;
@@ -340,18 +389,20 @@ footer{margin-top: 3em;}
   Boostrap overwritten rules
   ========================================================================== */
 ul.dropdown-menu {
-  background-color: rgb(252, 252, 252);
+   background-color: rgb(252, 252, 252);
    -webkit-background-clip: padding-box; 
    background-clip: padding-box; 
    border: 0; 
    border-radius: 0; 
    -webkit-box-shadow: 0 0 0; 
    box-shadow: 0 0 0; 
-   font-family: Stanley;
+   font-family: "museo-sans-condensed";
+   text-transform: capitalize;
+   font-weight: 100;
 }
+
 ul.dropdown-menu a{
-  font-weight: bold;
-  font-size: 22px;
+  font-size: 17px;
   margin-bottom:5px; 
 }
 
@@ -400,25 +451,119 @@ background-color: transparent;
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
   margin-top: -20px;
 }
-.nav li a {font-size: 15px;}
+/*.nav li a {font-size: 15px;}
+*/
+#search-form{
+      padding-top: 15px;
+    padding-bottom: 15px;
+    display: none;
+}
 
+
+#search-form input{
+ font-family: Theinhardt;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #0C2443;
+    line-height: 2em;
+}
+
+input:focus{
+  outline:none;
+}
 
 p.meta{
-  font-family: Stanley;
+  font-family: "freight-text-pro";
   color: #7E7980;
   margin-top: 10px;
 }
-.meta_article{
-  font-family: Stanley;
-  color: #7E7980;
+.meta_article {
+    font-family: "museo-sans";
+    font-weight: 700;
+    color: #4571DB;
 }
 
 .image-caption{
-  font-family: Stanley;
+  font-family: "freight-text-pro";
   color: #7E7980;
   margin-top: 10px;
   font-size: 12px;
 }
+.modal-header{
+  display: none;
+}
+
+.modal-content{
+  border-radius: 0px;
+  border: 0 transparent;
+  background-color: #FAFAFA;
+  padding:10px;
+  line-height: 0.8em;
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.5); */
+    box-shadow: 0 0px 0px rgba(0,0,0,.5); */
+
+}
+
+.modal-content input{
+  font-family: Theinhardt;
+  background-color: transparent;
+  border: none;
+  border-bottom:1px solid #0C2443; 
+  margin-bottom: 10px;
+  line-height: 2em;
+}
+
+
+
+form .pass-mail{
+  font-size: 18px;
+}
+
+.modal-footer .btn{
+  border-radius: 0px;
+  border:0px;
+}
+
+
+.btn-primary{
+  background-color: #0C2443;
+  color: #FAFAFA;
+}
+
+.btn-primary:hover{
+    background-color: #265AD9;
+
+}
+
+.btn-default {
+     background-color: #0C2443;
+       color: #FAFAFA;
+}
+
+.btn-default:hover{
+    background-color: #265AD9;
+    color: #FAFAFA;
+}
+
+
+/*div.modal-content a:link :visited :hover :active{
+  text-decoration: none;
+}*/
+
+.modal-content a .login-with{
+  color: #265AD9;
+  text-decoration: none;
+}
+
+.modal-body form{
+  margin-top: 25px;
+}
+.modal-footer {
+    padding: 8px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
 /* ==========================================================================
    SVG
    ==========================================================================

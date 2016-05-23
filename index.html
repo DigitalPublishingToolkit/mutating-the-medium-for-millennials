@@ -6,6 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 <link rel="shortcut icon" href="assets/favicon.ico" >
         <title>Even Up</title>
         <meta name="description" content="">
@@ -25,13 +26,18 @@
         <!-- take a look at the not-minified version (css/boostrap.css) if you're interested -->
 
         <!-- you will write your style rules in the file below -->
+        <!-- fonts -->
+        <script src="https://use.typekit.net/ans3zvq.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
         <link rel="stylesheet" href="css/main.css">
-<script src="js/vendor/jquery-1.11.2.min.js"></script>        
-<script src="js/vendor/bootstrap.min.js"></script> 
+        <link rel="stylesheet" href="css/account.css">
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>        
+        <script src="js/vendor/bootstrap.min.js"></script> 
+        <script src="js/main.js"></script>
 
         <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
-
 
     <body>
     <nav id="main_top" class="navbar navbar-fixed-top" role="navigation">
@@ -45,11 +51,42 @@
             <span class="icon-bar"> </span>
           </button>
           <a class="navbar-brand" href="index.html"><img src="content/img/logo.svg" alt="even up" title="even up" /></a>
+<!--modal-->
+      <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="login"></h4>
+      </div>
+    
+      <div class="modal-body">
+        <p>login with <a href=""><span class="login-with">facebook</span></a></p>
+      <p>login with <a href=""><span class="login-with">google</span></a></p>
+
+        <form><p class="pass-mail"> e-mail</p>
+        <input type="text"> <br>
+        <p class="pass-mail">password</p>
+        <input type="text"> 
+
+       </form>      
+        </div>
+      <div class="modal-footer">
+        <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
+        <a href="account.html" class="btn btn-primary">sign up</a>
+      </div>
+    </div>
+  </div>
+</div> <!--end of modal-->
+        
 
         <ul id="notCollapsible"  class="nav navbar-nav">
-          <li><a href="#">
-          <svg version="1.1" id="search" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
-             viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve">
+        <li><form id="search-form">
+          <input type="text" >
+        </form></li>
+          <li><a class="search-bar" href="#">
+          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
+             viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
               <g transform="matrix( 1, 0, 0, 1, 0,0) ">
                 <g id="a">
                   <path d="M27.8,26.7c0-0.3-0.1-0.5-0.3-0.7l-7.7-7.6c1.5-1.8,2.3-3.8,2.2-6.2c0-2.7-1-5.1-3-7c-1.9-1.9-4.3-2.9-7.1-2.9
@@ -61,8 +98,8 @@
             </g>
           </svg>
           </a></li>
-          <li><a href="account.html">
-          <svg version="1.1" id="bindi" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35" height="35"
+          <li><a  data-toggle="modal" data-target="#login">
+          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35" height="35"
           viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
           <g>
             <circle cx="21.9" cy="10.5" r="1.4"/>
@@ -88,31 +125,32 @@
         <div id="myNavBar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav fullnav"> 
 
-              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
+              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">yoga</a></li>
-                <li><a href="#">running</a></li>
-                <li><a href="#">body care</a></li>
+                <li><a href="#">fitness</a></li>
+                <li><a href="#">health</a></li>
+
               </ul>
             </li>
-             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
+             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
-                <li><a href="#">psychology</a></li>
                 <li><a href="#">mental health</a></li>
+                <li><a href="#">meditation</a></li>
                 <li><a href="#">relationships</a></li>
               </ul>
             </li>
 
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth </span><span class="sr-only">(current)</span></a> 
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
-                <li><a href="#">climate change</a></li>
-                <li><a href="#">wildlife</a></li>
+                <li><a href="#">sustainability</a></li>
+                <li><a href="#">travel</a></li>
                 <li><a href="#">energy</a></li>
               </ul>
             </li>          
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">even more </span><span class="sr-only">(current)</span></a> 
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
-                <li><a href="#">art therapy</a></li>
+                <li><a href="#">food</a></li>
                 <li><a href="#">photography</a></li>
                 <li><a href="#">education</a></li>
                 <li><a href="#">home &amp; garden</a></li>
@@ -122,13 +160,13 @@
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">Yoga</a></li>
                 <li><a href="#">DIY</a></li>
-                <li><a href="#">food</a></li>
+                <li><a href="#">cooking</a></li>
               </ul>
             </li>  
             <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
-                <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></li>
+                <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
                 <li><a href="#">guided meditation</a><img src="content/icons/audio.svg" height="40px"></li>
                 <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
 
@@ -160,14 +198,37 @@
           <h2 class="article-heading">Meditation and creativity: should we believe the hype?</h2>
           <h3 class="article-sub-heading">Best of the Web is a chance for us to procrastinate while pretending we are really doing work. This week’s edition covers everything from online harassment to the fees that celebs receive for nightclub appearances. </h3>
         </div></a>
+
+        <a href="articledoctor.html">
         <div class="col-sm-6">
           <img src="content/img/home-2.png" />
           <p class="meta">Rick Paulas – 12th April 2016</p>
           <h2 class="article-heading">The Internet is not a doctor!</h2>
            <h3 class="article-sub-heading">Best of the Web is a chance for us to procrastinate while pretending we are really doing work. This week’s edition covers everything from online harassment to the fees that celebs receive for nightclub appearances. </h3>
-        </div>
+        </div></a>
       </div><!-- end .row -->
-      <div class="row">
+
+
+
+<div class="row">
+           <h2 class="most-popular col-sm-3 .col-sm-offset-6">Most Popular
+
+<svg class="pop-line" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" viewBox="0 0 1140 35" enable-background="new 0 0 1139 35" xml:space="preserve">
+<line stroke-width="2" stroke="#0C2443" stroke-miterlimit="10" x1="4" y1="19.5" x2="1140" y2="19.5"/>
+</svg>
+</h2>
+
+           <h2 class="may-missed col-sm-3 .col-sm-offset-9">You may have missed...
+             
+<svg class="pop-line" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" viewBox="0 0 1140 35" enable-background="new 0 0 1139 35" xml:space="preserve">
+<line stroke-width="2" stroke="#0C2443" stroke-miterlimit="10" x1="-4" y1="19.5" x2="1140" y2="19.5"/>
+</svg>
+         </h2>
+</div>
+
+      <div class="row second-row">
         <div class="col-sm-3 no-title">
           <img src="content/img/prison.png" />
           <p class="meta">Jessica Rizzo – 10th Feb 2016</p>
@@ -179,14 +240,14 @@
           <h3 class="small-article-heading">Greenery (or Even Photos of Trees) Can Make Us Happier</h3>
        </div>
         <div class="col-sm-3">
-          <h2 class="most-recent">Most Recent</h2>
-          <img src="content/img/bottles.png" />
+<!--           <h2 class="most-popular">Most Popular</h2>
+ -->          <img src="content/img/bottles.png" />
           <p class="meta">Charlotte Jansen – 13th April 2016</p>
           <h3 class="small-article-heading">The Ghanaian turning thousands of discarded plastic bottles into art</h3>
         </div>
         <div class="col-sm-3">
-          <h2 class="most-popular">Most Popular</h2>
-          <img src="content/img/mental-health-disorders.png" />
+<!--           <h2 class="may-missed">You may have missed...</h2>
+ -->          <img src="content/img/mental-health-disorders.png" />
           <p class="meta">Hanson O'Haver – 12th April 2016</p>
           <h3 class="small-article-heading">Why Mental Health Disorders Emerge in Your Early Twenties</h3>
         </div>
@@ -204,14 +265,14 @@
           <h3 class="small-article-heading">Learning to Cook Is Helping Me Battle Depression</h3>
        </div>
         <div class="col-sm-3">
-          <img src="content/img/bottles.png" />
+          <img src="content/img/environmentalist.jpg" />
           <p class="meta">Charlotte Jansen – 13th April 2016</p>
-          <h3 class="small-article-heading">The Ghanaian turning thousands of discarded plastic bottles into art</h3>
+          <h3 class="small-article-heading">How I deal with the unbearable hypocrisy of being an environmentalist</h3>
         </div>
         <div class="col-sm-3">
-          <img src="content/img/mental-health-disorders.png" />
+          <img src="content/img/brain.jpg"/>
           <p class="meta">Hanson O'Haver – 12th April 2016</p>
-          <h3 class="small-article-heading">Why Mental Health Disorders Emerge in Your Early Twenties</h3>
+          <h3 class="small-article-heading">Walk, Jog or Dance: It's All Good for the Aging Brain</h3>
         </div>
       </div>
 
@@ -257,12 +318,6 @@
       </footer>
     </div> <!-- end .container -->
 
-        <!-- for now, let's comment this out -->
-        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script> -->
+        
     </body>
 </html>
