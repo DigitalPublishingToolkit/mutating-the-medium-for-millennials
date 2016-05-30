@@ -1,0 +1,370 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="shortcut icon" href="assets/favicon.ico" >
+        <title>Even Up</title>
+        <meta name="description" content="">
+
+        <!-- about browserconfig.xml -->
+        <!-- see https://msdn.microsoft.com/en-us/library/dn320426%28v=vs.85%29.aspx -->
+
+        <!-- for further info: http://www.w3schools.com/css/css_rwd_viewport.asp -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- further info on favicons: http://stackoverflow.com/questions/23849377/html-5-favicon-support -->
+        <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+        <!-- this is where bootstrap classes and rules are defined -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- this file is compressed, very hard to read (by us, humans)-->
+        <!-- take a look at the not-minified version (css/boostrap.css) if you're interested -->
+
+        <!-- you will write your style rules in the file below -->
+        <!-- fonts -->
+        <script src="https://use.typekit.net/ans3zvq.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/account.css">
+        <link rel="stylesheet" href="css/photo.css">
+
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>        
+        <script src="js/vendor/bootstrap.min.js"></script> 
+        <script src="js/main.js"></script>
+
+        <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+    </head>
+
+    <body>
+    <nav id="main_top" class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div id="gray-box">
+        <div class="navbar-header" id="topHeader">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+
+<div class="menu-outer menu-outer-one">
+  <div class="menu-outer menu-outer-two">
+    <div class="menu-outer menu-outer-three"> 
+    </div>
+  </div>
+</div>
+            <!-- 
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span> -->
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="content/img/logo.svg" alt="even up" title="even up" /></a>
+<!--modal-->
+      <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="login"></h4>
+      </div>
+    
+      <div class="modal-body">
+        <p>login with <a href=""><span class="login-with">facebook</span></a></p>
+      <p>login with <a href=""><span class="login-with">google</span></a></p>
+
+        <form><p class="pass-mail"> e-mail</p>
+            <input type="text"> <br>
+        <p class="pass-mail">password</p>
+            <input type="text"> 
+        </form>      
+
+        </div>
+      <div class="modal-footer">
+        <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
+        <a href="account.html" class="btn btn-primary">sign up</a>
+      </div>
+    </div>
+  </div>
+</div> <!--end of modal-->
+        
+
+        <ul id="notCollapsible"  class="nav navbar-nav">
+        <li><form id="search-form">
+          <input type="text" >
+        </form></li>
+          <li><a class="search-bar" href="#">
+          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23"
+             viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
+              <g transform="matrix( 1, 0, 0, 1, 0,0) ">
+                <g id="a">
+                  <path d="M27.8,26.7c0-0.3-0.1-0.5-0.3-0.7l-7.7-7.6c1.5-1.8,2.3-3.8,2.2-6.2c0-2.7-1-5.1-3-7c-1.9-1.9-4.3-2.9-7.1-2.9
+                    c-2.8,0-5.2,1-7.1,2.9C2.9,7.1,2,9.4,2,12.2c0,2.7,1,5.1,2.9,7c2,1.9,4.3,2.9,7.1,2.9c2.4,0,4.5-0.7,6.3-2.2l7.7,7.6
+                    c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.5-0.1,0.7-0.3C27.7,27.3,27.8,27,27.8,26.7 M17.6,6.6C19.2,8.1,20,10,20,12.2
+                    c0,2.2-0.8,4-2.3,5.5l0,0C16.1,19.2,14.2,20,12,20c-2.2,0-4.1-0.8-5.6-2.3c-1.5-1.5-2.3-3.3-2.3-5.5c0-2.2,0.8-4,2.3-5.5
+                    C7.9,5.1,9.8,4.3,12,4.3C14.2,4.3,16.1,5.1,17.6,6.6z"/>
+                </g>
+            </g>
+          </svg>
+          </a></li>
+          <li><a  data-toggle="modal" data-target="#login">
+          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33" height="33"
+          viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+          <g>
+            <circle cx="21.9" cy="10.5" r="1.4"/>
+            <path d="M23.2,25.9h-2.5c-0.7,0-1,0.5-1,1s0.5,1,1,1h2.5c0.7,0,1-0.5,1-1S23.8,25.9,23.2,25.9z"/>
+            <path d="M33.9,38.3h-2.2c-1.9,0-3.2-1.5-3.2-3.2v-3.7c1.2-1.2,2.2-2.5,2.5-4.2c2.7-0.3,4.7-2.5,4.7-5.3c0-2.5-1.9-4.7-4.2-5.3v-3
+              c0-2.5-1-5.1-2.9-6.8c-1.9-1.9-4.2-2.9-6.8-2.9c-5.4,0-9.7,4.4-9.7,9.7v2.9C9.9,16.9,8,19.1,8,21.7c0,2.7,2,5.1,4.7,5.3
+              c0.5,1.5,1.4,2.9,2.4,4.1l0.2,0.2v3.7c0,1.9-1.5,3.2-3.2,3.2H9.9c-0.7,0-1,0.5-1,1s0.5,1,1,1h2.2c3,0,5.4-2.4,5.4-5.4v-2.2
+              c1.4,0.7,2.9,1.2,4.6,1.2s3.2-0.3,4.6-1.2v2.2c0,3,2.4,5.4,5.4,5.4h2.2c0.7,0,1-0.5,1-1C34.9,38.8,34.6,38.3,33.9,38.3z M31.5,24.4
+              v-5.6c1.2,0.5,2.2,1.7,2.2,3c0,1.4-0.8,2.5-2.2,3C31.5,24.6,31.5,24.6,31.5,24.4z M10,21.7c0-1.4,0.8-2.5,2.2-3v5.6
+              c0,0.2,0,0.3,0,0.5C10.9,24.4,10,23.2,10,21.7z M29.3,16.4h-3.9v-0.7c0-0.5,0.8-1,1.9-1c1,0,1.9,0.5,1.9,1L29.3,16.4L29.3,16.4z
+               M14.4,15.8c0-0.3,1-1,2.5-1s2.5,0.7,2.5,1v0.7h-5.1V15.8L14.4,15.8z M21.9,31.8c-2,0-3.9-0.8-5.3-2.2c-1-1-1.7-2.4-2-3.9
+              c-0.2-0.5-0.2-1-0.2-1.5v-5.8h5.1V23c0,0.7,0.5,1,1,1h2.5c0.7,0,1-0.5,1-1c0-0.7-0.5-1-1-1h-1.5v-6.3c0-1.9-2-3.2-4.7-3.2
+              c-1,0-1.9,0.2-2.5,0.5c0.3-3.9,3.6-6.9,7.5-6.9c2,0,3.9,0.8,5.3,2.2c1.2,1.2,2,2.9,2.2,4.6c-0.5-0.2-1.2-0.3-1.9-0.3
+              c-2.4,0-4.1,1.4-4.1,3.2v1.7c0,0.7,0.5,1,1,1h4.9v5.8c0,0.5,0,1-0.2,1.5C28.5,29.3,25.4,31.8,21.9,31.8z"/>
+          </g>
+          <g>
+            <path d="M9,23.6"/>
+          </g>
+          </svg>
+          </a></li>
+        </ul><!-- end notCollapsible -->
+        </div><!-- end topHeader -->
+        <div id="myNavBar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav fullnav"> 
+
+              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">yoga</a></li>
+                <li><a href="#">fitness</a></li>
+                <li><a href="#">health</a></li>
+
+              </ul>
+            </li>
+             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">mental health</a></li>
+                <li><a href="#">meditation</a></li>
+                <li><a href="#">relationships</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">sustainability</a></li>
+                <li><a href="#">travel</a></li>
+                <li><a href="#">energy</a></li>
+              </ul>
+            </li>          
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">food</a></li>
+                <li><a href="slider.html">photography</a></li>
+                <li><a href="#">education</a></li>
+                <li><a href="#">home &amp; garden</a></li>
+              </ul>
+            </li>  
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="channelyoga.html">Yoga</a></li>
+                <li><a href="#">DIY</a></li>
+                <li><a href="#">cooking</a></li>
+              </ul>
+            </li>  
+            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
+                <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
+                <li><a href="#">guided meditation<img src="content/icons/audio.svg" height="40px"></a></li>
+                <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
+
+              </ul>
+            </li>  
+
+          </ul>
+        </div><!-- end .navbar-collapse -->
+</div>
+
+
+<svg version="1.1" id="top-line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" viewBox="0 0 1140 35" enable-background="new 0 0 1140 35" xml:space="preserve">
+<polygon fill="#FAFAFA" points="1140,7.5 0,16 0,0 1140,0 "/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="16" x2="1140" y2="7.2"/>
+</svg>
+
+      </div><!-- end .container -->
+    </nav>
+    <!-- navbar ends, main content starts HERE -->
+
+    <div id="main-content" class="container">
+      <!-- use rows to create horizontal groups of columns -->
+      <div class="row">
+        <a href="article.html">
+        <div class="col-sm-6">
+
+          <img src="content/img/exercices-animation.gif"/>
+  <div class="branding">Sponsored by <i>The Guardian</i></div>
+          <p class="meta">Emily Gosling – 12th April 2016</p>
+          <h2 class="article-heading">Flexible fitness taps into on demand trend among millennials</h2>
+          <h3 class="article-sub-heading">Best of the Web is a chance for us to procrastinate while pretending we are really doing work. This week’s edition covers everything from online harassment to the fees that celebs receive for nightclub appearances. </h3>
+        </div></a>
+
+        <a href="articledoctor.html">
+        <div class="col-sm-6">
+          <img src="content/img/fitnesselephant.jpg" />
+
+          <p class="meta">Rick Paulas – 12th April 2016</p>
+          <h2 class="article-heading">Stone age cities: what modern urbanites could learn from paleolithic humans</h2>
+           <h3 class="article-sub-heading">Best of the Web is a chance for us to procrastinate while pretending we are really doing work. This week’s edition covers everything from online harassment to the fees that celebs receive for nightclub appearances. </h3>
+        </div></a>
+      </div><!-- end .row -->
+
+
+
+<div class="row">
+           <h2 class="most-popular col-sm-3 .col-sm-offset-6">Most Popular
+
+<svg class="pop-line" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" viewBox="0 0 1140 35" enable-background="new 0 0 1139 35" xml:space="preserve">
+<line stroke-width="2" stroke="#0C2443" stroke-miterlimit="10" x1="4" y1="19.5" x2="1140" y2="19.5"/>
+</svg>
+</h2>
+
+           <h2 class="may-missed col-sm-3 .col-sm-offset-9">You may have missed...
+             
+<svg class="pop-line" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" viewBox="0 0 1140 35" enable-background="new 0 0 1139 35" xml:space="preserve">
+<line stroke-width="2" stroke="#0C2443" stroke-miterlimit="10" x1="-4" y1="19.5" x2="1140" y2="19.5"/>
+</svg>
+         </h2>
+</div>
+
+      <div class="row second-row">
+        <div class="col-sm-3 no-title branded-article-prison">
+          <img src="content/img/prison.png" />
+           <div class="branding-small">Sponsored by <i>Dove</i></div>
+          <p class="meta">Jessica Rizzo – 10th Feb 2016</p>
+          <h3 class="small-article-heading">Prison Yoga Is Helping Inmates Transcend Their Cells</h3>
+        </div>
+        <div class="col-sm-3 no-title">
+          <img src="content/img/greenery.png" />
+          <p class="meta">Gretchen Reynolds – 10th Feb 2016</p>
+          <h3 class="small-article-heading">Greenery (or Even Photos of Trees) Can Make Us Happier</h3>
+       </div>
+        <div class="col-sm-3">
+<!--           <h2 class="most-popular">Most Popular</h2>
+ -->          <img src="content/img/bottles.png" />
+          <p class="meta">Charlotte Jansen – 13th April 2016</p>
+          <h3 class="small-article-heading">The Ghanaian turning thousands of discarded plastic bottles into art</h3>
+        </div>
+        <div class="col-sm-3 branded-article-environment">
+<!--           <h2 class="may-missed">You may have missed...</h2> -->         
+  <img src="content/img/mental-health-disorders.png"/>
+                    <div class="branding-small">Sponsored by <i>Dove</i></div>
+          <p class="meta">12th April 2016</p>
+          <h3 class="small-article-heading">Why Mental Health Disorders Emerge in Your Early Twenties</h3>
+        </div>
+      </div>
+
+<div class="row second-row">
+        <div class="col-sm-3 no-title">
+          <img src="content/img/palestine.jpg" />
+          <p class="meta">Jessica Rizzo – 10th Feb 2016</p>
+          <h3 class="small-article-heading">Running through conflict: the Palestine Marathon</h3>
+        </div>
+        <div class="col-sm-3 no-title">
+          <img src="content/img/depression.jpg" />
+          <p class="meta">Jackson Connor – 2nd Apr 2016</p>
+          <h3 class="small-article-heading">Learning to Cook Is Helping Me Battle Depression</h3>
+       </div>
+        <div class="col-sm-3 branded-article-environment">
+          <img src="content/img/environmentalist.jpg" />
+          <p class="meta">Charlotte Jansen – 13th April 2016</p>
+          <h3 class="small-article-heading">How I deal with the unbearable hypocrisy of being an environmentalist</h3>
+        </div>
+        <div class="col-sm-3">
+          <img src="content/img/brain.jpg"/>
+          <p class="meta">Hanson O'Haver – 12th April 2016</p>
+          <h3 class="small-article-heading">Walk, Jog or Dance: It's All Good for the Aging Brain</h3>
+        </div>
+      </div>
+
+<div class="row second-row">
+        <div class="col-sm-6 no-title horizontal-article">
+          <img src="content/img/yogapose.png" class="col-sm-4"/>
+          <p class="horizontal-meta">Emily Witt – 27th May 2016</p>
+          <h3 class="small-article-heading">The Goddess Pose by Michelle Goldberg – the strange story of how yoga became popular</h3>
+        </div>
+
+        <div class="col-sm-6 no-title horizontal-article">
+          <img src="content/img/food.jpg" class="col-sm-4"/>
+          <p class="horizontal-meta">Jackson Connor – 2nd Apr 2016</p>
+          <h3 class="small-article-heading">Learning to Cook Is Helping Me Battle Depression</h3>
+       </div>
+  </div>
+
+  <div class="row">
+        <div class="col-sm-6 branded-article-environment horizontal-article">
+          <img src="content/img/thomashedger-green.jpg" class="col-sm-4"/>
+          <p class="horizontal-meta">Charlotte Jansen – 13th April 2016</p>
+          <h3 class="small-article-heading">How I deal with the unbearable hypocrisy of being an environmentalist</h3>
+        </div>
+        <div class="col-sm-6 horizontal-article">
+          <img src="content/img/thomashedger-black.jpg" class="col-sm-4"/>
+          <p class="horizontal-meta">Hanson O'Haver – 12th April 2016</p>
+          <h3 class="small-article-heading">Walk, Jog or Dance: It's All Good for the Aging Brain</h3>
+        </div>
+      </div>
+      <!-- rotating a <hr> seems to work fine in most cases, but if you prefer to use svg... -->
+      <svg
+         width="100%"
+         height="40px"
+         viewBox="0 0 100 100"
+         preserveAspectRatio="none"
+         id="svg3">
+         <!-- width and height will define the size of the svg element on the page. they could also be defined in the css file -->
+         <!-- viewbox will define the format (scale/stretch) of the svg ref. to the container element -->
+         <!-- for further info, check http://svgpocketguide.com/book/#section-3 -->
+
+         <!-- the <g> element is not strictly necessary in this case -->
+         <g id="layer2" >
+          <!-- would be equivalent to
+          <line x1="0" y1="3" x2="100" y2="38" stroke-dasharray="2,1,1,1" id="footer-line"  />
+          -->
+          <!-- for more info, check http://svgpocketguide.com/book/#section-2 -->
+          <path d="M 0,3 100,38" stroke-dasharray="2,1,1,1" id="footer-line"  />
+        </g>
+
+      </svg>
+
+      <footer>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" xml:space="preserve">
+<polygon fill="#FAFAFA" points="1140,35 0.2,35 0.2,19 1140,27 "/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1140" y1="27" x2="0" y2="19"/>
+</svg>
+
+
+        <ul id="footer-menu">
+          <li class="copy">&copy; even up</li>
+          <li><a href="#">Info</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy & Cookies</a></li>
+        </ul>
+      </footer>
+    </div> <!-- end .container -->
+
+<script>
+
+$(".menu-outer").on("touchstart", function () {
+  $(this).toggleClass("menutilt");
+console.log("touchstart")
+})  
+</script>
+        
+    </body>
+</html>

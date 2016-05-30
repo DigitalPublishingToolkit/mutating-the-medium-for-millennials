@@ -1,0 +1,519 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="shortcut icon" href="assets/favicon.ico" >
+        <title>Even Up</title>
+        <meta name="description" content="">
+
+        <!-- about browserconfig.xml -->
+        <!-- see https://msdn.microsoft.com/en-us/library/dn320426%28v=vs.85%29.aspx -->
+
+        <!-- for further info: http://www.w3schools.com/css/css_rwd_viewport.asp -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- further info on favicons: http://stackoverflow.com/questions/23849377/html-5-favicon-support -->
+        <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+        <!-- this is where bootstrap classes and rules are defined -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- this file is compressed, very hard to read (by us, humans)-->
+        <!-- take a look at the not-minified version (css/boostrap.css) if you're interested -->
+
+        <!-- you will write your style rules in the file below -->
+        <!-- fonts -->
+        <script src="https://use.typekit.net/ans3zvq.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/account.css">
+         <link rel="stylesheet" href="css/photo.css">
+
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>        
+        <script src="js/vendor/bootstrap.min.js"></script> 
+        <script src="js/main.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="css/rotating-slider.css">
+
+        <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+    </head>
+
+    <body>
+    <nav id="main_top" class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div id="gray-box">
+        <div class="navbar-header" id="topHeader">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="content/img/logo.svg" alt="even up" title="even up" /></a>
+<!--modal-->
+      <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="login"></h4>
+      </div>
+    
+      <div class="modal-body">
+        <p>login with <a href=""><span class="login-with">facebook</span></a></p>
+      <p>login with <a href=""><span class="login-with">google</span></a></p>
+
+        <form><p class="pass-mail"> e-mail</p>
+        <input type="text"> <br>
+        <p class="pass-mail">password</p>
+        <input type="text"> 
+
+       </form>      
+        </div>
+      <div class="modal-footer">
+        <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
+        <a href="account.html" class="btn btn-primary">sign up</a>
+      </div>
+    </div>
+  </div>
+</div> <!--end of modal-->
+        
+
+        <ul id="notCollapsible"  class="nav navbar-nav">
+        <li><form id="search-form">
+          <input type="text" >
+        </form></li>
+          <li><a class="search-bar" href="#">
+          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
+             viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
+              <g transform="matrix( 1, 0, 0, 1, 0,0) ">
+                <g id="a">
+                  <path d="M27.8,26.7c0-0.3-0.1-0.5-0.3-0.7l-7.7-7.6c1.5-1.8,2.3-3.8,2.2-6.2c0-2.7-1-5.1-3-7c-1.9-1.9-4.3-2.9-7.1-2.9
+                    c-2.8,0-5.2,1-7.1,2.9C2.9,7.1,2,9.4,2,12.2c0,2.7,1,5.1,2.9,7c2,1.9,4.3,2.9,7.1,2.9c2.4,0,4.5-0.7,6.3-2.2l7.7,7.6
+                    c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.5-0.1,0.7-0.3C27.7,27.3,27.8,27,27.8,26.7 M17.6,6.6C19.2,8.1,20,10,20,12.2
+                    c0,2.2-0.8,4-2.3,5.5l0,0C16.1,19.2,14.2,20,12,20c-2.2,0-4.1-0.8-5.6-2.3c-1.5-1.5-2.3-3.3-2.3-5.5c0-2.2,0.8-4,2.3-5.5
+                    C7.9,5.1,9.8,4.3,12,4.3C14.2,4.3,16.1,5.1,17.6,6.6z"/>
+                </g>
+            </g>
+          </svg>
+          </a></li>
+          <li><a  data-toggle="modal" data-target="#login">
+          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35" height="35"
+          viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+          <g>
+            <circle cx="21.9" cy="10.5" r="1.4"/>
+            <path d="M23.2,25.9h-2.5c-0.7,0-1,0.5-1,1s0.5,1,1,1h2.5c0.7,0,1-0.5,1-1S23.8,25.9,23.2,25.9z"/>
+            <path d="M33.9,38.3h-2.2c-1.9,0-3.2-1.5-3.2-3.2v-3.7c1.2-1.2,2.2-2.5,2.5-4.2c2.7-0.3,4.7-2.5,4.7-5.3c0-2.5-1.9-4.7-4.2-5.3v-3
+              c0-2.5-1-5.1-2.9-6.8c-1.9-1.9-4.2-2.9-6.8-2.9c-5.4,0-9.7,4.4-9.7,9.7v2.9C9.9,16.9,8,19.1,8,21.7c0,2.7,2,5.1,4.7,5.3
+              c0.5,1.5,1.4,2.9,2.4,4.1l0.2,0.2v3.7c0,1.9-1.5,3.2-3.2,3.2H9.9c-0.7,0-1,0.5-1,1s0.5,1,1,1h2.2c3,0,5.4-2.4,5.4-5.4v-2.2
+              c1.4,0.7,2.9,1.2,4.6,1.2s3.2-0.3,4.6-1.2v2.2c0,3,2.4,5.4,5.4,5.4h2.2c0.7,0,1-0.5,1-1C34.9,38.8,34.6,38.3,33.9,38.3z M31.5,24.4
+              v-5.6c1.2,0.5,2.2,1.7,2.2,3c0,1.4-0.8,2.5-2.2,3C31.5,24.6,31.5,24.6,31.5,24.4z M10,21.7c0-1.4,0.8-2.5,2.2-3v5.6
+              c0,0.2,0,0.3,0,0.5C10.9,24.4,10,23.2,10,21.7z M29.3,16.4h-3.9v-0.7c0-0.5,0.8-1,1.9-1c1,0,1.9,0.5,1.9,1L29.3,16.4L29.3,16.4z
+               M14.4,15.8c0-0.3,1-1,2.5-1s2.5,0.7,2.5,1v0.7h-5.1V15.8L14.4,15.8z M21.9,31.8c-2,0-3.9-0.8-5.3-2.2c-1-1-1.7-2.4-2-3.9
+              c-0.2-0.5-0.2-1-0.2-1.5v-5.8h5.1V23c0,0.7,0.5,1,1,1h2.5c0.7,0,1-0.5,1-1c0-0.7-0.5-1-1-1h-1.5v-6.3c0-1.9-2-3.2-4.7-3.2
+              c-1,0-1.9,0.2-2.5,0.5c0.3-3.9,3.6-6.9,7.5-6.9c2,0,3.9,0.8,5.3,2.2c1.2,1.2,2,2.9,2.2,4.6c-0.5-0.2-1.2-0.3-1.9-0.3
+              c-2.4,0-4.1,1.4-4.1,3.2v1.7c0,0.7,0.5,1,1,1h4.9v5.8c0,0.5,0,1-0.2,1.5C28.5,29.3,25.4,31.8,21.9,31.8z"/>
+          </g>
+          <g>
+            <path d="M9,23.6"/>
+          </g>
+          </svg>
+          </a></li>
+        </ul><!-- end notCollapsible -->
+        </div><!-- end topHeader -->
+        <div id="myNavBar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav fullnav"> 
+
+              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">yoga</a></li>
+                <li><a href="#">fitness</a></li>
+                <li><a href="#">health</a></li>
+
+              </ul>
+            </li>
+             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">mental health</a></li>
+                <li><a href="#">meditation</a></li>
+                <li><a href="#">relationships</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">sustainability</a></li>
+                <li><a href="#">travel</a></li>
+                <li><a href="#">energy</a></li>
+              </ul>
+            </li>          
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">food</a></li>
+                <li><a href="#">photography</a></li>
+                <li><a href="#">education</a></li>
+                <li><a href="#">home &amp; garden</a></li>
+              </ul>
+            </li>  
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">Yoga</a></li>
+                <li><a href="#">DIY</a></li>
+                <li><a href="#">cooking</a></li>
+              </ul>
+            </li>  
+            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
+                <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
+                <li><a href="#">guided meditation</a><img src="content/icons/audio.svg" height="40px"></li>
+                <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
+
+              </ul>
+            </li>  
+
+          </ul>
+        </div><!-- end .navbar-collapse -->
+</div>
+
+
+<svg version="1.1" id="top-line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" viewBox="0 0 1140 35" enable-background="new 0 0 1140 35" xml:space="preserve">
+<polygon fill="#FAFAFA" points="1140,7.5 0,16 0,0 1140,0 "/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="16" x2="1140" y2="7.2"/>
+</svg>
+
+      </div><!-- end .container -->
+    </nav>
+
+    <div id="main-content" class="container ">
+      <!-- use rows to create horizontal groups of columns -->
+   
+   <div class="col-sm-2">
+   <div class="meta_article">
+12th April 2016</div>
+<a href="#">
+<svg id="comment" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   x="0px" y="0px" width="25px" height="25px" viewBox="97 0 192 200" xml:space="preserve">
+<path d="M205.2,170.1v-30.7h-64.2c-8,0-14.4-6.4-14.4-14.4V48.8c0-8,6.4-14.4,14.4-14.4h107.2c8,0,14.4,6.4,14.4,14.4V125
+  c0,8-6.4,14.4-14.4,14.4h-12.2L205.2,170.1z M141.1,40.8c-4.5,0-8,3.5-8,8V125c0,4.5,3.5,8,8,8h70.6v21.8l21.8-21.8h14.9
+  c4.5,0,8-3.5,8-8V48.8c0-4.5-3.5-8-8-8C248.3,40.8,141.1,40.8,141.1,40.8z"/>
+</svg>
+</a>
+
+</div>
+
+     <div class="col-sm-7">
+
+     <div class="article-heading article-heading-photo">
+The Land of No Men</div>
+    <div id="photo-arrows">
+         <a href="#">
+              <svg version="1.1" id="left-arrow" x="0px" y="0px"
+                 width="28px" height="80px" viewBox="153.6 -33 33.4 92.1" enable-background="new 153.6 -33 33.4 92.1" xml:space="preserve">
+              <path d="M178.8-30.2l-20.3,42.5c0,0,0,0,0,0.1c0,0.1,0,0.2-0.1,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.2,0.1,0.2
+                c0,0,0,0,0,0.1l20.3,42.5c0.3,0.6,1,0.9,1.6,0.6c0.4-0.2,0.7-0.6,0.7-1.1c0-0.2,0-0.3-0.1-0.5l-20.1-42l20.1-42
+                c0.1-0.2,0.1-0.3,0.1-0.5c0-0.4-0.2-0.9-0.7-1.1C179.8-31.1,179.1-30.8,178.8-30.2z"/>
+              </svg>
+        </a>
+        <a href="#">
+              <svg version="1.1" id="right-arrow"  x="0px" y="0px"
+                 width="28px" height="80px" viewBox="153.6 -33 33.4 92.1" enable-background="new 153.6 -33 33.4 92.1" xml:space="preserve" stroke-width="3px">
+              <path d="M160.7,55.9L181,13.3c0,0,0,0,0-0.1c0-0.1,0-0.2,0.1-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.2-0.1-0.2
+                c0,0,0,0,0-0.1l-20.3-42.5c-0.3-0.6-1-0.9-1.6-0.6c-0.4,0.2-0.7,0.6-0.7,1.1c0,0.2,0,0.3,0.1,0.5l20.1,42l-20.1,42
+                c-0.1,0.2-0.1,0.3-0.1,0.5c0,0.4,0.2,0.9,0.7,1.1C159.7,56.7,160.4,56.5,160.7,55.9z"/>
+              </svg>        
+               </div>
+        </a>
+<img src="content/img/womenonly.jpg">
+
+
+<div class="image-caption caption-photo">Village of Kenya Sundance
+
+<a href="fullscreen.html">
+<svg version="1.1"
+   id="fullscreen" x="0px" y="0px" width="22px" height="22px" fill="#929090" stroke="#929090" stroke-width="1px"
+   viewBox="0 42 156 158" enable-background="new 0 42 156 158" xml:space="preserve">
+<g transform="translate(0,-952.36218)">
+  <path d="M101.1,1003.6c-0.9,0.1-1.5,0.9-1.4,1.8s0.9,1.5,1.8,1.5h40.9L13.4,1135.7v-40.9c0-0.9-0.7-1.6-1.5-1.7c-0.1,0-0.2,0-0.3,0
+    c-0.8,0.1-1.4,0.8-1.4,1.7v44.8c0,0.9,0.7,1.6,1.6,1.6h44.8c0.9,0,1.6-0.7,1.6-1.6c0-0.9-0.7-1.6-1.6-1.6c0,0,0,0,0,0h-41
+    l129-128.9v40.9c0,0.9,0.7,1.6,1.6,1.6c0.9,0,1.6-0.7,1.6-1.6c0,0,0,0,0,0v-44.8c0-0.9-0.7-1.6-1.6-1.6h-44.8
+    C101.3,1003.6,101.2,1003.6,101.1,1003.6z"/>
+</g>
+</svg>
+</a>
+</div>
+<div id="content">
+    <div id="form-container">
+      <form style="min-height: 100px;">
+        <input id="slider" name="slider" type="range" step="1" value="9" min="1" max="30" />
+        <output for="slider">1 of 16</output>
+      </form>
+    </div>
+</div>
+ <div class="article-sub-heading article-sub-heading-photo"> Where the foothills of Mount Kenya merge into the desert, the people of Samburu have maintained a strict patriarchy for over 500 years in northern Kenya. That is, until 25 years ago, when Rebecca Lolosoli founded Umoja village as a safe haven for the region's women. Umoja, which means "unity" in Swahili, is quite literally a no man's land, and the matriarchal refuge is now home to the Samburu women who no longer want to suffer abuses, like genital mutilation and forced marriages, at the hands of men.
+     Photographs by Rick Paulas</div>
+  <script src="js/rotating-slider.js"></script>
+
+ 
+
+<div class="send-top">
+ <a href="#"><svg class="top-arrow" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   x="0px" y="0px" width="123.4px" height="84.1px" viewBox="0 0 123.4 84.1" xml:space="preserve">
+<polyline fill="none" stroke="#0C2443" stroke-miterlimit="10" points="12.9,63.3 60.9,15.3 109.1,63.5 "/>
+</svg></a>
+</div>
+     </div>
+
+
+<div class="col-sm-3">
+
+  <ul class="article_icons">
+  <li><a href="#"><svg version="1.1" id="star-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20" height="20"
+   viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<path d="M38.9,15.1c-0.1-0.3-0.4-0.5-0.7-0.6l-12-1.6L21.1,2.1c-0.1-0.3-0.4-0.5-0.8-0.5s-0.6,0.2-0.8,0.5L14.4,13l-12,1.6
+  c-0.3,0-0.6,0.3-0.7,0.6s0,0.6,0.2,0.8l8.8,8.3L8.5,36.2c0,0.3,0.1,0.6,0.3,0.8c0.3,0.2,0.6,0.2,0.9,0l10.6-5.8L30.9,37
+  c0.1,0.1,0.3,0.1,0.4,0.1c0.2,0,0.3,0,0.5-0.2c0.3-0.2,0.4-0.5,0.3-0.8L30,24.2l8.7-8.2C38.9,15.8,39,15.5,38.9,15.1z M28.4,23.4
+  c-0.2,0.2-0.3,0.5-0.3,0.8l2,10.6l-9.4-5.2c-0.1-0.1-0.3-0.1-0.4-0.1c-0.2,0-0.3,0-0.4,0.1l-9.4,5.2l2-10.6c0-0.3,0-0.6-0.3-0.8
+  L4.4,16l10.7-1.4c0.3,0,0.6-0.2,0.6-0.5l4.6-9.7l4.6,9.7c0.1,0.3,0.4,0.4,0.6,0.5L36.2,16L28.4,23.4z"/>
+</svg>
+</a></li>
+
+  <li><a href="#"><svg version="1.1" id="bookmark-icon"
+   id="Layer_1" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px"
+   viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g>
+  <path stroke="#000000" d="M11.4,37V5.1c0-1.5,1.8-2.9,3.2-2.9h11.6c1.2,0,3.2,1.7,3.2,2.9V37l-9-9L11.4,37z M20.5,27.5l8.7,8.7V5.1
+    c0-0.9-1.7-2.6-2.8-2.6H14.8c-1.2,0-2.9,1.3-2.9,2.6v31.1L20.5,27.5z"/>
+</g>
+</svg>
+
+</a></li>
+
+  <li><a href="content/img/printed.pdf" target="blank"><svg version="1.1" id="print-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20" height="20"
+   viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<g><g>
+    <path d="M32.4,14.9H7.9c-1.9,0-3.5,1.5-3.5,3.5v7.5c0,1.9,1.5,3.5,3.5,3.5h4.3v-1.3H7.9c-1.3,0-2.2-1-2.2-2.2v-7.5
+      c0-1.3,1-2.2,2.2-2.2h24.5c1.3,0,2.2,1,2.2,2.2v7.5c0,1.3-1,2.2-2.2,2.2h-4v1.3h4c1.9,0,3.5-1.5,3.5-3.5v-7.5
+      C35.9,16.5,34.3,14.9,32.4,14.9z"/>
+  </g><g>
+    <path d="M29.7,16.2H11V3.4h18.7V16.2z M12.2,14.9h16.2V4.7H12.2V14.9z"/>
+  </g><g>
+    <path d="M11,22.9v12.8h18.7V22.9H11z M28.4,34.4H12.2V24.1h16.2V34.4z"/>
+  </g><g><g>
+      <rect x="14.5" y="26.2" width="11.9" height="0.9"/>
+    </g><g>
+      <rect x="14.5" y="28.9" width="11.9" height="0.9"/>
+    </g><g>
+      <rect x="14.5" y="31.5" width="6" height="0.9"/>
+    </g></g></g>
+</svg></a></li>
+  </ul>
+
+<!-- share twitter and facebook -->
+  <ul id="share">
+  <li><a href="#">
+    <svg version="1.1" id="facebook-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="20px" height="20px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g>
+  <defs>
+    <rect id="SVGID_1_" x="-492" y="-1123" width="1024" height="2286"/>
+  </defs>
+  <clipPath id="SVGID_2_">
+    <use xlink:href="#SVGID_1_"  overflow="visible"/>
+  </clipPath>
+  <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
+    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
+    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
+  <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
+    c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4l2.1,0c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
+    c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
+    c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2l0.5-0.1
+    l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4L506-896C504.3-887.6,497.8-884.6,492.7-884.6z"/>
+</g>
+<g>
+  <defs>
+    <rect id="SVGID_3_" x="-492" y="-1123" width="1024" height="2286"/>
+  </defs>
+  <clipPath id="SVGID_4_">
+    <use xlink:href="#SVGID_3_"  overflow="visible"/>
+  </clipPath>
+  <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
+    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
+    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
+  <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
+    c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4l2.1,0c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
+    c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
+    c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2l0.5-0.1
+    l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4L506-896C504.3-887.6,497.8-884.6,492.7-884.6z"/>
+</g>
+<g>
+  <defs>
+    <rect id="SVGID_5_" x="-493" y="-1125" width="1024" height="2286"/>
+  </defs>
+  <clipPath id="SVGID_6_">
+    <use xlink:href="#SVGID_5_"  overflow="visible"/>
+  </clipPath>
+  <path clip-path="url(#SVGID_6_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M468.7-885.2h-5.2
+    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
+    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-885.2z"/>
+</g>
+<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M23,38.2h-8.6V22.6H9.1V14h5.1c0-0.3,0-0.6,0-0.9c0-1.4,0.1-2.7,0.2-4
+  c0.5-4.9,3.4-7.6,8.3-7.9c0.2,0,0.4,0,0.6,0c2.8-0.1,4.5,0,5.4,1.2c1,1.2,0.8,3.1,0.3,5.9L29,9.3l-3,0c-0.4,0-0.9,0-1.4,0
+  c-1.4,0-1.6,0.6-1.6,1.6V14h6.2l-1,8.3H23V38.2z"/>
+</svg></a>
+  </li><!-- end of facebook -->
+
+  <li><a href="#">
+    <svg version="1.1" id="twitter-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="20px" height="20px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g>
+  <g>
+    <defs>
+      <rect id="SVGID_1_" x="-492" y="-1123" width="1024" height="2286"/>
+    </defs>
+    <clipPath id="SVGID_2_">
+      <use xlink:href="#SVGID_1_"  overflow="visible"/>
+    </clipPath>
+    <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
+      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
+      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
+  </g>
+  <g>
+    <defs>
+      <rect id="SVGID_3_" x="-492" y="-1123" width="1024" height="2286"/>
+    </defs>
+    <clipPath id="SVGID_4_">
+      <use xlink:href="#SVGID_3_"  overflow="visible"/>
+    </clipPath>
+    <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
+      c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4h2.1c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
+      c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
+      c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2
+      l0.5-0.1l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4l0.1,0.2
+      C504.3-887.6,497.8-884.6,492.7-884.6z"/>
+  </g>
+</g>
+<g>
+  <g>
+    <defs>
+      <rect id="SVGID_5_" x="-492" y="-1123" width="1024" height="2286"/>
+    </defs>
+    <clipPath id="SVGID_6_">
+      <use xlink:href="#SVGID_5_"  overflow="visible"/>
+    </clipPath>
+    <path clip-path="url(#SVGID_6_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
+      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
+      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
+  </g>
+  <g>
+    <defs>
+      <rect id="SVGID_7_" x="-492" y="-1123" width="1024" height="2286"/>
+    </defs>
+    <clipPath id="SVGID_8_">
+      <use xlink:href="#SVGID_7_"  overflow="visible"/>
+    </clipPath>
+    <path clip-path="url(#SVGID_8_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
+      c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4h2.1c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
+      c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
+      c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2
+      l0.5-0.1l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4l0.1,0.2
+      C504.3-887.6,497.8-884.6,492.7-884.6z"/>
+  </g>
+</g>
+<g>
+  <g>
+    <defs>
+      <rect id="SVGID_9_" x="-493" y="-1125" width="1024" height="2286"/>
+    </defs>
+    <clipPath id="SVGID_10_">
+      <use xlink:href="#SVGID_9_"  overflow="visible"/>
+    </clipPath>
+    <path clip-path="url(#SVGID_10_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M468.7-885.2h-5.2
+      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
+      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-885.2z"/>
+  </g>
+</g>
+<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M15.3,36.1c-3.4,0-6.8-0.8-9.8-2.4c-0.2-0.1-0.4-0.2-0.7-0.5l-3.2-2.1
+  h3.2c3,0,5.2-0.5,7.2-1.5c-2.2-0.8-3.7-2.4-4.7-4.7l-0.5-1.2l0.9-0.1c-1.8-1.5-2.8-3.4-3.1-6l-0.1-1.3L6,16.6
+  C4.5,14,4.5,11.3,5.8,8.5L6.6,7l1,1.2c3.4,4.1,7.4,6.3,12.3,6.9c0-0.1,0-0.2,0-0.4c0.1-0.9,0.2-1.9,0.5-2.8c1-3.1,4.1-5.3,7.3-5.3
+  c1.3,0,2.5,0.4,3.6,1c1.6,1,2.7,1.1,4.2,0.3c0.3-0.2,0.6-0.2,0.8-0.3l0.8-0.1l1.4,0.9l-1.4,1.9L39,9.9l-0.5,1.6
+  c-0.1,0.3-0.1,0.7-0.5,1c-1.9,1.5-2.3,3.6-2.8,6l0.1,0.5C32.7,31.6,22.9,36.1,15.3,36.1z"/>
+</svg></a>
+  </li><!-- end of twitter -->
+  </ul>
+
+
+<ul class="tags">
+<a href="#"><li>WOMEN-ONLY</li></a>
+<a href="#"><li>UMOJA</li></a>
+<a href="#"><li>KENYA</li></a>
+<a href="#"><li>MATRIARCHY</li></a>
+<a href="#"><li>AFRICA</li></a>
+<a href="#"><li>POLITICS</li></a>
+
+
+</div> <!-- end of column -->
+
+      <hr>
+
+      <!-- rotating a <hr> seems to work fine in most cases, but if you prefer to use svg... -->
+      <svg
+         width="100%"
+         height="40px"
+         viewBox="0 0 100 100"
+         preserveAspectRatio="none"
+         id="svg3">
+         <!-- width and height will define the size of the svg element on the page. they could also be defined in the css file -->
+         <!-- viewbox will define the format (scale/stretch) of the svg ref. to the container element -->
+         <!-- for further info, check http://svgpocketguide.com/book/#section-3 -->
+
+         <!-- the <g> element is not strictly necessary in this case -->
+         <g id="layer2" >
+          <!-- would be equivalent to
+          <line x1="0" y1="3" x2="100" y2="38" stroke-dasharray="2,1,1,1" id="footer-line"  />
+          -->
+          <!-- for more info, check http://svgpocketguide.com/book/#section-2 -->
+          <path d="M 0,3 100,38" stroke-dasharray="2,1,1,1" id="footer-line"  />
+        </g>
+
+      </svg>
+
+     <footer>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" height="35px" xml:space="preserve">
+<polygon fill="#FAFAFA" points="1140,35 0.2,35 0.2,19 1140,27 "/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1140" y1="27" x2="0" y2="19"/>
+</svg>
+
+
+        <ul id="footer-menu">
+          <li class="copy">&copy; even up</li>
+          <li><a href="#">Info</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy & Cookies</a></li>
+        </ul>
+      </footer>
+    </div> <!-- end .container -->
+
+        <!-- for now, let's comment this out -->
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script> -->
+
+
+
+    </body>
+</html>

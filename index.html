@@ -32,6 +32,8 @@
 
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/account.css">
+        <link rel="stylesheet" href="css/photo.css">
+
         <script src="js/vendor/jquery-1.11.2.min.js"></script>        
         <script src="js/vendor/bootstrap.min.js"></script> 
         <script src="js/main.js"></script>
@@ -46,9 +48,17 @@
         <div class="navbar-header" id="topHeader">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
+
+<div class="menu-outer menu-outer-one">
+  <div class="menu-outer menu-outer-two">
+    <div class="menu-outer menu-outer-three"> 
+    </div>
+  </div>
+</div>
+            <!-- 
             <span class="icon-bar"> </span>
             <span class="icon-bar"> </span>
-            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span> -->
           </button>
           <a class="navbar-brand" href="index.html"><img src="content/img/logo.svg" alt="even up" title="even up" /></a>
 <!--modal-->
@@ -65,11 +75,11 @@
       <p>login with <a href=""><span class="login-with">google</span></a></p>
 
         <form><p class="pass-mail"> e-mail</p>
-        <input type="text"> <br>
+            <input type="text"> <br>
         <p class="pass-mail">password</p>
-        <input type="text"> 
+            <input type="text"> 
+        </form>      
 
-       </form>      
         </div>
       <div class="modal-footer">
         <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
@@ -85,7 +95,7 @@
           <input type="text" >
         </form></li>
           <li><a class="search-bar" href="#">
-          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
+          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23"
              viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
               <g transform="matrix( 1, 0, 0, 1, 0,0) ">
                 <g id="a">
@@ -99,7 +109,7 @@
           </svg>
           </a></li>
           <li><a  data-toggle="modal" data-target="#login">
-          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35" height="35"
+          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33" height="33"
           viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
           <g>
             <circle cx="21.9" cy="10.5" r="1.4"/>
@@ -128,7 +138,7 @@
               <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">yoga</a></li>
-                <li><a href="#">fitness</a></li>
+                <li><a href="indexfitness.html">fitness</a></li>
                 <li><a href="#">health</a></li>
 
               </ul>
@@ -151,14 +161,14 @@
             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">food</a></li>
-                <li><a href="#">photography</a></li>
+                <li><a href="slider.html">photography</a></li>
                 <li><a href="#">education</a></li>
                 <li><a href="#">home &amp; garden</a></li>
               </ul>
             </li>  
             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
-                <li><a href="#">Yoga</a></li>
+                <li><a href="channelyoga.html">Yoga</a></li>
                 <li><a href="#">DIY</a></li>
                 <li><a href="#">cooking</a></li>
               </ul>
@@ -167,7 +177,7 @@
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
                 <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
-                <li><a href="#">guided meditation</a><img src="content/icons/audio.svg" height="40px"></li>
+                <li><a href="#">guided meditation<img src="content/icons/audio.svg" height="40px"></a></li>
                 <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
 
               </ul>
@@ -193,7 +203,9 @@
       <div class="row">
         <a href="article.html">
         <div class="col-sm-6">
-          <img src="content/img/home-1.png" />
+
+          <img src="content/img/home-1.png"/>
+  <div class="branding">Sponsored by <i>The Guardian</i></div>
           <p class="meta">Emily Gosling – 12th April 2016</p>
           <h2 class="article-heading">Meditation and creativity: should we believe the hype?</h2>
           <h3 class="article-sub-heading">Best of the Web is a chance for us to procrastinate while pretending we are really doing work. This week’s edition covers everything from online harassment to the fees that celebs receive for nightclub appearances. </h3>
@@ -202,6 +214,7 @@
         <a href="articledoctor.html">
         <div class="col-sm-6">
           <img src="content/img/home-2.png" />
+
           <p class="meta">Rick Paulas – 12th April 2016</p>
           <h2 class="article-heading">The Internet is not a doctor!</h2>
            <h3 class="article-sub-heading">Best of the Web is a chance for us to procrastinate while pretending we are really doing work. This week’s edition covers everything from online harassment to the fees that celebs receive for nightclub appearances. </h3>
@@ -229,8 +242,9 @@
 </div>
 
       <div class="row second-row">
-        <div class="col-sm-3 no-title">
+        <div class="col-sm-3 no-title branded-article-prison">
           <img src="content/img/prison.png" />
+           <div class="branding-small">Sponsored by <i>Dove</i></div>
           <p class="meta">Jessica Rizzo – 10th Feb 2016</p>
           <h3 class="small-article-heading">Prison Yoga Is Helping Inmates Transcend Their Cells</h3>
         </div>
@@ -245,15 +259,16 @@
           <p class="meta">Charlotte Jansen – 13th April 2016</p>
           <h3 class="small-article-heading">The Ghanaian turning thousands of discarded plastic bottles into art</h3>
         </div>
-        <div class="col-sm-3">
-<!--           <h2 class="may-missed">You may have missed...</h2>
- -->          <img src="content/img/mental-health-disorders.png" />
-          <p class="meta">Hanson O'Haver – 12th April 2016</p>
+        <div class="col-sm-3 branded-article-environment">
+<!--           <h2 class="may-missed">You may have missed...</h2> -->         
+  <img src="content/img/mental-health-disorders.png"/>
+                    <div class="branding-small">Sponsored by <i>Dove</i></div>
+          <p class="meta">12th April 2016</p>
           <h3 class="small-article-heading">Why Mental Health Disorders Emerge in Your Early Twenties</h3>
         </div>
       </div>
 
-<div class="row">
+<div class="row second-row">
         <div class="col-sm-3 no-title">
           <img src="content/img/palestine.jpg" />
           <p class="meta">Jessica Rizzo – 10th Feb 2016</p>
@@ -264,7 +279,7 @@
           <p class="meta">Jackson Connor – 2nd Apr 2016</p>
           <h3 class="small-article-heading">Learning to Cook Is Helping Me Battle Depression</h3>
        </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 branded-article-environment">
           <img src="content/img/environmentalist.jpg" />
           <p class="meta">Charlotte Jansen – 13th April 2016</p>
           <h3 class="small-article-heading">How I deal with the unbearable hypocrisy of being an environmentalist</h3>
@@ -276,7 +291,32 @@
         </div>
       </div>
 
+<div class="row second-row">
+        <div class="col-sm-6 no-title horizontal-article">
+          <img src="content/img/yogapose.png" class="col-sm-4"/>
+          <p class="horizontal-meta">Emily Witt – 27th May 2016</p>
+          <h3 class="small-article-heading">The Goddess Pose by Michelle Goldberg – the strange story of how yoga became popular</h3>
+        </div>
 
+        <div class="col-sm-6 no-title horizontal-article">
+          <img src="content/img/food.jpg" class="col-sm-4"/>
+          <p class="horizontal-meta">Jackson Connor – 2nd Apr 2016</p>
+          <h3 class="small-article-heading">Learning to Cook Is Helping Me Battle Depression</h3>
+       </div>
+  </div>
+
+  <div class="row">
+        <div class="col-sm-6 branded-article-environment horizontal-article">
+          <img src="content/img/thomashedger-green.jpg" class="col-sm-4"/>
+          <p class="horizontal-meta">Charlotte Jansen – 13th April 2016</p>
+          <h3 class="small-article-heading">How I deal with the unbearable hypocrisy of being an environmentalist</h3>
+        </div>
+        <div class="col-sm-6 horizontal-article">
+          <img src="content/img/thomashedger-black.jpg" class="col-sm-4"/>
+          <p class="horizontal-meta">Hanson O'Haver – 12th April 2016</p>
+          <h3 class="small-article-heading">Walk, Jog or Dance: It's All Good for the Aging Brain</h3>
+        </div>
+      </div>
       <!-- rotating a <hr> seems to work fine in most cases, but if you prefer to use svg... -->
       <svg
          width="100%"
@@ -318,6 +358,13 @@
       </footer>
     </div> <!-- end .container -->
 
+<script>
+
+$(".menu-outer").on("touchstart", function () {
+  $(this).toggleClass("menutilt");
+console.log("touchstart")
+})  
+</script>
         
     </body>
 </html>

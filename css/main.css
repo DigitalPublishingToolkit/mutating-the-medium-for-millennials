@@ -23,6 +23,22 @@ a:active, a:focus, a:link {
   text-decoration: none;
 }
 
+
+.menu-outer {
+  border-top: 2px solid black;
+  width: 22px;
+  left:3px;
+  top:4px;
+  position: relative;
+  transition: all 0.9s ease-in-out 0s;
+}
+
+/* */
+
+.menutilt {
+      transform: rotate(50deg);
+  }
+
 img{width: 100%;}
 
 hr {
@@ -46,6 +62,41 @@ hr {
   width: 100%;
 }
 
+.second-row{
+  margin-bottom: 40px;
+}
+.branding img{
+width: auto;
+}
+.branding-small{
+  font-size: 11px;
+    margin-top: -15px;
+  background-color: #FAFAFA;
+/*  border-bottom: solid #FAFAFA 2px;
+  margin-top: -55px;*/
+  transform: rotate(-5deg);
+  float: right;
+  color: #999;
+  padding: 3px;
+
+}
+.branding{
+  margin-top: -15px;
+  background-color: #FAFAFA;
+/*  border-bottom: solid #FAFAFA 2px;
+  margin-top: -55px;*/
+  transform: rotate(-5deg);
+  float: right;
+  color: #999;
+  padding: 5px;
+}
+/*
+.branded-article-prison{
+}
+  .branded-article-environment{
+}
+*/
+
 
 /* ==========================================================================
    article page
@@ -58,7 +109,6 @@ hr {
           line-height: 1.2;
           font-weight: bold;
           margin-bottom: 10px;
-          margin-top: 10px;
         }
 
 .article-sub-heading{
@@ -113,11 +163,10 @@ margin-bottom:30px;
 
 .create-account{
   border: solid 1px #0C2443;
-  padding: 10px;
-  width: 150px
+  padding: 8px;
   text-align: center;
-   vertical-align: middle;
    margin-left: 30px;
+      margin-top: 30px;
 }
 
 a .create-account:hover{
@@ -151,17 +200,12 @@ a .create-account:hover{
 .pop-line{
   margin-top: -15px;
   margin-bottom:-5px;
-}
-
-.pop-line:hover{
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .8s ease-in-out;
+  transition: all 0.4s ease-in-out 0s;
 }
 
 .pop-line:hover{
     cursor: default;
-    transform: rotate(20deg);
-    transition: all 0.9s ease-in-out 0s;
+    transform: rotate(2deg);
 }
 .small-article-heading{
           font-size: 24px;
@@ -409,6 +453,11 @@ ul.dropdown-menu a{
 li.menu-box ul{
   border: 1px solid;
 }
+
+li.menu-box ul img{
+  width: 60px;
+  height: 50px;
+}
 .nav .open>a:focus {
 
     background-color: transparent; 
@@ -434,7 +483,7 @@ li.menu-box ul{
 }
 
 button.navbar-toggle:nth-child(1) {
-  transform: rotate(20deg);
+  transform: rotate(0deg);
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
@@ -451,21 +500,25 @@ background-color: transparent;
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
   margin-top: -20px;
 }
-/*.nav li a {font-size: 15px;}
-*/
+
 #search-form{
       padding-top: 15px;
     padding-bottom: 15px;
     display: none;
+
 }
 
 
+.search-bar{
+  margin-top: 3px;
+}
+
 #search-form input{
- font-family: Theinhardt;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #0C2443;
     line-height: 2em;
+    transform: rotate(2deg);
 }
 
 input:focus{
@@ -480,7 +533,7 @@ p.meta{
 .meta_article {
     font-family: "museo-sans";
     font-weight: 700;
-    color: #4571DB;
+    color: #929090;
 }
 
 .image-caption{
@@ -511,12 +564,23 @@ p.meta{
   border-bottom:1px solid #0C2443; 
   margin-bottom: 10px;
   line-height: 2em;
+  transform: rotate(-2deg);
 }
 
+.horizontal-article{
+  padding-left: 0;
+  padding-right: 0;
+}
 
+.horizontal-meta{
+  font-family: "freight-text-pro";
+  color: #7E7980;
+  margin-top: -5px;
+}
 
 form .pass-mail{
-  font-size: 18px;
+  font-size: 16px;
+  margin-top: 3px;
 }
 
 .modal-footer .btn{
@@ -564,31 +628,23 @@ form .pass-mail{
     border-top: 1px solid #e5e5e5;
 }
 
+.nav .open>a, .nav .open>a:hover{
+  background-color: transparent;
+}
+
+
 /* ==========================================================================
    SVG
    ==========================================================================
    */
 
-#bindi:hover{
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .8s ease-in-out;
+#bindi, #search {
+      transition: all 0.4s ease-in-out;
 }
 
-#bindi:hover{
+#bindi:hover, #search:hover {
     cursor: default;
-    transform: rotate(360deg);
-    transition: all 0.9s ease-in-out 0s;
-}
-
-#search:hover{
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .8s ease-in-out;
-}
-
-#search:hover{
-    cursor: default;
-    transform: rotate(360deg);
-    transition: all 0.9s ease-in-out 0s;
+    transform: rotate(15deg);
 }
 
 #svg3{
@@ -679,11 +735,68 @@ transition: transform 1s;
 /*figure out*/
   }
 
+ .article-heading{
+  font-size: 34px;
+ } 
+.small-article-heading{
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 1.2;
+          margin-top: 10px;
+        }
+#top-line {
+    margin-top: -18px;
+}
+
 }/* end max-width 991 */
 
 @media screen and (max-width:767px){
+  body{
+    padding-top: 0;
+  }
+  .navbar-brand{
+    margin-left: -20px;
+    margin-top: 10px;
+    width: 50%;
+  }
 
+  #myNavBar{
+background-color: #FAFAFA;
+    margin-top: 10px;
+  }
+#gray-box {
+    background-color: #FAFAFA;
+    height: 70px;
+}
+ .article-heading{
+  font-size: 26px;
+ } 
+ul.dropdown-menu li{
+}
+li.menu-box ul {
+  display: none;
+}
+
+.horizontal-article{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.horizontal-article img{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.horizontal-meta{
+  margin-top: 10px;
+}
   /* you can remove the line below, put here to make it easier to 'see' the breakpoint */
   body{/*background-color: green;*/}
 
 }/* end max-width 767 */
+.navbar-toggle{
+  margin-right: 0;
+}
+.navbar-nav{
+  margin:0;
+}
+

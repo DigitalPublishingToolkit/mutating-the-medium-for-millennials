@@ -49,7 +49,7 @@ $(document).ready(function(){
       'transform': 'rotate('+degToRotate+'deg)',
       'transform-origin': originPerc + '% 0%'
     });
-    $('output').html('<strong>Rotation </strong>' +degToRotate + '<br><strong>Rotation center (knob position)</strong> '+thumbPos+'<br>Step ' + curVal + ' of ' + maxVal + ' ('+curVal/maxVal*100+'%)');
+    // $('output').html('<strong>Rotation </strong>' +degToRotate + '<br><strong>Rotation center (knob position)</strong> '+thumbPos+'<br>Step ' + curVal + ' of ' + maxVal + ' ('+curVal/maxVal*100+'%)');
   }
 
   //initial rotation angle
