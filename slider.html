@@ -28,18 +28,22 @@
         <!-- you will write your style rules in the file below -->
         <!-- fonts -->
         <script src="https://use.typekit.net/ans3zvq.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/account.css">
-         <link rel="stylesheet" href="css/photo.css">
+        <link rel="stylesheet" href="css/photo.css">
+        <link rel="stylesheet" href="css/rotating-slider.css">
 
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>        
-        <script src="js/vendor/bootstrap.min.js"></script> 
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-        <link rel="stylesheet" href="css/rotating-slider.css">
+
+        <script src="js/vendor/jquery.touchSwipe.min.js" ></script>
+        <script src="js/rotating-slider.js"></script>
+
 
         <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
@@ -56,39 +60,40 @@
             <span class="icon-bar"> </span>
           </button>
           <a class="navbar-brand" href="index.html"><img src="content/img/logo.svg" alt="even up" title="even up" /></a>
-<!--modal-->
+      <!--modal-->
       <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="login"></h4>
-      </div>
-    
-      <div class="modal-body">
-        <p>login with <a href=""><span class="login-with">facebook</span></a></p>
-      <p>login with <a href=""><span class="login-with">google</span></a></p>
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="login"></h4>
+              </div><!-- end modal-header -->
 
-        <form><p class="pass-mail"> e-mail</p>
-        <input type="text"> <br>
-        <p class="pass-mail">password</p>
-        <input type="text"> 
+              <div class="modal-body">
+                <p>login with <a href=""><span class="login-with">facebook</span></a></p>
+                <p>login with <a href=""><span class="login-with">google</span></a></p>
 
-       </form>      
-        </div>
-      <div class="modal-footer">
-        <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
-        <a href="account.html" class="btn btn-primary">sign up</a>
-      </div>
-    </div>
-  </div>
-</div> <!--end of modal-->
-        
+                <form><p class="pass-mail"> e-mail</p>
+                  <input type="text"> <br>
+                  <p class="pass-mail">password</p>
+                  <input type="text">
+                </form>
+            </div><!-- end modal-body -->
+            <div class="modal-footer">
+              <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
+              <a href="account.html" class="btn btn-primary">sign up</a>
+            </div><!-- end modal-footer -->
+          </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+      </div> <!--end of modal-->
+
 
         <ul id="notCollapsible"  class="nav navbar-nav">
-        <li><form id="search-form">
-          <input type="text" >
-        </form></li>
+        <li>
+          <form id="search-form">
+            <input type="text" >
+          </form>
+        </li>
           <li><a class="search-bar" href="#">
           <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
              viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
@@ -128,9 +133,9 @@
         </ul><!-- end notCollapsible -->
         </div><!-- end topHeader -->
         <div id="myNavBar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav fullnav"> 
+          <ul class="nav navbar-nav fullnav">
 
-              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
+              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">yoga</a></li>
                 <li><a href="#">fitness</a></li>
@@ -138,7 +143,7 @@
 
               </ul>
             </li>
-             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
+             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">mental health</a></li>
                 <li><a href="#">meditation</a></li>
@@ -146,29 +151,29 @@
               </ul>
             </li>
 
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a> 
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">sustainability</a></li>
                 <li><a href="#">travel</a></li>
                 <li><a href="#">energy</a></li>
               </ul>
-            </li>          
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a> 
+            </li>
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">food</a></li>
                 <li><a href="#">photography</a></li>
                 <li><a href="#">education</a></li>
                 <li><a href="#">home &amp; garden</a></li>
               </ul>
-            </li>  
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a> 
+            </li>
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">Yoga</a></li>
                 <li><a href="#">DIY</a></li>
                 <li><a href="#">cooking</a></li>
               </ul>
-            </li>  
-            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a> 
+            </li>
+            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
                 <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
@@ -176,7 +181,7 @@
                 <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
 
               </ul>
-            </li>  
+            </li>
 
           </ul>
         </div><!-- end .navbar-collapse -->
@@ -194,7 +199,7 @@
 
     <div id="main-content" class="container ">
       <!-- use rows to create horizontal groups of columns -->
-   
+
    <div class="col-sm-2">
    <div class="meta_article">
 12th April 2016</div>
@@ -212,8 +217,60 @@
      <div class="col-sm-7">
 
      <div class="article-heading article-heading-photo">
-The Land of No Men</div>
-    <div id="photo-arrows">
+       <!-- The article title should be wrapped in a h1 or h2. You'll probably need to adjust styles now. :) -->
+       <h1>The Land of No Men</h1>
+     </div>
+     <!-- image gallery wrapper -->
+     <div >
+       <ul id="article-image-gallery">
+         <li class="currentImg">
+           <img src="content/img/womenonly.jpg" alt="Village of Kenya Sundance" />
+         </li>
+         <li>
+           <img src="content/img/yogapose.png" alt="IMG 2 Yoga Pose" />
+         </li>
+         <li>
+           <img src="content/img/womenonly.jpg" alt="IMG 3 Village of Kenya Sundance" />
+         </li>
+         <li>
+           <img src="content/img/yogapose.png" alt="IMG 4 Yoga Pose again" />
+         </li>
+       </ul>
+     </div><!-- end image-gallery -->
+     <p id="article-image-gallery-text" class="image-caption caption-photo">
+       <span class="counter">1 of 16</span> <span class="caption">Caption (via JS)</span>
+       <span id="fullscreen">
+         <svg version="1.1"
+        id="fullscreen" x="0px" y="0px" width="22px" height="22px" fill="#929090" stroke="#929090" stroke-width="1px"
+        viewBox="0 42 156 158" enable-background="new 0 42 156 158" xml:space="preserve">
+           <g transform="translate(0,-952.36218)">
+             <path d="M101.1,1003.6c-0.9,0.1-1.5,0.9-1.4,1.8s0.9,1.5,1.8,1.5h40.9L13.4,1135.7v-40.9c0-0.9-0.7-1.6-1.5-1.7c-0.1,0-0.2,0-0.3,0
+               c-0.8,0.1-1.4,0.8-1.4,1.7v44.8c0,0.9,0.7,1.6,1.6,1.6h44.8c0.9,0,1.6-0.7,1.6-1.6c0-0.9-0.7-1.6-1.6-1.6c0,0,0,0,0,0h-41
+               l129-128.9v40.9c0,0.9,0.7,1.6,1.6,1.6c0.9,0,1.6-0.7,1.6-1.6c0,0,0,0,0,0v-44.8c0-0.9-0.7-1.6-1.6-1.6h-44.8
+               C101.3,1003.6,101.2,1003.6,101.1,1003.6z"/>
+           </g>
+         </svg>
+       </span>
+     </p><!-- end .image-caption caption-photo -->
+     <div id="gallery-nav">
+       <div id="prev" >
+         <svg id="left-arrow" x="0px" y="0px"
+            width="28px" height="80px" viewBox="153.6 -33 33.4 92.1" enable-background="new 153.6 -33 33.4 92.1" xml:space="preserve">
+         <path d="M178.8-30.2l-20.3,42.5c0,0,0,0,0,0.1c0,0.1,0,0.2-0.1,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.2,0.1,0.2
+           c0,0,0,0,0,0.1l20.3,42.5c0.3,0.6,1,0.9,1.6,0.6c0.4-0.2,0.7-0.6,0.7-1.1c0-0.2,0-0.3-0.1-0.5l-20.1-42l20.1-42
+           c0.1-0.2,0.1-0.3,0.1-0.5c0-0.4-0.2-0.9-0.7-1.1C179.8-31.1,179.1-30.8,178.8-30.2z"/>
+         </svg>
+       </div>
+       <div id="next">
+         <svg id="right-arrow" x="0px" y="0px"
+            width="28px" height="80px" viewBox="153.6 -33 33.4 92.1" enable-background="new 153.6 -33 33.4 92.1" xml:space="preserve">
+         <path d="M178.8-30.2l-20.3,42.5c0,0,0,0,0,0.1c0,0.1,0,0.2-0.1,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.2,0.1,0.2
+           c0,0,0,0,0,0.1l20.3,42.5c0.3,0.6,1,0.9,1.6,0.6c0.4-0.2,0.7-0.6,0.7-1.1c0-0.2,0-0.3-0.1-0.5l-20.1-42l20.1-42
+           c0.1-0.2,0.1-0.3,0.1-0.5c0-0.4-0.2-0.9-0.7-1.1C179.8-31.1,179.1-30.8,178.8-30.2z"/>
+         </svg>
+       </div>
+     </div>
+     <!-- <div id="photo-arrows">
          <a href="#">
               <svg version="1.1" id="left-arrow" x="0px" y="0px"
                  width="28px" height="80px" viewBox="153.6 -33 33.4 92.1" enable-background="new 153.6 -33 33.4 92.1" xml:space="preserve">
@@ -228,15 +285,16 @@ The Land of No Men</div>
               <path d="M160.7,55.9L181,13.3c0,0,0,0,0-0.1c0-0.1,0-0.2,0.1-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.2-0.1-0.2
                 c0,0,0,0,0-0.1l-20.3-42.5c-0.3-0.6-1-0.9-1.6-0.6c-0.4,0.2-0.7,0.6-0.7,1.1c0,0.2,0,0.3,0.1,0.5l20.1,42l-20.1,42
                 c-0.1,0.2-0.1,0.3-0.1,0.5c0,0.4,0.2,0.9,0.7,1.1C159.7,56.7,160.4,56.5,160.7,55.9z"/>
-              </svg>        
-               </div>
+              </svg>
+
         </a>
-<img src="content/img/womenonly.jpg">
+        </div> -->
+<!-- <img src="content/img/womenonly.jpg"> -->
 
 
-<div class="image-caption caption-photo">Village of Kenya Sundance
+<!-- <div class="image-caption caption-photo">Village of Kenya Sundance</div> -->
 
-<a href="fullscreen.html">
+<!-- <a href="fullscreen.html">
 <svg version="1.1"
    id="fullscreen" x="0px" y="0px" width="22px" height="22px" fill="#929090" stroke="#929090" stroke-width="1px"
    viewBox="0 42 156 158" enable-background="new 0 42 156 158" xml:space="preserve">
@@ -247,21 +305,24 @@ The Land of No Men</div>
     C101.3,1003.6,101.2,1003.6,101.1,1003.6z"/>
 </g>
 </svg>
-</a>
-</div>
-<div id="content">
-    <div id="form-container">
-      <form style="min-height: 100px;">
-        <input id="slider" name="slider" type="range" step="1" value="9" min="1" max="30" />
-        <output for="slider">1 of 16</output>
-      </form>
-    </div>
-</div>
- <div class="article-sub-heading article-sub-heading-photo"> Where the foothills of Mount Kenya merge into the desert, the people of Samburu have maintained a strict patriarchy for over 500 years in northern Kenya. That is, until 25 years ago, when Rebecca Lolosoli founded Umoja village as a safe haven for the region's women. Umoja, which means "unity" in Swahili, is quite literally a no man's land, and the matriarchal refuge is now home to the Samburu women who no longer want to suffer abuses, like genital mutilation and forced marriages, at the hands of men.
-     Photographs by Rick Paulas</div>
-  <script src="js/rotating-slider.js"></script>
+</a> -->
 
- 
+<!-- <div id="content"> -->
+    <!-- <div id="form-container"> -->
+      <form>
+        <input id="slider" name="slider" type="range" step="1" value="1" min="1" max="10" />
+        <!-- <output for="slider">1 of 16</output> -->
+      </form>
+    <!-- </div> -->
+<!-- </div> -->
+ <div class="article-sub-heading article-sub-heading-photo">
+   <p> Where the foothills of Mount Kenya merge into the desert, the people of Samburu have maintained a strict patriarchy for over 500 years in northern Kenya. That is, until 25 years ago, when Rebecca Lolosoli founded Umoja village as a safe haven for the region's women. Umoja, which means "unity" in Swahili, is quite literally a no man's land, and the matriarchal refuge is now home to the Samburu women who no longer want to suffer abuses, like genital mutilation and forced marriages, at the hands of men.</p>
+   <p id="photo-credits">Photographs by Rick Paulas</p><!-- should the credits be before the text? -->
+   </div>
+ <!-- <script src="js/rotating-slider.js"></script> -->
+ <!-- moved to the <head> -->
+
+
 
 <div class="send-top">
  <a href="#"><svg class="top-arrow" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
