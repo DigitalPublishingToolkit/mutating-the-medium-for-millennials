@@ -61,9 +61,12 @@ hr {
 #topHeader{
   width: 100%;
 }
+.row{
+  margin-bottom:40px}
+
 
 .second-row{
-  margin-bottom: 40px;
+  margin-bottom: -40px;
 }
 .branding img{
 width: auto;
@@ -176,27 +179,30 @@ a .create-account:hover{
 
 }
 
+.comments{
+ margin-top: 70px; 
+}
 .comments-title{
- font-size: 30px;
+ font-size: 26px;
  line-height: 1.2;
  margin-top: 40px; 
  margin-bottom: 20px; 
 }
 
-.most-popular{ 
+.most-popular .may-missed{ 
   float: right;
   font-size: 24px;
-  padding-bottom: 6px;
-/*  border-bottom: 1px solid #0C2443;
-*/
 }
 
-.may-missed{ 
-    float: right;
-  font-size: 24px;
-  padding-bottom: 6px;
-/*  border-bottom: 1px solid #0C2443;
-*/}
+
+.most-popular {
+    margin-left: -16px;
+}
+
+.may-missed{
+     margin-left: 16px; 
+}
+
 .pop-line{
   margin-top: -15px;
   margin-bottom:-5px;
@@ -262,6 +268,7 @@ margin-top: 60px;
     fill:#265AD9;
 }
 
+
 #comment:hover{   
   fill:#265AD9;
   stroke-width:3px;
@@ -301,7 +308,8 @@ margin-top: 60px;
 }
 
 .navbar-brand{
-  width: 220px;
+  width: 200px;
+  padding: 5px 5px;
 }
 
 nav .navbar-nav .fullnav{
@@ -470,7 +478,6 @@ li.menu-box ul img{
     font-weight: bold;
     text-decoration: none;
     background-color: transparent;
-
 }
 
 .main-menu{
@@ -727,6 +734,9 @@ transition: transform 1s;
   /* you can remove the line below, put here to make it easier to 'see' the breakpoint */
   body{/*background-color: red;*/}
 
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+  display: none;
+}
   /* try commenting it out to see what happens */
   .fullnav > li {
       width: 92px;
@@ -744,8 +754,9 @@ transition: transform 1s;
           line-height: 1.2;
           margin-top: 10px;
         }
+
 #top-line {
-    margin-top: -18px;
+    margin-top: -20px;
 }
 
 }/* end max-width 991 */
