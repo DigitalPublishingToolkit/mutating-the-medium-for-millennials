@@ -29,7 +29,79 @@
 
 $(document).ready(function(){
 
-  var thumbPos, origin, originPerc, degToRotate, minVal, maxVal, curVal, sliderWidth;
+  //gallery mechanism
+  var numImg = $('#article-image-gallery').children().length; //total images
+  var imgCounter = 0; //initial image
+  var imgCounterCaption = (imgCounter+1) + ' of ' + numImg;
+  var imgCaption = $('.currentImg img').attr('alt');
+
+  //count and caption, initial
+  $('.counter').text(imgCounterCaption); //count and caption
+  $('.caption').text(imgCaption);
+
+  function setCaption(c){
+    //count and caption
+    imgCounterCaption = (c+1) + ' of ' + numImg;
+    imgCaption = $('.currentImg img').attr('alt');
+    $('.counter').text(imgCounterCaption); //count and caption
+    $('.caption').text(imgCaption);
+  }
+
+  function nextImg(){
+    if(imgCounter < numImg -1){
+      imgCounter++;
+    }else{
+      imgCounter = 0;
+    }
+    //set .currentImg
+    $('.currentImg').removeClass('currentImg');
+    $('#article-image-gallery li').eq(imgCounter).addClass('currentImg');
+
+    //count and caption
+    setCaption(imgCounter);
+  }
+
+  function prevImg(){
+    if(imgCounter > 0){
+      imgCounter--;
+    }else{
+      imgCounter = numImg -1;
+    }
+    //set .currentImg
+    $('.currentImg').removeClass('currentImg');
+    $('#article-image-gallery li').eq(imgCounter).addClass('currentImg');
+
+    //count and caption
+    setCaption(imgCounter);
+  }
+
+  //click
+  $('#next').on('click', function(){
+    nextImg();
+  });
+
+  $('#prev').on('click', function(){
+    prevImg();
+  });
+
+  //swipe (TO DO)
+
+
+  //keyboard arrow
+  $("body").keydown(function(e) {
+    if(e.keyCode == 37) { // left
+      prevImg();
+    }
+    else if(e.keyCode == 39) { // right
+      nextImg();
+    }
+  });
+
+
+  //end gallery mechanism
+
+
+  var thumbPos, origin, originPerc, degToRotate, minVal, maxVal, curVal, lastVal, sliderWidth;
 
   var scale = d3.scale.linear()
                       .domain([0, 25, 50, 75, 100])
@@ -38,6 +110,7 @@ $(document).ready(function(){
   function setRotation(w){
     sliderWidth = w;
     //sliderWidth = $('#slider').width();
+    $('#slider').prop('max', numImg);
     minVal = $('#slider').prop('min');
     maxVal = $('#slider').prop('max');
     curVal = $('#slider').val();
@@ -58,7 +131,10 @@ $(document).ready(function(){
   //on input change
   $("#slider").on("input change", function(){
     setRotation($(this).width());
+    //call prev next img functions
   });
+
+
 
   //on resize
   $(window).smartresize(function(){
