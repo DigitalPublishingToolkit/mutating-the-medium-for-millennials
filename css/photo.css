@@ -4,9 +4,13 @@
 .caption-photo{
 	color: #929090;
 	font-size: 14px;
-	padding-top: 5px;
+
 	margin-top: 0;
 
+}
+
+#article-image-gallery-text{
+		margin-top: 15px;	
 }
 
 .fullscreen-background{
@@ -19,45 +23,64 @@
 	padding-right: 0;
 }
 
-.article-heading-photo{
+ .article-heading-photo{
+	font-size: 38px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: -10px;
 }
 
 .article-sub-heading-photo{
+	margin-top: 30px;
 }
 
 #left-arrow{
 	fill:#265AD9;
-    background-color: rgba(238,238,238,.7);	
+    background-color: rgba(249,249,249,.5);	
 	padding: 3px;
+	transition: all 0.4s ease-in-out 0s;
 }
 
 #left-arrow-full{
 	margin-left: -60px;
 	fill:#FAFAFA;
 	padding: 3px;
+	transition: all 0.4s ease-in-out 0s;	
 }
 
 #left-arrow:hover{
-	fill:red;
 	 stroke-width:3px;
+	 transform: rotate(-5deg);
+}
+
+#left-arrow-full:hover{
+	 stroke-width:3px;
+	 transform: rotate(-5deg);
 }
 
 #right-arrow{
 	padding: 3px;
 	float: right;
 	fill:#265AD9 ;
-    background-color: rgba(238,238,238,.7);	
+    background-color: rgba(249,249,249,.5);
+    transition: all 0.4s ease-in-out 0s;	
 }
 #right-arrow-full{
 	margin-right: -60px;
 	padding: 3px;
 	float: right;
 	fill:#FAFAFA ;
+	transition: all 0.4s ease-in-out 0s;	
 }
 
 #right-arrow:hover{
-	transition: 
-	fill:red;
+	 stroke-width:3px; 
+	 transform: rotate(5deg);
+}
+
+#right-arrow-full:hover{
+	 stroke-width:3px; 
+	 transform: rotate(5deg);
 }
 
 #photo-arrows{
@@ -66,15 +89,14 @@
 	position: absolute;
 }
 
-#photo-arrows-full{
-	margin-top: 300px;
-	width: 80%;
-	position: absolute;
-}
-
 #exit{
 	float: right;
 	margin-right: -40px;
+}
+
+#photo-credits{
+	color: #929090;
+	font-size: 12px;
 }
 
 .image-number{

@@ -28,17 +28,22 @@
         <!-- you will write your style rules in the file below -->
         <!-- fonts -->
         <script src="https://use.typekit.net/ans3zvq.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/account.css">
         <link rel="stylesheet" href="css/photo.css">
-        <link rel="stylesheet" href="css/channel.css">
+        <link rel="stylesheet" href="css/rotating-slider.css">
 
-
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>        
-        <script src="js/vendor/bootstrap.min.js"></script> 
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+        <script src="js/vendor/jquery.touchSwipe.min.js" ></script>
+        <script src="js/rotating-slider.js"></script>
+
 
         <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
@@ -50,54 +55,47 @@
         <div class="navbar-header" id="topHeader">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
-
-<div class="menu-outer menu-outer-one">
-  <div class="menu-outer menu-outer-two">
-    <div class="menu-outer menu-outer-three"> 
-    </div>
-  </div>
-</div>
-            <!-- 
             <span class="icon-bar"> </span>
             <span class="icon-bar"> </span>
-            <span class="icon-bar"> </span> -->
+            <span class="icon-bar"> </span>
           </button>
           <a class="navbar-brand" href="index.html"><img src="content/img/logo.svg" alt="even up" title="even up" /></a>
-<!--modal-->
+      <!--modal-->
       <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="login"></h4>
-      </div>
-    
-      <div class="modal-body">
-        <p>login with <a href=""><span class="login-with">facebook</span></a></p>
-      <p>login with <a href=""><span class="login-with">google</span></a></p>
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="login"></h4>
+              </div><!-- end modal-header -->
 
-        <form><p class="pass-mail"> e-mail</p>
-            <input type="text"> <br>
-        <p class="pass-mail">password</p>
-            <input type="text"> 
-        </form>      
+              <div class="modal-body">
+                <p>login with <a href=""><span class="login-with">facebook</span></a></p>
+                <p>login with <a href=""><span class="login-with">google</span></a></p>
 
-        </div>
-      <div class="modal-footer">
-        <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
-        <a href="account.html" class="btn btn-primary">sign up</a>
-      </div>
-    </div>
-  </div>
-</div> <!--end of modal-->
-        
+                <form><p class="pass-mail"> e-mail</p>
+                  <input type="text"> <br>
+                  <p class="pass-mail">password</p>
+                  <input type="text">
+                </form>
+            </div><!-- end modal-body -->
+            <div class="modal-footer">
+              <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
+              <a href="account.html" class="btn btn-primary">sign up</a>
+            </div><!-- end modal-footer -->
+          </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+      </div> <!--end of modal-->
+
 
         <ul id="notCollapsible"  class="nav navbar-nav">
-        <li><form id="search-form">
-          <input type="text" >
-        </form></li>
+        <li>
+          <form id="search-form">
+            <input type="text" >
+          </form>
+        </li>
           <li><a class="search-bar" href="#">
-          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23"
+          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
              viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
               <g transform="matrix( 1, 0, 0, 1, 0,0) ">
                 <g id="a">
@@ -111,7 +109,7 @@
           </svg>
           </a></li>
           <li><a  data-toggle="modal" data-target="#login">
-          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33" height="33"
+          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35" height="35"
           viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
           <g>
             <circle cx="21.9" cy="10.5" r="1.4"/>
@@ -135,55 +133,55 @@
         </ul><!-- end notCollapsible -->
         </div><!-- end topHeader -->
         <div id="myNavBar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav fullnav"> 
+          <ul class="nav navbar-nav fullnav">
 
-              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
+              <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">yoga</a></li>
-                <li><a href="indexfitness.html">fitness</a></li>
+                <li><a href="#">fitness</a></li>
                 <li><a href="#">health</a></li>
 
               </ul>
             </li>
-             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="mindmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="mindmenu">
+             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">mental health</a></li>
-                <li><a href="indexmeditation.html">meditation</a></li>
+                <li><a href="#">meditation</a></li>
                 <li><a href="#">relationships</a></li>
               </ul>
             </li>
 
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="earthmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="earthmenu">
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">sustainability</a></li>
                 <li><a href="#">travel</a></li>
-                <li><a href="indexenergy.html">energy</a></li>
+                <li><a href="#">energy</a></li>
               </ul>
-            </li>          
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="moremenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="moremenu">
+            </li>
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">food</a></li>
-                <li><a href="slider.html">photography</a></li>
+                <li><a href="#">photography</a></li>
                 <li><a href="#">education</a></li>
                 <li><a href="#">home &amp; garden</a></li>
               </ul>
-            </li>  
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="channelmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="channelmenu">
-                <li><a href="channelyoga.html">Yoga</a></li>
+            </li>
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">Yoga</a></li>
                 <li><a href="#">DIY</a></li>
                 <li><a href="#">cooking</a></li>
               </ul>
-            </li>  
-            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="unevenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="unevenmenu">
-                <li><a href="article.html">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
+            </li>
+            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+                <li><a href="#">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
                 <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
-                <li><a href="#">guided meditation<img src="content/icons/audio.svg" height="40px"></a></li>
+                <li><a href="#">guided meditation</a><img src="content/icons/audio.svg" height="40px"></li>
                 <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
 
               </ul>
-            </li>  
+            </li>
 
           </ul>
         </div><!-- end .navbar-collapse -->
@@ -198,14 +196,14 @@
 
       </div><!-- end .container -->
     </nav>
-    <!-- navbar ends, main content starts HERE -->
-    <div id="main-content" class="container">
+
+    <div id="main-content" class="container ">
       <!-- use rows to create horizontal groups of columns -->
-   
+
    <div class="col-sm-2">
-   <div class="meta_article">Rick Paulas<br> 
-12th April 2016</div>
-<a href="#comment-section">
+  <div class="meta_article">Stuart Haygarth<br> 
+  11th April 2016</div>
+<a href="#">
 <svg id="comment" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
    x="0px" y="0px" width="25px" height="25px" viewBox="97 0 192 200" xml:space="preserve">
 <path d="M205.2,170.1v-30.7h-64.2c-8,0-14.4-6.4-14.4-14.4V48.8c0-8,6.4-14.4,14.4-14.4h107.2c8,0,14.4,6.4,14.4,14.4V125
@@ -218,245 +216,98 @@
 
      <div class="col-sm-7">
 
-     <div class="article-heading">
-     Meditation and creativity: should we believe the hype?
+
+       <!-- The article title should be wrapped in a h1 or h2. You'll probably need to adjust styles now. :) -->
+       <h1 class="article-heading-photo">One man's trash: the filtered flotsam of artist Stuart Haygarth</h1>
+    
+          <p id="article-image-gallery-text" class="image-caption caption-photo">
+       <span class="counter">1 of 16</span> <span class="caption">Caption (via JS)</span>
+       <a href="fullscreen-trash.html">
+              <svg version="1.1"
+                 id="fullscreen" x="0px" y="0px" width="22px" height="22px" fill="#929090" stroke="#929090" stroke-width="1px"
+                 viewBox="0 42 156 158" enable-background="new 0 42 156 158" xml:space="preserve">
+              <g transform="translate(0,-952.36218)">
+                <path d="M101.1,1003.6c-0.9,0.1-1.5,0.9-1.4,1.8s0.9,1.5,1.8,1.5h40.9L13.4,1135.7v-40.9c0-0.9-0.7-1.6-1.5-1.7c-0.1,0-0.2,0-0.3,0
+                  c-0.8,0.1-1.4,0.8-1.4,1.7v44.8c0,0.9,0.7,1.6,1.6,1.6h44.8c0.9,0,1.6-0.7,1.6-1.6c0-0.9-0.7-1.6-1.6-1.6c0,0,0,0,0,0h-41
+                  l129-128.9v40.9c0,0.9,0.7,1.6,1.6,1.6c0.9,0,1.6-0.7,1.6-1.6c0,0,0,0,0,0v-44.8c0-0.9-0.7-1.6-1.6-1.6h-44.8
+                  C101.3,1003.6,101.2,1003.6,101.1,1003.6z"/>
+              </g>
+              </svg>
+        </a>
+     </p><!-- end .image-caption caption-photo -->
+     <!-- image gallery wrapper -->
+     <div >
+       <ul id="article-image-gallery">
+         <li class="currentImg">
+           <img src="content/img/trash1.png" alt="Collection (Blue)" />
+         </li>
+         <li>
+           <img src="content/img/trash2.png" alt="Cigarette Lighters" />
+         </li>
+         <li>
+           <img src="content/img/trash3.png" alt="Combs" />
+         </li>
+         <li>
+           <img src="content/img/trash4.png" alt="Toys" />
+         </li>
+         <li>
+           <img src="content/img/trash5.png" alt="Floor Vinyl" />
+         </li>
+         <li>
+           <img src="content/img/trash6.png" alt="Balls" />
+         </li>
+         <li>
+           <img src="content/img/trash7.png" alt="Swimming Hat" />
+         </li>
+         <li>
+           <img src="content/img/trash8.png" alt="Graphics" />
+         </li>
+         <li>
+           <img src="content/img/trash9.png" alt="Rubber Gloves" />
+         </li>
+       </ul>
+     </div><!-- end image-gallery -->
+
+
+     <div id="gallery-nav">
+       <div id="prev" >
+         <svg id="left-arrow" x="0px" y="0px"
+            width="28px" height="80px" viewBox="153.6 -33 33.4 92.1" enable-background="new 153.6 -33 33.4 92.1" xml:space="preserve">
+         <path d="M178.8-30.2l-20.3,42.5c0,0,0,0,0,0.1c0,0.1,0,0.2-0.1,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.2,0.1,0.2
+           c0,0,0,0,0,0.1l20.3,42.5c0.3,0.6,1,0.9,1.6,0.6c0.4-0.2,0.7-0.6,0.7-1.1c0-0.2,0-0.3-0.1-0.5l-20.1-42l20.1-42
+           c0.1-0.2,0.1-0.3,0.1-0.5c0-0.4-0.2-0.9-0.7-1.1C179.8-31.1,179.1-30.8,178.8-30.2z"/>
+         </svg>
+       </div>
+       <div id="next">
+         <svg id="right-arrow" x="0px" y="0px"
+            width="28px" height="80px" viewBox="153.6 -33 33.4 92.1" enable-background="new 153.6 -33 33.4 92.1" xml:space="preserve">
+         <path d="M178.8-30.2l-20.3,42.5c0,0,0,0,0,0.1c0,0.1,0,0.2-0.1,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.2,0.1,0.2
+           c0,0,0,0,0,0.1l20.3,42.5c0.3,0.6,1,0.9,1.6,0.6c0.4-0.2,0.7-0.6,0.7-1.1c0-0.2,0-0.3-0.1-0.5l-20.1-42l20.1-42
+           c0.1-0.2,0.1-0.3,0.1-0.5c0-0.4-0.2-0.9-0.7-1.1C179.8-31.1,179.1-30.8,178.8-30.2z"/>
+         </svg>
+       </div>
+     </div>
+
+<div id="content">
+    <div id="form-container">
+      <form>
+        <input id="slider" name="slider" type="range" step="1" value="1" min="1" max="10" />
+        <!-- <output for="slider">1 of 16</output> -->
+      </form>
+    </div>
 </div>
-     <div class="article-sub-heading">Best of the Web is a chance for us to procrastinate while pretending we are really doing work. This week’s edition covers everything from online harassment to the fees that celebs receive for nightclub appearances. Listed below are the articles and videos that have caught the attention of.</div>
-<img src="content/img/home-1.png">
-<div class="image-caption">Illustration: Christoper DeLorenzo</div>
-  <div class="article-text">
-The Friends of Abe has acted as a clandestine club for Hollywood conservatives for more than a decade, hosting secret events where they could vent rightwing views and hear speeches from visiting Tea Party luminaries.
-<br><br>
-But on Thursday the organisation – which counts Jon Voight, Jerry Bruckheimer and Kelsey Grammer among its 1,500 members – made an abrupt announcement: it was dissolving.
-<br><br>
-<i>Effective immediately, we are going to begin to wind down the 501 c3 organization, bring the Sustaining Membership dues to an end, and do away with the costly infrastructure and the abespal.com website,</i> the executive director, Jeremy Boreing, told members in an email, a copy of which the Guardian has seen.
-<br><br>
-<i>Today, because we have been successful in creating a community that extends far beyond our events, people just don’t feel as much of a need to show up for every speaker or bar night, and fewer people pay the dues that help us maintain that large infrastructure.</i>
-<br><br>
-The announcement caught members by surprise and fueled speculation that infighting over Donald Trump’s candidacy, among other factors, had drained commitment. Others said the group had been losing steam for years.
-<br><br>
-Instead of electrifying the organisation, California’s 7 June primary, a final and potentially decisive showdown between Trump and his GOP rivals Ted Cruz and John Kasich, appeared to frazzle it.
-<br><br>
-Why California is Republicans' best bet to stop Trump
- Read more
-Lionel Chetwynd, a producer and screenwriter and co-founder of the FOA, recently spoke of the primary campaign causing a <i>civil war in slow motion</i>, which fractured friendships and shredded solidarity.
-<br><br>
-Boreing, a director and producer, put a positive gloss on the announcement, saying the initial hunger for fellowship had prompted the group to build an expensive website, rent offices and hire staff, including lawyers and accountants.
-<br><br>
-<i>It’s time to change how we do it. As our group has grown in size and success, many of the structures that helped us grow have become less useful. ... It means an end to the standing organization, but not an end to the mission or the fellowship.</i>
-<br><br>
-Boreing vowed to maintain the mailing list and stage events, but without the infrastructure, staff or budget requirements.
-<br><br>
-<i>We will still get together for drinks and speakers, but we may reassess how we approach those events logistically. In short, FOA will return to its roots. It will be a passion project, like it was in the beginning... We’ll still be a private organization that protects the names of our members at all costs.</i>
-<br><br>
-Boreing did not immediately respond to interview requests.
-<br><br>
-Members expressed surprise and dismay at the weakening, and perhaps loss, of a refuge from what they see as Hollywood’s bullying liberal ethos.
-<br><br>
-It was the one place where many of its members – actors, producers, writers and technicians – felt safe from liberal sneers and potential retribution.
-<br><br>
-<i>As a conservative, if you expressed your political views at work you would be weeded out,</i> said Jack Marino, a film-maker. <i>At Abe events we could get together over dinner and hang out with our own kind and speak freely.</i>
-<br><br>
-Another member, speaking on condition of anonymity, expressed bafflement and disappointment at the group’s winding down.
-<br><br>
-John Kasich clings to hope with Philadelphia rally – as it happened
-Follow live updates from the campaign trail as Clinton meets with families of gun violence victims and John Kasich holds a rally in Philadelphia
- Read more
-Formed in 2005, high-profile supporters include Clint Eastwood, Gary Sinise and Patricia Heaton, who played Debra Barone in the sitcom Everybody Loves Raymond.
-<br><br>
-The group, named after Abraham Lincoln, swore members to secrecy by adopting a line from the film Fight Club: the first rule of the Friends of Abe is you do not talk about the Friends of Abe.
-
-For a time it ran a tightly controlled Facebook page and banned members from talking to the press, taking pictures or tweeting at events – rules occasionally breached.
-
-In addition to Trump and Cruz, the group hosted the likes of Antonin Scalia, Dick Cheney, John Boehner and Rush Limbaugh at venues around Los Angeles, including the Reagan library, the Luxe Hotel and the Bistro Garden.
-
-It became more widely known – and a rallying point for Republicans – when news leaked in 2014 that the Internal Revenue Service was investigating the group in connection with its application for tax-exempt status. The IRS subsequently granted the status.</div>
-
- <ul class="end_article_icons">
-  <li><a data-toggle="modal" data-target="#login" ><svg version="1.1" id="star-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30"
-   viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-<path d="M38.9,15.1c-0.1-0.3-0.4-0.5-0.7-0.6l-12-1.6L21.1,2.1c-0.1-0.3-0.4-0.5-0.8-0.5s-0.6,0.2-0.8,0.5L14.4,13l-12,1.6
-  c-0.3,0-0.6,0.3-0.7,0.6s0,0.6,0.2,0.8l8.8,8.3L8.5,36.2c0,0.3,0.1,0.6,0.3,0.8c0.3,0.2,0.6,0.2,0.9,0l10.6-5.8L30.9,37
-  c0.1,0.1,0.3,0.1,0.4,0.1c0.2,0,0.3,0,0.5-0.2c0.3-0.2,0.4-0.5,0.3-0.8L30,24.2l8.7-8.2C38.9,15.8,39,15.5,38.9,15.1z M28.4,23.4
-  c-0.2,0.2-0.3,0.5-0.3,0.8l2,10.6l-9.4-5.2c-0.1-0.1-0.3-0.1-0.4-0.1c-0.2,0-0.3,0-0.4,0.1l-9.4,5.2l2-10.6c0-0.3,0-0.6-0.3-0.8
-  L4.4,16l10.7-1.4c0.3,0,0.6-0.2,0.6-0.5l4.6-9.7l4.6,9.7c0.1,0.3,0.4,0.4,0.6,0.5L36.2,16L28.4,23.4z"/>
-</svg>
-</a></li>
-
-  <li><a data-toggle="modal" data-target="#login" href="#"><svg version="1.1" id="bookmark-icon"
-   id="Layer_1" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px"
-   viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<g>
-  <path stroke="#000000" d="M11.4,37V5.1c0-1.5,1.8-2.9,3.2-2.9h11.6c1.2,0,3.2,1.7,3.2,2.9V37l-9-9L11.4,37z M20.5,27.5l8.7,8.7V5.1
-    c0-0.9-1.7-2.6-2.8-2.6H14.8c-1.2,0-2.9,1.3-2.9,2.6v31.1L20.5,27.5z"/>
-</g>
-</svg>
-
-</a></li>
-
-  <li><a href="content/img/printed.pdf" target="blank"><svg version="1.1" id="print-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30"
-   viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-<g><g>
-    <path d="M32.4,14.9H7.9c-1.9,0-3.5,1.5-3.5,3.5v7.5c0,1.9,1.5,3.5,3.5,3.5h4.3v-1.3H7.9c-1.3,0-2.2-1-2.2-2.2v-7.5
-      c0-1.3,1-2.2,2.2-2.2h24.5c1.3,0,2.2,1,2.2,2.2v7.5c0,1.3-1,2.2-2.2,2.2h-4v1.3h4c1.9,0,3.5-1.5,3.5-3.5v-7.5
-      C35.9,16.5,34.3,14.9,32.4,14.9z"/>
-  </g><g>
-    <path d="M29.7,16.2H11V3.4h18.7V16.2z M12.2,14.9h16.2V4.7H12.2V14.9z"/>
-  </g><g>
-    <path d="M11,22.9v12.8h18.7V22.9H11z M28.4,34.4H12.2V24.1h16.2V34.4z"/>
-  </g><g><g>
-      <rect x="14.5" y="26.2" width="11.9" height="0.9"/>
-    </g><g>
-      <rect x="14.5" y="28.9" width="11.9" height="0.9"/>
-    </g><g>
-      <rect x="14.5" y="31.5" width="6" height="0.9"/>
-    </g></g></g>
-</svg></a></li>
- 
-
-<!-- share twitter and facebook -->
-  
-  <li><a href="#">
-    <svg version="1.1" id="facebook-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="30px" height="30px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<g>
-  <defs>
-    <rect id="SVGID_1_" x="-492" y="-1123" width="1024" height="2286"/>
-  </defs>
-  <clipPath id="SVGID_2_">
-    <use xlink:href="#SVGID_1_"  overflow="visible"/>
-  </clipPath>
-  <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
-    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
-  <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
-    c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4l2.1,0c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
-    c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
-    c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2l0.5-0.1
-    l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4L506-896C504.3-887.6,497.8-884.6,492.7-884.6z"/>
-</g>
-<g>
-  <defs>
-    <rect id="SVGID_3_" x="-492" y="-1123" width="1024" height="2286"/>
-  </defs>
-  <clipPath id="SVGID_4_">
-    <use xlink:href="#SVGID_3_"  overflow="visible"/>
-  </clipPath>
-  <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
-    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
-  <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
-    c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4l2.1,0c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
-    c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
-    c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2l0.5-0.1
-    l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4L506-896C504.3-887.6,497.8-884.6,492.7-884.6z"/>
-</g>
-<g>
-  <defs>
-    <rect id="SVGID_5_" x="-493" y="-1125" width="1024" height="2286"/>
-  </defs>
-  <clipPath id="SVGID_6_">
-    <use xlink:href="#SVGID_5_"  overflow="visible"/>
-  </clipPath>
-  <path clip-path="url(#SVGID_6_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M468.7-885.2h-5.2
-    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-885.2z"/>
-</g>
-<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M23,38.2h-8.6V22.6H9.1V14h5.1c0-0.3,0-0.6,0-0.9c0-1.4,0.1-2.7,0.2-4
-  c0.5-4.9,3.4-7.6,8.3-7.9c0.2,0,0.4,0,0.6,0c2.8-0.1,4.5,0,5.4,1.2c1,1.2,0.8,3.1,0.3,5.9L29,9.3l-3,0c-0.4,0-0.9,0-1.4,0
-  c-1.4,0-1.6,0.6-1.6,1.6V14h6.2l-1,8.3H23V38.2z"/>
-</svg></a>
-  </li><!-- end of facebook -->
-
-  <li><a href="#">
-    <svg version="1.1" id="twitter-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="30px" height="30px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<g>
-  <g>
-    <defs>
-      <rect id="SVGID_1_" x="-492" y="-1123" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_2_">
-      <use xlink:href="#SVGID_1_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
-      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
-  </g>
-  <g>
-    <defs>
-      <rect id="SVGID_3_" x="-492" y="-1123" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_4_">
-      <use xlink:href="#SVGID_3_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
-      c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4h2.1c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
-      c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
-      c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2
-      l0.5-0.1l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4l0.1,0.2
-      C504.3-887.6,497.8-884.6,492.7-884.6z"/>
-  </g>
-</g>
-<g>
-  <g>
-    <defs>
-      <rect id="SVGID_5_" x="-492" y="-1123" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_6_">
-      <use xlink:href="#SVGID_5_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_6_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
-      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
-  </g>
-  <g>
-    <defs>
-      <rect id="SVGID_7_" x="-492" y="-1123" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_8_">
-      <use xlink:href="#SVGID_7_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_8_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
-      c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4h2.1c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
-      c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
-      c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2
-      l0.5-0.1l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4l0.1,0.2
-      C504.3-887.6,497.8-884.6,492.7-884.6z"/>
-  </g>
-</g>
-<g>
-  <g>
-    <defs>
-      <rect id="SVGID_9_" x="-493" y="-1125" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_10_">
-      <use xlink:href="#SVGID_9_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_10_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M468.7-885.2h-5.2
-      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-885.2z"/>
-  </g>
-</g>
-<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M15.3,36.1c-3.4,0-6.8-0.8-9.8-2.4c-0.2-0.1-0.4-0.2-0.7-0.5l-3.2-2.1
-  h3.2c3,0,5.2-0.5,7.2-1.5c-2.2-0.8-3.7-2.4-4.7-4.7l-0.5-1.2l0.9-0.1c-1.8-1.5-2.8-3.4-3.1-6l-0.1-1.3L6,16.6
-  C4.5,14,4.5,11.3,5.8,8.5L6.6,7l1,1.2c3.4,4.1,7.4,6.3,12.3,6.9c0-0.1,0-0.2,0-0.4c0.1-0.9,0.2-1.9,0.5-2.8c1-3.1,4.1-5.3,7.3-5.3
-  c1.3,0,2.5,0.4,3.6,1c1.6,1,2.7,1.1,4.2,0.3c0.3-0.2,0.6-0.2,0.8-0.3l0.8-0.1l1.4,0.9l-1.4,1.9L39,9.9l-0.5,1.6
-  c-0.1,0.3-0.1,0.7-0.5,1c-1.9,1.5-2.3,3.6-2.8,6l0.1,0.5C32.7,31.6,22.9,36.1,15.3,36.1z"/>
-</svg></a>
-  </li><!-- end of twitter -->
-  <a href="#"><span class="create-account">Create&nbsp;an&nbsp;account</span></a>
-
-  </ul>
 
 
-<div class="comments" id="comment-section">
-<img src="content/img/comments.png" width="400px">
+ <div class="article-sub-heading article-sub-heading-photo">
+   <p> Stuart Haygarth walked from Kent to Land’s End, picking up the trash he found on beaches – and arranged it into collections that show us how weird the ordinary objects in our lives can be.</p>
+   <p id="photo-credits"></p><!-- should the credits be before the text? -->
+   </div>
+ <!-- <script src="js/rotating-slider.js"></script> -->
+ <!-- moved to the <head> -->
 
-</div><!-- end of comments -->
-     <div class="comments-title">
-     Related Articles
+
+<div class="comments-title">
+     More Photo Galleries
 </div>
 
 
@@ -482,6 +333,8 @@ It became more widely known – and a rallying point for Republicans – when ne
           <p class="meta">Hanson O'Haver - 12th April 2016</p>
           <h3 class="small-article-heading">Why Mental Health Disorders Emerge in Your Early Twenties</h3>
         </div>
+
+
 
 <div class="send-top">
  <a href="#"><svg class="top-arrow" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -672,27 +525,12 @@ It became more widely known – and a rallying point for Republicans – when ne
 
 
 <ul class="tags">
-<a href="#"><li>READ</li></a>
-<a href="#"><li>SOME</li></a>
-<a href="#"><li>MORE</li></a>
-<a href="#"><li>THINGS</li></a>
-<a href="#"><li>BRAIN</li></a>
-<a href="#"><li>YOGA</li></a>
-<a href="#"><li>MINDFULNESS</li></a>
-<a href="#"><li>MEDITATION</li></a>
-<a href="#"><li>BALANCE</li></a>
-<a href="#"><li>BRAIN</li></a>
-<a href="#"><li>FOOD</li></a>
-<a href="#"><li>BRAIN</li></a>
-<a href="#"><li>YOGA</li></a>
-<a href="#"><li>HEALTH</li></a>
-<a href="#"><li>WORDS</li></a>
-<a href="#"><li>BALANCE</li></a>
-<a href="#"><li>BRAIN</li></a>
-</ul>
-
-
-
+<a href="#"><li>WOMEN-ONLY</li></a>
+<a href="#"><li>UMOJA</li></a>
+<a href="#"><li>KENYA</li></a>
+<a href="#"><li>MATRIARCHY</li></a>
+<a href="#"><li>AFRICA</li></a>
+<a href="#"><li>POLITICS</li></a>
 
 
 </div> <!-- end of column -->
@@ -729,8 +567,9 @@ It became more widely known – and a rallying point for Republicans – when ne
 <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1140" y1="27" x2="0" y2="19"/>
 </svg>
 
+
         <ul id="footer-menu">
-          <li class="copy">Even Up &copy; 2016</li>
+          <li class="copy">&copy; even up</li>
           <li><a href="#">Info</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="#">Terms & Conditions</a></li>

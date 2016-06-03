@@ -1,0 +1,33 @@
+.media-player-container{
+		background-color: #0C2443; 
+
+}
+
+.media-player-video{}
+
+.media-player-slice{
+
+
+}
+.media-player-slice-item a{
+		color: #C3C0C0;
+}
+
+.media-player-slice-item{
+
+	list-style: none;
+	margin: 15px 25px;
+    border-bottom: 1px #C3C0C0 solid;
+	font-size: 16px;
+	transition: all 0.4s ease-in-out 0s;
+
+}
+
+.media-player-slice-item:hover{
+		transform: rotate(3deg);
+}
+
+.media-player-slice-item img{
+	float: right;
+	width: 22px;
+}

@@ -446,6 +446,10 @@ footer {
 #footer-menu li.copy{
   -webkit-flex: 3;
   flex: 3;
+  float: left;
+  color: #999;
+  margin-left: -40px;
+
 }
 
 #main_top{
@@ -771,6 +775,7 @@ transition: transform 1s;
   body{
     padding-top: 0;
   }
+
   .navbar-brand{
     margin-left: -20px;
     margin-top: 10px;
@@ -790,11 +795,17 @@ transition: transform 1s;
  .article-heading{
   font-size: 26px;
  }
+
+.most-popular .may-missed{ 
+  display: none;  
+}
+
+/*
 ul.dropdown-menu li{
 }
 li.menu-box ul {
   display: none;
-}
+}*/
 
 .horizontal-article{
     padding-left: 15px;

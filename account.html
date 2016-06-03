@@ -32,6 +32,10 @@
 
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/account.css">
+        <link rel="stylesheet" href="css/photo.css">
+        <link rel="stylesheet" href="css/channel.css">
+
+
         <script src="js/vendor/jquery-1.11.2.min.js"></script>        
         <script src="js/vendor/bootstrap.min.js"></script> 
         <script src="js/main.js"></script>
@@ -46,9 +50,17 @@
         <div class="navbar-header" id="topHeader">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
+
+<div class="menu-outer menu-outer-one">
+  <div class="menu-outer menu-outer-two">
+    <div class="menu-outer menu-outer-three"> 
+    </div>
+  </div>
+</div>
+            <!-- 
             <span class="icon-bar"> </span>
             <span class="icon-bar"> </span>
-            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span> -->
           </button>
           <a class="navbar-brand" href="index.html"><img src="content/img/logo.svg" alt="even up" title="even up" /></a>
 <!--modal-->
@@ -65,11 +77,11 @@
       <p>login with <a href=""><span class="login-with">google</span></a></p>
 
         <form><p class="pass-mail"> e-mail</p>
-        <input type="text"> <br>
+            <input type="text"> <br>
         <p class="pass-mail">password</p>
-        <input type="text"> 
+            <input type="text"> 
+        </form>      
 
-       </form>      
         </div>
       <div class="modal-footer">
         <a href="account.html" class="btn btn-default" data-dismiss="modal">login</a>
@@ -85,7 +97,7 @@
           <input type="text" >
         </form></li>
           <li><a class="search-bar" href="#">
-          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25" height="25"
+          <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23"
              viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
               <g transform="matrix( 1, 0, 0, 1, 0,0) ">
                 <g id="a">
@@ -99,7 +111,7 @@
           </svg>
           </a></li>
           <li><a  data-toggle="modal" data-target="#login">
-          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35" height="35"
+          <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33" height="33"
           viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
           <g>
             <circle cx="21.9" cy="10.5" r="1.4"/>
@@ -128,46 +140,46 @@
               <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexbody.html"><span class="main-menu">body</span> <span class="sr-only">(current)</span></a> 
               <ul class="dropdown-menu" aria-labelledby="bodymenu">
                 <li><a href="#">yoga</a></li>
-                <li><a href="#">fitness</a></li>
+                <li><a href="indexfitness.html">fitness</a></li>
                 <li><a href="#">health</a></li>
 
               </ul>
             </li>
-             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+             <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="mindmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="indexmind.html"><span class="main-menu">mind</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="mindmenu">
                 <li><a href="#">mental health</a></li>
-                <li><a href="#">meditation</a></li>
+                <li><a href="indexmeditation.html">meditation</a></li>
                 <li><a href="#">relationships</a></li>
               </ul>
             </li>
 
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="earthmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">earth</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="earthmenu">
                 <li><a href="#">sustainability</a></li>
                 <li><a href="#">travel</a></li>
-                <li><a href="#">energy</a></li>
+                <li><a href="indexenergy.html">energy</a></li>
               </ul>
             </li>          
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="bodymenu">
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="moremenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">more</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="moremenu">
                 <li><a href="#">food</a></li>
-                <li><a href="#">photography</a></li>
+                <li><a href="slider.html">photography</a></li>
                 <li><a href="#">education</a></li>
                 <li><a href="#">home &amp; garden</a></li>
               </ul>
             </li>  
-            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="bodymenu">
-                <li><a href="#">Yoga</a></li>
+            <li class="dropdown tilt menu-box"><a class="dropdown-toggle" id="channelmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">channels</span><span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="channelmenu">
+                <li><a href="channelyoga.html">Yoga</a></li>
                 <li><a href="#">DIY</a></li>
                 <li><a href="#">cooking</a></li>
               </ul>
             </li>  
-            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="bodymenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a> 
-              <ul class="dropdown-menu" aria-labelledby="bodymenu">
-                <li><a href="#">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
+            <li class="dropdown tilt uneven menu-box"><a class="dropdown-toggle" id="unevenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="main-menu">uneven</span> <span class="sr-only">(current)</span></a> 
+              <ul class="dropdown-menu" aria-labelledby="unevenmenu">
+                <li><a href="article.html">bubble burst <img src="content/icons/bubble.svg" height="40px"></a></li>
                 <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
-                <li><a href="#">guided meditation</a><img src="content/icons/audio.svg" height="40px"></li>
+                <li><a href="#">guided meditation<img src="content/icons/audio.svg" height="40px"></a></li>
                 <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
 
               </ul>
@@ -185,7 +197,8 @@
 </svg>
 
       </div><!-- end .container -->
-    </nav><!-- navbar ends, main content starts HERE -->
+    </nav>
+    <!-- navbar ends, main content starts HERE -->
     
     <div id="main-content" class="container">
       <!-- use rows to create horizontal groups of columns -->
@@ -398,7 +411,7 @@
 
 
         <ul id="footer-menu">
-          <li class="copy">&copy; even up</li>
+          <li class="copy">Even Up &copy; 2016</li>
           <li><a href="#">Info</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="#">Terms & Conditions</a></li>
