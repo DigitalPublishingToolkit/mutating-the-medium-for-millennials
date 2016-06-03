@@ -64,10 +64,14 @@ hr {
 .row{
   margin-bottom:40px}
 
-
 .second-row{
   margin-bottom: -40px;
 }
+
+.row-account{
+   margin-bottom:20px;
+}
+
 .branding img{
 width: auto;
 }

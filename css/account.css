@@ -1,7 +1,8 @@
 
 
 #account-icon{
-  width: 100px;
+  width: 60px;
+  margin-right: 20px;
 }
 
 .hello{ 
@@ -92,15 +93,12 @@ width: 120px;
 .middle-line{
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.middle-line:hover{
-  -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
 }
 
 .middle-line:hover{
     cursor: default;
-    transform: rotate(20deg);
+    transform: rotate(-6deg);
     transition: all 0.9s ease-in-out 0s;
 }
 
@@ -113,6 +111,21 @@ width: 120px;
 .upgrade img {
   width: 50px;
 }
+
+
+.plus-sign .more-features{ 
+      color: #265AD9;
+ margin: auto;
+  margin-top: 50px;
+    margin-left: 35%;
+
+ }
+
+.plus-sign:hover{ 
+    stroke-width:4px;
+    color: red;
+ }
+
 
 /*line animation*/
 
