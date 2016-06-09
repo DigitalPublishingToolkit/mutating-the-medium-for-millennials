@@ -28,6 +28,7 @@
 
 $(document).ready(function(){
 
+
 	//code
 	$('.search-bar').on("click", function(){
 		$('#search-form').toggle();
@@ -74,6 +75,22 @@ $(document).ready(function(){
 		}
   });
 
+
+//mobile article icons
+		// $(document).ready(function(){
+
+		// var isAnimationDone = true;
+
+		//     $("mobile-hidden-arrow").click(function(){ 
+		//       if(isAnimationDone == true){
+		//        $("mobile-hidden-icons").animate({left: '200px'},);
+		//        isAnimationDone = false;
+		//      }else{
+		//        $("mobile-hidden-icons").animate({left: '0px'},);
+		//        isAnimationDone = true;
+		//      }
+		//     });
+		// });
 	
 
 });

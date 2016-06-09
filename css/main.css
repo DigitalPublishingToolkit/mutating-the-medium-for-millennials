@@ -264,10 +264,15 @@ margin-top: 60px;
     fill:#265AD9;
 }
 
+#comment{
+  float: right;
+margin-right: 15px;
+}
 
 #comment:hover{   
   fill:#265AD9;
   stroke-width:3px;
+
 }
 
 .tags a li:hover{
@@ -481,10 +486,17 @@ li.menu-box ul{
   border: 1px solid;
 }
 
+#more-features{
+width: 40px;
+margin-right: 10px;
+}
+
 li.menu-box ul img{
   width: 60px;
   height: 50px;
 }
+
+
 .nav .open>a:focus {
 
     background-color: transparent;
@@ -515,6 +527,7 @@ button.navbar-toggle:nth-child(1) {
 .nav>li>a:hover, .nav>li>a:focus {
 background-color: transparent;
 }
+
 
 .fullnav{
 }
@@ -558,8 +571,11 @@ p.meta{
 }
 .meta_article {
     font-family: "museo-sans";
-    font-weight: 700;
+    font-weight: 500;
     color: #929090;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 5px;
 }
 
 .image-caption{
@@ -732,6 +748,15 @@ transition: transform 1s;
     transition: all 0.9s ease-in-out 0s;
 }
 
+.mobile-hidden-icons{
+  /*position: fixed;*/
+  height: 40px;
+}
+
+.mobile-hidden-icons-each img{
+  float: left;
+  width: 15%;
+}
 
 
 
