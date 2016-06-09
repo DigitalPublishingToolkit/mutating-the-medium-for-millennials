@@ -63,6 +63,16 @@ $(document).ready(function(){
 		$('body').removeClass('lscr');
 	}
 
+  //smooth scroll to top
+  //check this if you'd like all anchor links to scroll smoothly
+  //https://css-tricks.com/snippets/jquery/smooth-scrolling/
+  $('.send-top').on('click', function(){
+    $('html, body').animate({
+          scrollTop: 0
+        }, 1000);
+        //1000 (milliseconds) is the duration of the animation
+  });
+
 	//on resize
   $(window).smartresize(function(){
     //check screen size, remove class if needed
@@ -76,6 +86,7 @@ $(document).ready(function(){
   });
 
 
+<<<<<<< HEAD
 //mobile article icons
 		// $(document).ready(function(){
 
@@ -92,5 +103,7 @@ $(document).ready(function(){
 		//     });
 		// });
 	
+=======
+>>>>>>> f38c971fec24fd0e7c790da8dcf6bd078e672137
 
 });
