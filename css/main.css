@@ -184,7 +184,7 @@ a .create-account:hover{
 }
 
 .comments{
- margin-top: 70px; 
+ margin-top: 70px;
 }
 .comments-title{
  font-size: 26px;
@@ -193,7 +193,7 @@ a .create-account:hover{
  margin-bottom: 20px;
 }
 
-.most-popular .may-missed{ 
+.most-popular .may-missed{
   float: right;
   font-size: 24px;
 }
@@ -265,7 +265,7 @@ margin-top: 60px;
 }
 
 
-#comment:hover{   
+#comment:hover{
   fill:#265AD9;
   stroke-width:3px;
 }
@@ -414,6 +414,13 @@ display: block;
   float: right;
   text-align: right;
 }
+
+/* Fixed sidebars */
+/*.fSidebar{
+  position: fixed;
+  width: inherit;
+}*/
+
 
 /* Content */
 
@@ -744,9 +751,9 @@ transition: transform 1s;
   /* you can remove the line below, put here to make it easier to 'see' the breakpoint */
   body{/*background-color: red;*/}
 
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+/*.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
   display: none;
-}
+}*/
   /* try commenting it out to see what happens */
   .fullnav > li {
       width: 92px;
@@ -796,8 +803,8 @@ transition: transform 1s;
   font-size: 26px;
  }
 
-.most-popular .may-missed{ 
-  display: none;  
+.most-popular .may-missed{
+  display: none;
 }
 
 /*
