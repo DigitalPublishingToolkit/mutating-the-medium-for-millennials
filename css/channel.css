@@ -1,12 +1,15 @@
 .media-player-container{
 		background-color: #0C2443; 
-
+margin-right: -15px;
 }
 
-.media-player-video{}
+.media-player-video{
+
+padding: 10px;
+}
 
 .media-player-slice{
-
+margin-left: -45px;
 
 }
 .media-player-slice-item a{
@@ -14,12 +17,12 @@
 }
 
 .media-player-slice-item{
-
 	list-style: none;
-	margin: 15px 25px;
     border-bottom: 1px #C3C0C0 solid;
-	font-size: 16px;
-	transition: all 0.4s ease-in-out 0s;
+	font-size: 14px;
+	transition: all 0.2s ease-in-out 0s;
+padding-left: -5px;
+padding-top: 10px;
 
 }
 
@@ -30,4 +33,12 @@
 .media-player-slice-item img{
 	float: right;
 	width: 22px;
+}
+.title-yoga-channel{
+	font-size: 34px;
+	margin-top: 10px;
+
+	font-weight: 700;
+	color: #FAFAFA;
+
 }

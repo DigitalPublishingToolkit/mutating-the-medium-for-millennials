@@ -34,8 +34,7 @@
         <link rel="stylesheet" href="css/account.css">
         <link rel="stylesheet" href="css/photo.css">
         <link rel="stylesheet" href="css/channel.css">
-
-
+        <link rel="stylesheet" href="css/rotating-slider.css">
         <script src="js/vendor/jquery-1.11.2.min.js"></script>        
         <script src="js/vendor/bootstrap.min.js"></script> 
         <script src="js/main.js"></script>
@@ -96,7 +95,7 @@
         <li><form id="search-form">
           <input type="text" >
         </form></li>
-          <li><a class="search-bar" href="#">
+          <li><a class="search-bar">
           <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23"
              viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
               <g transform="matrix( 1, 0, 0, 1, 0,0) ">
@@ -109,7 +108,15 @@
                 </g>
             </g>
           </svg>
-          </a></li>
+          </a>
+          </li>
+          
+          <li id="trolley">
+              <a class="hidden-xs" href="#">
+              <img src="content/icons/trolley.svg">
+              </a>
+          </li>
+          
           <li><a  data-toggle="modal" data-target="#login">
           <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33" height="33"
           viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
@@ -181,7 +188,7 @@
                 <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
                 <li><a href="#">guided meditation<img src="content/icons/audio.svg" height="40px"></a></li>
                 <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
-
+                <li><a href="#"><img id="more-features" src="content/icons/plus.svg">more features</a></li>
               </ul>
             </li>  
 
@@ -199,263 +206,39 @@
       </div><!-- end .container -->
     </nav>
     <!-- navbar ends, main content starts HERE -->
+
     <div id="main-content" class="container">
       <!-- use rows to create horizontal groups of columns -->
 <!--    
    <div class="col-sm-2"></div> -->
      
 
-      <div class="col-sm-7 col-sm-offset-2">
-        <div class="media-player-container">
-   <div class="media-player-video"></div>
-        <iframe height="480" width="640" poster="content/img/thomashedger.png" src="https://www.youtube.com/embed/0o0kNeOyH98?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-  <div class="row">
-      <ul class="media-player-slice col-sm-6">
-          <li class="media-player-slice-item"><a href="#">Yoga for Beginners 1 <img src="content/icons/eye.svg"></a></li>
-          <li class="media-player-slice-item"><a href="#">Yoga for Beginners 2<img src="content/icons/eye.svg"></a></li>
-          <li class="media-player-slice-item"><a href="#">Yoga for Beginners 3<img src="content/icons/eye.svg"></a></li>
-          <li class="media-player-slice-item"><a href="#">Yoga for Beginners 4<img src="content/icons/eye.svg"></a></li>
-          <li class="media-player-slice-item"><a href="#">Yoga for Beginners 5<img src="content/icons/eye.svg"></a></li>
-      </ul>
 
-      <ul class="media-player-slice col-sm-6">
-          <li class="media-player-slice-item"><a href="#">Advanced Yoga 1<img src="content/icons/eye.svg"></a></li>
-          <li class="media-player-slice-item"><a href="#">Advanced Yoga 2<img src="content/icons/eye.svg"></a></li>
-          <li class="media-player-slice-item"><a href="#">Advanced Yoga 3<img src="content/icons/eye.svg"></a></li>
-          <li class="media-player-slice-item"><a href="#">Advanced Yoga 4<img src="content/icons/eye.svg"></a></li>
-          <li class="media-player-slice-item"><a href="#">Advanced Yoga 5<img src="content/icons/eye.svg"></a></li>
-      </ul>
-  </div>
-          </div> <!-- end of media player container -->
+<div class="col-sm-9 media-player-container">   
+<div class="col-sm-offset-3 title-yoga-channel">The Yoga Channel</div>
 
+    <div class="row col-sm-3">
+        <ul class="media-player-slice">
+            <li class="media-player-slice-item"><a href="#">Yoga for Beginners 1 <img src="content/icons/eye.svg"></a></li>
+            <li class="media-player-slice-item"><a href="#">Yoga for Beginners 2<img src="content/icons/eye.svg"></a></li>
+            <li class="media-player-slice-item"><a href="#">Yoga for Beginners 3<img src="content/icons/eye.svg"></a></li>
+            <li class="media-player-slice-item"><a href="#">Yoga for Beginners 4<img src="content/icons/eye.svg"></a></li>
+            <li class="media-player-slice-item"><a href="#">Yoga for Beginners 5<img src="content/icons/eye.svg"></a></li>
+        </ul>
 
+        <ul class="media-player-slice">
+            <li class="media-player-slice-item"><a href="#">Advanced Yoga 1<img src="content/icons/eye.svg"></a></li>
+            <li class="media-player-slice-item"><a href="#">Advanced Yoga 2<img src="content/icons/eye.svg"></a></li>
+            <li class="media-player-slice-item"><a href="#">Advanced Yoga 3<img src="content/icons/eye.svg"></a></li>
+            <li class="media-player-slice-item"><a href="#">Advanced Yoga 4<img src="content/icons/eye.svg"></a></li>
+            <li class="media-player-slice-item"><a href="#">Advanced Yoga 5<img src="content/icons/eye.svg"></a></li>
+        </ul>
+    </div>
+   <div class="col-sm-9 media-player-video">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/iTicuDqMuq8?rel=0&amp;showinfo=0&amp;controls=1" frameborder="0" allowfullscreen></iframe>
+   </div>
+</div><!-- end of media player container -->
 
-<!-- https://www.youtube.com/watch?v=0o0kNeOyH98 -->
-     <div class="article-sub-heading">Yoga for complete beginners. 20 minute gentle yoga class to give you greater relaxation, more energy and joy. Relaxation pose and crocodile poses to relax the lower back. Shoulder exercises to relax the neck and shoulders. Sitting forward bend for flexibility. Inclined plane for strengthening the back. Spinal twist for good massage of the abdominal organs. Final relaxation to really let go. You will feel full refreshed and recharged. Try it out! </div>
-
-<div class="image-caption">Demonstrated by Aruna, instructed by Sukadev Bretz. Music by Yogi Hari</div>
-  <div class="article-text">
-</div>
-
- <ul class="end_article_icons">
-  <li><a data-toggle="modal" data-target="#login" ><svg version="1.1" id="star-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30"
-   viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-<path d="M38.9,15.1c-0.1-0.3-0.4-0.5-0.7-0.6l-12-1.6L21.1,2.1c-0.1-0.3-0.4-0.5-0.8-0.5s-0.6,0.2-0.8,0.5L14.4,13l-12,1.6
-  c-0.3,0-0.6,0.3-0.7,0.6s0,0.6,0.2,0.8l8.8,8.3L8.5,36.2c0,0.3,0.1,0.6,0.3,0.8c0.3,0.2,0.6,0.2,0.9,0l10.6-5.8L30.9,37
-  c0.1,0.1,0.3,0.1,0.4,0.1c0.2,0,0.3,0,0.5-0.2c0.3-0.2,0.4-0.5,0.3-0.8L30,24.2l8.7-8.2C38.9,15.8,39,15.5,38.9,15.1z M28.4,23.4
-  c-0.2,0.2-0.3,0.5-0.3,0.8l2,10.6l-9.4-5.2c-0.1-0.1-0.3-0.1-0.4-0.1c-0.2,0-0.3,0-0.4,0.1l-9.4,5.2l2-10.6c0-0.3,0-0.6-0.3-0.8
-  L4.4,16l10.7-1.4c0.3,0,0.6-0.2,0.6-0.5l4.6-9.7l4.6,9.7c0.1,0.3,0.4,0.4,0.6,0.5L36.2,16L28.4,23.4z"/>
-</svg>
-</a></li>
-
-  <li><a data-toggle="modal" data-target="#login" href="#"><svg version="1.1" id="bookmark-icon"
-   id="Layer_1" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px"
-   viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<g>
-  <path stroke="#000000" d="M11.4,37V5.1c0-1.5,1.8-2.9,3.2-2.9h11.6c1.2,0,3.2,1.7,3.2,2.9V37l-9-9L11.4,37z M20.5,27.5l8.7,8.7V5.1
-    c0-0.9-1.7-2.6-2.8-2.6H14.8c-1.2,0-2.9,1.3-2.9,2.6v31.1L20.5,27.5z"/>
-</g>
-</svg>
-
-</a></li>
-
-  <li><a href="content/img/printed.pdf" target="blank"><svg version="1.1" id="print-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30"
-   viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-<g><g>
-    <path d="M32.4,14.9H7.9c-1.9,0-3.5,1.5-3.5,3.5v7.5c0,1.9,1.5,3.5,3.5,3.5h4.3v-1.3H7.9c-1.3,0-2.2-1-2.2-2.2v-7.5
-      c0-1.3,1-2.2,2.2-2.2h24.5c1.3,0,2.2,1,2.2,2.2v7.5c0,1.3-1,2.2-2.2,2.2h-4v1.3h4c1.9,0,3.5-1.5,3.5-3.5v-7.5
-      C35.9,16.5,34.3,14.9,32.4,14.9z"/>
-  </g><g>
-    <path d="M29.7,16.2H11V3.4h18.7V16.2z M12.2,14.9h16.2V4.7H12.2V14.9z"/>
-  </g><g>
-    <path d="M11,22.9v12.8h18.7V22.9H11z M28.4,34.4H12.2V24.1h16.2V34.4z"/>
-  </g><g><g>
-      <rect x="14.5" y="26.2" width="11.9" height="0.9"/>
-    </g><g>
-      <rect x="14.5" y="28.9" width="11.9" height="0.9"/>
-    </g><g>
-      <rect x="14.5" y="31.5" width="6" height="0.9"/>
-    </g></g></g>
-</svg></a></li>
- 
-
-<!-- share twitter and facebook -->
-  
-  <li><a href="#">
-    <svg version="1.1" id="facebook-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="30px" height="30px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<g>
-  <defs>
-    <rect id="SVGID_1_" x="-492" y="-1123" width="1024" height="2286"/>
-  </defs>
-  <clipPath id="SVGID_2_">
-    <use xlink:href="#SVGID_1_"  overflow="visible"/>
-  </clipPath>
-  <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
-    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
-  <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
-    c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4l2.1,0c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
-    c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
-    c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2l0.5-0.1
-    l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4L506-896C504.3-887.6,497.8-884.6,492.7-884.6z"/>
-</g>
-<g>
-  <defs>
-    <rect id="SVGID_3_" x="-492" y="-1123" width="1024" height="2286"/>
-  </defs>
-  <clipPath id="SVGID_4_">
-    <use xlink:href="#SVGID_3_"  overflow="visible"/>
-  </clipPath>
-  <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
-    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
-  <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
-    c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4l2.1,0c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
-    c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
-    c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2l0.5-0.1
-    l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4L506-896C504.3-887.6,497.8-884.6,492.7-884.6z"/>
-</g>
-<g>
-  <defs>
-    <rect id="SVGID_5_" x="-493" y="-1125" width="1024" height="2286"/>
-  </defs>
-  <clipPath id="SVGID_6_">
-    <use xlink:href="#SVGID_5_"  overflow="visible"/>
-  </clipPath>
-  <path clip-path="url(#SVGID_6_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M468.7-885.2h-5.2
-    v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-    c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5l-1.8,0c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-885.2z"/>
-</g>
-<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M23,38.2h-8.6V22.6H9.1V14h5.1c0-0.3,0-0.6,0-0.9c0-1.4,0.1-2.7,0.2-4
-  c0.5-4.9,3.4-7.6,8.3-7.9c0.2,0,0.4,0,0.6,0c2.8-0.1,4.5,0,5.4,1.2c1,1.2,0.8,3.1,0.3,5.9L29,9.3l-3,0c-0.4,0-0.9,0-1.4,0
-  c-1.4,0-1.6,0.6-1.6,1.6V14h6.2l-1,8.3H23V38.2z"/>
-</svg></a>
-  </li><!-- end of facebook -->
-
-  <li><a href="#">
-    <svg version="1.1" id="twitter-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="30px" height="30px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<g>
-  <g>
-    <defs>
-      <rect id="SVGID_1_" x="-492" y="-1123" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_2_">
-      <use xlink:href="#SVGID_1_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_2_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
-      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
-  </g>
-  <g>
-    <defs>
-      <rect id="SVGID_3_" x="-492" y="-1123" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_4_">
-      <use xlink:href="#SVGID_3_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_4_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
-      c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4h2.1c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
-      c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
-      c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2
-      l0.5-0.1l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4l0.1,0.2
-      C504.3-887.6,497.8-884.6,492.7-884.6z"/>
-  </g>
-</g>
-<g>
-  <g>
-    <defs>
-      <rect id="SVGID_5_" x="-492" y="-1123" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_6_">
-      <use xlink:href="#SVGID_5_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_6_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M469.7-883.2h-5.2
-      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-883.2z"/>
-  </g>
-  <g>
-    <defs>
-      <rect id="SVGID_7_" x="-492" y="-1123" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_8_">
-      <use xlink:href="#SVGID_7_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_8_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M492.7-884.6
-      c-2.3,0-4.6-0.6-6.6-1.6c-0.1-0.1-0.3-0.2-0.5-0.3l-2.1-1.4h2.1c2,0,3.5-0.3,4.8-1c-1.5-0.6-2.5-1.6-3.1-3.1l-0.3-0.8l0.6-0.1
-      c-1.2-1-1.9-2.3-2-4l-0.1-0.9l1,0.2c-1-1.8-1-3.5-0.1-5.5l0.4-0.9l0.6,0.8c2.3,2.7,5,4.2,8.2,4.6c0-0.1,0-0.2,0-0.2
-      c0.1-0.6,0.1-1.2,0.3-1.9c0.7-2.1,2.7-3.5,4.9-3.5c0.9,0,1.7,0.2,2.4,0.7c1.1,0.7,1.8,0.7,2.8,0.2c0.2-0.1,0.4-0.2,0.5-0.2
-      l0.5-0.1l1,0.6l-0.9,1.3l1.3-0.3l-0.3,1.1c0,0.2-0.1,0.5-0.3,0.7c-1.3,1-1.5,2.4-1.9,4l0.1,0.2
-      C504.3-887.6,497.8-884.6,492.7-884.6z"/>
-  </g>
-</g>
-<g>
-  <g>
-    <defs>
-      <rect id="SVGID_9_" x="-493" y="-1125" width="1024" height="2286"/>
-    </defs>
-    <clipPath id="SVGID_10_">
-      <use xlink:href="#SVGID_9_"  overflow="visible"/>
-    </clipPath>
-    <path clip-path="url(#SVGID_10_)" fill="none" stroke="#020303" stroke-width="0.5" stroke-miterlimit="10" d="M468.7-885.2h-5.2
-      v-9.5h-3.2v-5.2h3.1c0-0.2,0-0.4,0-0.6c0-0.8,0.1-1.6,0.1-2.4c0.3-3,2-4.6,5-4.8c0.1,0,0.2,0,0.4,0c1.7,0,2.7,0,3.3,0.7
-      c0.6,0.7,0.5,1.9,0.2,3.6l-0.1,0.5h-1.8c-0.3,0-0.5,0-0.8,0c-0.8,0-1,0.4-1,1v1.9h3.7l-0.6,5.1h-3.1V-885.2z"/>
-  </g>
-</g>
-<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M15.3,36.1c-3.4,0-6.8-0.8-9.8-2.4c-0.2-0.1-0.4-0.2-0.7-0.5l-3.2-2.1
-  h3.2c3,0,5.2-0.5,7.2-1.5c-2.2-0.8-3.7-2.4-4.7-4.7l-0.5-1.2l0.9-0.1c-1.8-1.5-2.8-3.4-3.1-6l-0.1-1.3L6,16.6
-  C4.5,14,4.5,11.3,5.8,8.5L6.6,7l1,1.2c3.4,4.1,7.4,6.3,12.3,6.9c0-0.1,0-0.2,0-0.4c0.1-0.9,0.2-1.9,0.5-2.8c1-3.1,4.1-5.3,7.3-5.3
-  c1.3,0,2.5,0.4,3.6,1c1.6,1,2.7,1.1,4.2,0.3c0.3-0.2,0.6-0.2,0.8-0.3l0.8-0.1l1.4,0.9l-1.4,1.9L39,9.9l-0.5,1.6
-  c-0.1,0.3-0.1,0.7-0.5,1c-1.9,1.5-2.3,3.6-2.8,6l0.1,0.5C32.7,31.6,22.9,36.1,15.3,36.1z"/>
-</svg></a>
-  </li><!-- end of twitter -->
-  <a href="#"><span class="create-account">Create an account</span></a>
-
-  </ul>
-
-
-<div class="comments">
-    
-<img src="content/img/comments.png" width="400px">
-
-</div><!-- end of comments -->
-     <div class="comments-title">
-     Watch More
-</div>
-
-
-        <div class="col-sm-6 no-title">
-          <img src="content/img/prison.png" />
-          <p class="meta">Jessica Rizzo - 10th Feb 2016</p>
-          <h3 class="small-article-heading">Prison Yoga Is Helping Inmates Transcend Their Cells</h3>
-        </div>
-        <div class="col-sm-6 no-title">
-          <img src="content/img/greenery.png" />
-          <p class="meta">Gretchen Reynolds - 10th Feb 2016</p>
-          <h3 class="small-article-heading">Greenery (or Even Photos of Trees) Can Make Us Happier</h3>
-       </div>
-        <div class="col-sm-6">
-          
-          <img src="content/img/bottles.png" />
-          <p class="meta">Charlotte Jansen - 13th April 2016</p>
-          <h3 class="small-article-heading">The Ghanaian turning thousands of discarded plastic bottles into art</h3>
-        </div>
-        <div class="col-sm-6">
-     
-          <img src="content/img/mental-health-disorders.png" />
-          <p class="meta">Hanson O'Haver - 12th April 2016</p>
-          <h3 class="small-article-heading">Why Mental Health Disorders Emerge in Your Early Twenties</h3>
-        </div>
-
-<div class="send-top">
- <a href="#"><svg class="top-arrow" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-   x="0px" y="0px" width="123.4px" height="84.1px" viewBox="0 0 123.4 84.1" xml:space="preserve">
-<polyline fill="none" stroke="#0C2443" stroke-miterlimit="10" points="12.9,63.3 60.9,15.3 109.1,63.5 "/>
-</svg></a>
-</div>
-     </div>
 
 
 <div class="col-sm-3">
@@ -663,58 +446,41 @@
 
 </div> <!-- end of column -->
 
-      <hr>
 
-      <!-- rotating a <hr> seems to work fine in most cases, but if you prefer to use svg... -->
-      <svg
-         width="100%"
-         height="40px"
-         viewBox="0 0 100 100"
-         preserveAspectRatio="none"
-         id="svg3">
-         <!-- width and height will define the size of the svg element on the page. they could also be defined in the css file -->
-         <!-- viewbox will define the format (scale/stretch) of the svg ref. to the container element -->
-         <!-- for further info, check http://svgpocketguide.com/book/#section-3 -->
+<!-- https://www.youtube.com/watch?v=0o0kNeOyH98 -->
+     <div class="col-sm-offset-2 col-sm-7 article-sub-heading">Yoga for complete beginners. 20 minute gentle yoga class to give you greater relaxation, more energy and joy. Relaxation pose and crocodile poses to relax the lower back. Shoulder exercises to relax the neck and shoulders. Sitting forward bend for flexibility. Inclined plane for strengthening the back. Spinal twist for good massage of the abdominal organs. Final relaxation to really let go. You will feel full refreshed and recharged. Try it out! </div>
 
-         <!-- the <g> element is not strictly necessary in this case -->
-         <g id="layer2" >
-          <!-- would be equivalent to
-          <line x1="0" y1="3" x2="100" y2="38" stroke-dasharray="2,1,1,1" id="footer-line"  />
-          -->
-          <!-- for more info, check http://svgpocketguide.com/book/#section-2 -->
-          <path d="M 0,3 100,38" stroke-dasharray="2,1,1,1" id="footer-line"  />
-        </g>
+<div class="col-sm-offset-2 col-sm-7 image-caption">Demonstrated by Aruna, instructed by Sukadev Bretz. Music by Yogi Hari</div>
 
-      </svg>
 
-     <footer>
-
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="100%" height="35px" xml:space="preserve">
-<polygon fill="#FAFAFA" points="1140,35 0.2,35 0.2,19 1140,27 "/>
-<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1140" y1="27" x2="0" y2="19"/>
-</svg>
-
+<div class="col-sm-2 col-md-offset-5 no-title">
+   <div class="send-top">
+       <a href="#">
+           <svg class="top-arrow" version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px" width="123.4px" height="84.1px" viewBox="0 0 123.4 84.1" xml:space="preserve">
+          <polyline fill="none" stroke="#0C2443" stroke-miterlimit="10" points="12.9,63.3 60.9,15.3 109.1,63.5 "/>
+          </svg>
+       </a>
+    </div>
+</div><!-- end of column send top-->
+ 
+<footer>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="100%" height="35px" xml:space="preserve">
+            <polygon fill="#FAFAFA" points="1140,35 0.2,35 0.2,19 1140,27 "/>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1140" y1="27" x2="0" y2="19"/>
+            </svg>
 
         <ul id="footer-menu">
-          <li class="copy">&copy; even up</li>
+          <li class="copy">Even Up &copy; 2016</li>
           <li><a href="#">Info</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="#">Terms & Conditions</a></li>
           <li><a href="#">Privacy Policy & Cookies</a></li>
         </ul>
-      </footer>
-    </div> <!-- end .container -->
-
-        <!-- for now, let's comment this out -->
-        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script> -->
-
-
-
+</footer>
+   
+ </div> <!-- end .container -->
+</div><!-- end of column -->
     </body>
 </html>

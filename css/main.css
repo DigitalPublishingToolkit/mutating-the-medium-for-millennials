@@ -41,6 +41,10 @@ a:active, a:focus, a:link {
 
 img{width: 100%;}
 
+.first-article{
+  transform: rotate(2deg);
+}
+
 hr {
   border-color: #333;
   -moz-transform: rotate(0.8deg);
@@ -182,15 +186,18 @@ a .create-account:hover{
  color: #265AD9;
 
 }
-
+.endoftext{
+  margin-top: 40px;
+}
 .comments{
- margin-top: 70px;
+ margin-top: 30px;
 }
 .comments-title{
  font-size: 26px;
  line-height: 1.2;
  margin-top: 40px;
  margin-bottom: 20px;
+ padding-left:15px; 
 }
 
 .most-popular .may-missed{
@@ -409,7 +416,6 @@ display: block;
   float: left;
 }*/
 
-
 .fullnav{width: 100%;}
 
 .fullnav > li {
@@ -424,13 +430,12 @@ display: block;
 /*.fSidebar{
   position: fixed;
   width: inherit;
-}
-*/
+}*/
+
 
 /* Content */
 
 #main-content{margin-top: 100px;}
-
 
 /* Footer */
 
@@ -547,6 +552,9 @@ background-color: transparent;
   margin-top: -20px;
 }
 
+
+.trolley img {width: 20%}
+
 #search-form{
       padding-top: 15px;
     padding-bottom: 15px;
@@ -619,6 +627,7 @@ p.meta{
 .horizontal-article{
   padding-left: 0;
   padding-right: 0;
+  margin-left: -15px;
 }
 
 .horizontal-meta{
@@ -687,13 +696,14 @@ form .pass-mail{
    ==========================================================================
    */
 
-#bindi, #search {
+#bindi, #search, #trolley{
       transition: all 0.4s ease-in-out;
 }
 
-#bindi:hover, #search:hover {
+#bindi:hover, #search:hover, #trolley:hover
+ {
     cursor: default;
-    transform: rotate(15deg);
+    transform: rotate(22deg);
 }
 
 #footer-line{
@@ -735,7 +745,7 @@ transition: transform 1s;
 .top-arrow{
  margin: auto;
   margin-top: 50px;
-    margin-left: 35%;
+
 
  }
 
@@ -756,13 +766,21 @@ transition: transform 1s;
 }
 
 .mobile-hidden-icons{
-  /*position: fixed;*/
+  background-color: #FAFAFA;
+  position: fixed;
+ width: 225px;
   height: 40px;
+  margin-left: 83px;
+  left: 205px;
+  z-index: 300;
+  padding-top: 5px;
+  transform: rotate(3deg);
+/*  border: solid 1px #0C2443;*/
 }
 
 .mobile-hidden-icons-each img{
   float: left;
-  width: 15%;
+  width: 16%;
 }
 
 
@@ -828,9 +846,6 @@ transition: transform 1s;
   font-size: 26px;
  }
 
-.most-popular .may-missed{
-  display: none;
-}
 
 /*
 ul.dropdown-menu li{

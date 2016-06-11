@@ -86,24 +86,22 @@ $(document).ready(function(){
   });
 
 
-<<<<<<< HEAD
-//mobile article icons
-		// $(document).ready(function(){
 
-		// var isAnimationDone = true;
+// mobile article icons
+		
 
-		//     $("mobile-hidden-arrow").click(function(){ 
-		//       if(isAnimationDone == true){
-		//        $("mobile-hidden-icons").animate({left: '200px'},);
-		//        isAnimationDone = false;
-		//      }else{
-		//        $("mobile-hidden-icons").animate({left: '0px'},);
-		//        isAnimationDone = true;
-		//      }
-		//     });
-		// });
+		var isAnimationDone = true;
+
+		    $(".mobile-hidden-icons").click(function(){ 
+		      if(isAnimationDone == true){
+		       $(".mobile-hidden-icons").animate({left: '15px'});
+		       isAnimationDone = false;
+		     }else{
+		       $(".mobile-hidden-icons").animate({left: '210px'});
+		       isAnimationDone = true;
+		     }
+		    });
 	
-=======
->>>>>>> f38c971fec24fd0e7c790da8dcf6bd078e672137
+	
 
 });
