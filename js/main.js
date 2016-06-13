@@ -94,7 +94,7 @@ $(document).ready(function(){
 
 		    $(".mobile-hidden-icons").click(function(){ 
 		      if(isAnimationDone == true){
-		       $(".mobile-hidden-icons").animate({left: '15px'});
+		       $(".mobile-hidden-icons").animate({left: '50px'});
 		       isAnimationDone = false;
 		     }else{
 		       $(".mobile-hidden-icons").animate({left: '210px'});
@@ -102,6 +102,6 @@ $(document).ready(function(){
 		     }
 		    });
 	
-	
+	//w175 ml135
 
 });
