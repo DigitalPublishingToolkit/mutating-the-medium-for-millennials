@@ -197,7 +197,7 @@ a .create-account:hover{
  line-height: 1.2;
  margin-top: 40px;
  margin-bottom: 20px;
- padding-left:15px; 
+ padding-left:15px;
 }
 
 .most-popular .may-missed{
@@ -904,6 +904,14 @@ li.menu-box ul {
 }
   /* you can remove the line below, put here to make it easier to 'see' the breakpoint */
 /*body{background-color: green;}*/
+
+/* dropdown mobile, always visible */
+.dropdown-menu{
+    display: block;
+    position: static;
+}
+
+
 
 }/* end max-width 767 */
 .navbar-toggle{
