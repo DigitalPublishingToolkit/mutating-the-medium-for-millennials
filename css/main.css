@@ -228,6 +228,7 @@ a .create-account:hover{
   list-style: none;
   /*float:right;*/
   width: 100%;
+  padding-left: 0;
 }
 
 .article_icons li{
@@ -236,16 +237,15 @@ a .create-account:hover{
 }
 
 .end_article_icons li{
-margin-top: 60px;
+  margin-top: 60px;
   position: center;
-    list-style: none;
-      display: inline-block;
-
+  list-style: none;
+  display: inline-block;
 }
 
 #print-icon:hover{
   fill:#265AD9;
-     stroke-width:3px;
+   stroke-width:3px;
 }
 #bookmark-icon:hover{
   fill:#265AD9;
@@ -253,12 +253,13 @@ margin-top: 60px;
 }
 #star-icon:hover{
   fill:#265AD9;
-     stroke-width:3px;
+    stroke-width:3px;
 }
 
 #share{
     list-style: none;
-      width: 100%;
+    width: 100%;
+    padding-left: 0;
 }
 #share li{display: inline-block;}
 
@@ -281,14 +282,19 @@ margin-right: 15px;
   stroke-width:3px;
 
 }
+.tags li a{
+  color: #929090;
+}
 
-.tags a li:hover{
+.tags li a:hover{
   font-weight: 500;
   color: #265AD9;
 }
 
 .tags {
     margin-top: 20px;
+    padding-left: 0;
+    width: 70%;
 }
 .tags li {
     font-size: 12px;
@@ -296,9 +302,10 @@ margin-right: 15px;
     color: #929090;
     display: inline-block;
     list-style: none;
-    float: left;
+    /*float: left;*/
     margin-right: 8px;
     letter-spacing: 1px;
+    height: 12px;
 }
 
 /* ==========================================================================
@@ -427,10 +434,11 @@ display: block;
 }
 
 /* Fixed sidebars */
-/*.fSidebar{
+.fSidebar{
   position: fixed;
   width: inherit;
-}*/
+  padding-left: 40px;
+}
 
 
 /* Content */
