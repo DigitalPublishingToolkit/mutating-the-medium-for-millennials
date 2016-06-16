@@ -245,15 +245,15 @@ a .create-account:hover{
 
 #print-icon:hover{
   fill:#265AD9;
-   stroke-width:3px;
+   stroke-width:4px;
 }
 #bookmark-icon:hover{
   fill:#265AD9;
-     stroke-width:3px;
+     stroke-width:4px;
 }
 #star-icon:hover{
   fill:#265AD9;
-    stroke-width:3px;
+    stroke-width:4px;
 }
 
 #share{
@@ -275,6 +275,8 @@ a .create-account:hover{
 #comment{
   float: right;
 margin-right: 15px;
+margin-top: 10px;
+
 }
 
 #comment:hover{
@@ -439,7 +441,9 @@ display: block;
   width: inherit;
   padding-left: 40px;
 }
-
+.fSidebar-left{
+    position: fixed;
+}
 
 /* Content */
 
@@ -704,12 +708,11 @@ form .pass-mail{
    ==========================================================================
    */
 
-#bindi, #search, #trolley{
+#bindi, #search, #trolley, #fischliweiss{
       transition: all 0.4s ease-in-out;
 }
 
-#bindi:hover, #search:hover, #trolley:hover
- {
+#bindi:hover, #search:hover, #trolley:hover, #fischliweiss:hover{
     cursor: default;
     transform: rotate(22deg);
 }
@@ -753,25 +756,18 @@ transition: transform 1s;
 .top-arrow{
  margin: auto;
   margin-top: 50px;
+ }
 
-
+.top-arrow-small{
+ margin: auto;
+  margin-top: 10px;
+float: right;
  }
 
 .top-arrow:hover{
     stroke-width:2px;
  }
 
-
-#fischliweiss:hover{
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .8s ease-in-out;
-}
-
-#fischliweiss:hover{
-    cursor: default;
-    transform: rotate(360deg);
-    transition: all 0.9s ease-in-out 0s;
-}
 
 .mobile-hidden-icons{
   background-color: #FAFAFA;

@@ -73,6 +73,15 @@ $(document).ready(function(){
         //1000 (milliseconds) is the duration of the animation
   });
 
+  //smooth scroll to comment section
+
+  $('.comment-section').on('click', function(){
+        $('html, body').animate({
+            scrollTop: $('#comment-section').offset().top 
+        }, 'slow');
+    });
+
+
 	//on resize
   $(window).smartresize(function(){
     //check screen size, remove class if needed
