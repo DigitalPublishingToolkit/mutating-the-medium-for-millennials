@@ -33,9 +33,9 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/account.css">
         <link rel="stylesheet" href="css/photo.css">
+        <link rel="stylesheet" href="css/shop.css">
         <link rel="stylesheet" href="css/channel.css">
-
-
+        <link rel="stylesheet" href="css/rotating-slider.css">
         <script src="js/vendor/jquery-1.11.2.min.js"></script>        
         <script src="js/vendor/bootstrap.min.js"></script> 
         <script src="js/main.js"></script>
@@ -96,7 +96,7 @@
         <li><form id="search-form">
           <input type="text" >
         </form></li>
-          <li><a class="search-bar" href="#">
+          <li><a class="search-bar">
           <svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23"
              viewBox="0 0 28 28" style="enable-background:new 0 0 25 25;" xml:space="preserve">
               <g transform="matrix( 1, 0, 0, 1, 0,0) ">
@@ -109,7 +109,15 @@
                 </g>
             </g>
           </svg>
-          </a></li>
+          </a>
+          </li>
+          
+          <li id="trolley">
+              <a class="hidden-xs" href="shop.html">
+              <img src="content/icons/trolley.svg">
+              </a>
+          </li>
+          
           <li><a  data-toggle="modal" data-target="#login">
           <svg version="1.1" id="bindi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="33" height="33"
           viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
@@ -181,7 +189,7 @@
                 <li><a href="#">quizzes<img src="content/icons/quiz.svg" height="40px"></a></li>
                 <li><a href="#">guided meditation<img src="content/icons/audio.svg" height="40px"></a></li>
                 <li><a href="#">local map<img src="content/icons/map.svg" height="40px"></a></li>
-
+                <li><a href="morefeatures.html"><img id="more-features" src="content/icons/plus.svg">more features</a></li>
               </ul>
             </li>  
 
@@ -190,16 +198,22 @@
 </div>
 
 
-<svg version="1.1" id="top-line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg class="hidden-xs" version="1.1" id="top-line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="100%" height="35px" viewBox="0 0 1140 35" enable-background="new 0 0 1140 35" xml:space="preserve">
-<polygon fill="#FAFAFA" points="1140,7.5 0,16 0,0 1140,0 "/>
-<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="16" x2="1140" y2="7.2"/>
+<polygon fill="#FAFAFA" points="1140,5.2 0,16 0,0 1140,0 "/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="16" x2="1140" y2="5.2"/>
+</svg>
+
+<svg class="visible-xs top-line" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="100%" viewBox="0 0 1140 35" enable-background="new 0 0 1140 23" xml:space="preserve">
+<polygon fill="#FAFAFA" points="1140,5.2 0,16 0,0 1140,0 "/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="16" x2="1140" y2="5.2"/>
 </svg>
 
       </div><!-- end .container -->
     </nav>
     <!-- navbar ends, main content starts HERE -->
-    
+
     <div id="main-content" class="container">
       <!-- use rows to create horizontal groups of columns -->
     <div class="row-account">
@@ -345,10 +359,10 @@
       </div><!-- end .row -->
     
   
-          <svg class="middle-line" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <!--   <svg class="middle-line" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="1139px" height="35px" viewBox="0 0 1139 35" enable-background="new 0 0 1139 35" xml:space="preserve">
           <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="19.5" x2="1140" y2="19.5"/>
-          </svg>
+          </svg> -->
 
 
 

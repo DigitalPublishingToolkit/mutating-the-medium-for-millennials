@@ -802,9 +802,20 @@ transition: transform 1s;
   .fullnav > li {
       width: 92px;
   }
+.fullnav > li.uneven {
+    float: none; }
+
   .main-menu a:hover{
 /*figure out*/
   }
+
+li.menu-box ul {
+  border: none;
+}
+
+#myNavBar {
+    margin-top: 0px;
+}
 
  .article-heading{
   font-size: 34px;
@@ -859,13 +870,11 @@ transform: rotate(-3deg);
 
   .navbar-brand{
     margin-left: -20px;
-    margin-top: 10px;
     width: 50%;
   }
 
   #myNavBar{
     background-color: #FAFAFA;
-    margin-top: 10px;
   }
 
 

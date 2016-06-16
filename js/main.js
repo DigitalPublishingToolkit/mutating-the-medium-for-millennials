@@ -39,7 +39,7 @@ $(document).ready(function(){
 	"articleprison.html",
 	"articlegreenery.html",
 	"articleghanaian.html",
-	"articledisorders.html",
+	"articledoctor.html",
 	"articleconflict.html",
 	"articlecook.html"
 
