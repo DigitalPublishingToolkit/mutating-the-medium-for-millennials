@@ -1,5 +1,10 @@
 .add-to-trolley a img{
+    margin-top: -43px;
 }
 
 .shop-details{
+}
+
+.quantity a{
+padding: 15px;
 }

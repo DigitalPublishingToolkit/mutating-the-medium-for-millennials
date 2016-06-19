@@ -853,8 +853,37 @@ float: right;
   margin-right: 10px;
 }
 
-
-
+/*/////feature front page//////*/
+#whole-map-feature{  
+  transition: all 0.4s ease-in-out;
+}
+#whole-map-feature:hover{
+    transform: rotate(7deg);
+}
+.map-feature{
+  fill:blue;
+  transition: all 0.4s ease-in-out;
+} 
+.map-feature:hover{
+  fill:green
+  transform: rotate(7deg);
+}
+.cross-feature{
+  fill:orange;
+  transition: all 0.4s ease-in-out;
+}
+.cross-feature:hover{
+  fill:red;
+  transform: rotate(10deg);
+}
+.dots-feature{
+  fill:green;
+  transition: all 0.4s ease-in-out;
+}
+.dots-feature:hover{
+  fill:purple;
+  transform: rotate(9deg);
+}
 /* ==========================================================================
    Media queries
    ========================================================================== */
@@ -946,6 +975,10 @@ transform: rotate(-3deg);
     background-color: #FAFAFA;
   }
 
+#bodymenu, #mindmenu, #earthmenu, #moremenu, #channelmenu, #unevenmenu{
+  border-bottom: solid 1px;
+  width: 100%;
+}
 
 #gray-box {
     background-color: #FAFAFA;

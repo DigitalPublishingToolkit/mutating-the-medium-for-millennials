@@ -37,8 +37,9 @@ padding-top: 10px;
 .title-yoga-channel{
 	font-size: 34px;
 	margin-top: 10px;
-
 	font-weight: 700;
 	color: #FAFAFA;
-
+}
+.video-right-icons{
+	margin-left: 15px;
 }

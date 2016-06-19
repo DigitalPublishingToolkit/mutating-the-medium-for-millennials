@@ -141,6 +141,13 @@ output{
     margin:0 auto;
   }
 
+
+  #article-image-gallery-full img{
+   width: auto !important;
+    display: block;
+    margin:0 auto;
+  }
+
   #article-image-gallery li{
     display: none;
   }
