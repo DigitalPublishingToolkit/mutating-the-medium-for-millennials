@@ -973,6 +973,7 @@ transform: rotate(-3deg);
 
   #myNavBar{
     background-color: #FAFAFA;
+    border-bottom: solid #0C2443 2px;
   }
 
 #bodymenu, #mindmenu, #earthmenu, #moremenu, #channelmenu, #unevenmenu{
@@ -1022,7 +1023,10 @@ li.menu-box ul {
     position: static;
 }
 
-
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 380px;
+/*    transform: rotate(-2deg);
+*/  }
 
 }/* end max-width 767 */
 .navbar-toggle{
