@@ -28,9 +28,19 @@
 
 
 $(document).ready(function(){
+ var isFullScreen = false;
+ var numImg;
 
   //gallery mechanism
-  var numImg = $('#article-image-gallery').children().length; //total images
+  if($('#article-image-gallery').length){
+    //not full screen
+    numImg = $('#article-image-gallery').children().length; //total images
+  }else{
+    //fullscreen
+    numImg = $('#article-image-gallery-full').children().length; //total images
+    isFullScreen = true;
+  }
+
   var imgCounter = 0; //initial image
   var imgCounterCaption = (imgCounter+1) + ' of ' + numImg;
   var imgCaption = $('.currentImg img').attr('alt');
@@ -55,7 +65,12 @@ $(document).ready(function(){
 
     //set .currentImg
     $('.currentImg').removeClass('currentImg');
-    $('#article-image-gallery li').eq(imgCounter).addClass('currentImg');
+    if(isFullScreen){
+        $('#article-image-gallery-full li').eq(imgCounter).addClass('currentImg');
+    }else{
+        $('#article-image-gallery li').eq(imgCounter).addClass('currentImg');
+    }
+
 
     //count and caption
     setCaption(imgCounter);
@@ -73,7 +88,11 @@ $(document).ready(function(){
 
     //set .currentImg
     $('.currentImg').removeClass('currentImg');
-    $('#article-image-gallery li').eq(imgCounter).addClass('currentImg');
+    if(isFullScreen){
+        $('#article-image-gallery-full li').eq(imgCounter).addClass('currentImg');
+    }else{
+        $('#article-image-gallery li').eq(imgCounter).addClass('currentImg');
+    }
 
     //count and caption
     setCaption(imgCounter);
@@ -84,11 +103,15 @@ $(document).ready(function(){
     n = Math.round(n);
     //set .currentImg
     $('.currentImg').removeClass('currentImg');
-    $('#article-image-gallery li').eq(n).addClass('currentImg');
+    if(isFullScreen){
+        $('#article-image-gallery-full li').eq(imgCounter).addClass('currentImg');
+    }else{
+        $('#article-image-gallery li').eq(imgCounter).addClass('currentImg');
+    }
 
     //count and caption
     setCaption(n);
-    // imgCounter = n; //set in broadcastVal()
+     imgCounter = n; //set in broadcastVal()
   }// end loadImage()
 
   //click

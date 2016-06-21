@@ -1,3 +1,4 @@
+
 #content{
   margin-top: 80px;
   height: 2em;
@@ -10,9 +11,13 @@ input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   margin-left: 0px;
-  /*margin-top:120px;*/
   transform: rotate(0deg);
   transform-origin: 0;
+}
+
+.fullscreen-background input[type=range]{
+  width: 80%;
+  margin: 0 auto;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -20,7 +25,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus, input[type=range]:active {
-  outline: 0; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  outline: 0;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
 input[type=range]::-ms-track {
@@ -41,26 +47,28 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 12px;
   background:  #929090;
   cursor: pointer;
-  margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  margin-top: -7px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
   border: none;
-  height: 18px;
-  width: 18px;
+  height: 14px;
+  width: 14px;
   border-radius: 12px;
-  background: rgba(204, 204, 204, 0.5);
+  /*background: rgba(204, 204, 204, 0.5);*/
+  background:  #929090;
   cursor: pointer;
 }
 
 /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
   border: none;
-  height: 18px;
-  width: 18px;
+  height: 14px;
+  width: 14px;
   border-radius: 12px;
-  background: rgba(204, 204, 204, 0.5);
+  /*background: rgba(204, 204, 204, 0.5);*/
+  background:  #929090;
   cursor: pointer;
 }
 /* Note that while we're repeating code here, that's necessary as you can't comma-separate these type of selectors. Browsers will drop the entire selector if it doesn't understand a part of it. */
@@ -128,7 +136,7 @@ output{
 
   /* image-gallery */
 
-  #article-image-gallery{
+  #article-image-gallery, #article-image-gallery-full{
     list-style: none;
     padding: 0px;
     text-align: center;
@@ -143,22 +151,30 @@ output{
 
 
   #article-image-gallery-full img{
-   width: auto !important;
+    height: 555px;
+    width: auto !important;
     display: block;
     margin:0 auto;
   }
 
-  #article-image-gallery li{
+  #article-image-gallery li,#article-image-gallery-full li{
     display: none;
   }
 
-  #article-image-gallery li.currentImg{
+  #article-image-gallery li.currentImg, #article-image-gallery-full li.currentImg{
     display: block;
 }
+
 
   #gallery-nav{
     position: relative;
     top: -261px;
+    margin-bottom: -120px;
+  }
+
+  #gallery-nav-full{
+    position: relative;
+    top: -311px;
     /*border: 1px solid red;*/
     margin-bottom: -120px;
   }

@@ -210,13 +210,13 @@ a .create-account:hover{
 
 .comment-order{
   text-align: right;
- 
+
 }
 .comment-number{
   font-size: 22px;
 }
 .comment-light{
-  color: #929090; 
+  color: #929090;
 }
 .comment-text{
     font-family: "freight-text-pro";
@@ -241,7 +241,7 @@ text-align: bottom;
 }
 
 .comment-button a{
-  margin:20px; 
+  margin:20px;
   padding: 5px;
   text-align: center;
   font-weight: 700;
@@ -455,40 +455,14 @@ hr{margin-top: 0;
 
 .lscr  ul li.tilt:hover > ul.dropdown-menu {
 display: block;
+/*left: -6em;*/
 }
-
-/*#myNavBar ul li.current:hover{
-  -moz-transform: rotate(8deg);
-  -o-transform: rotate(8deg);
-  -webkit-transform: rotate(8deg);
-  -ms-transform: rotate(8deg);
-  transform: rotate(8deg);
-}*/
-
-/*#myNavBar ul li.tilt:hover,.tilt.open{
-  -moz-transform: rotate(6deg);
-  -o-transform: rotate(6deg);
-  -webkit-transform: rotate(6deg);
-  -ms-transform: rotate(6deg);
-  transform: rotate(6deg);
+.lscr  ul li.uneven:hover > ul.dropdown-menu {
+left: -6em;
 }
-
-#myNavBar ul li.tilt:hover > ul.dropdown-menu {
-display: block;
-}*/
 
 /* MENU FIX - END EDIT */
 
-
-/*#notCollapsible{
-  float: right;
-}
-
-#notCollapsible li{
-  display: inline !important;
-  position: static;
-  float: left;
-}*/
 
 .fullnav{width: 100%;}
 
@@ -617,10 +591,6 @@ button.navbar-toggle:nth-child(1) {
 background-color: transparent;
 }
 
-
-.fullnav{
-}
-
 .navbar-right li a{
   margin-:-15px;
 }
@@ -686,8 +656,8 @@ p.meta{
   background-color: #FAFAFA;
   padding:10px;
   line-height: 0.8em;
-    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.5); */
-    box-shadow: 0 0px 0px rgba(0,0,0,.5); */
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.5);
+    box-shadow: 0 0px 0px rgba(0,0,0,.5);
 
 }
 
@@ -744,11 +714,6 @@ form .pass-mail{
     color: #FAFAFA;
 }
 
-
-/*div.modal-content a:link :visited :hover :active{
-  text-decoration: none;
-}*/
-
 .modal-content a .login-with{
   color: #265AD9;
   text-decoration: none;
@@ -800,9 +765,6 @@ form .pass-mail{
 }
 
 #foo{
-/*border-radius:50px;
-background:#c00;*/
-
 width:95px;
 height:95px;
 position:absolute;
@@ -844,7 +806,6 @@ float: right;
   z-index: 300;
   padding-top: 5px;
   transform: rotate(3deg);
-/*  border: solid 1px #0C2443;*/
 }
 
 .mobile-hidden-icons-each img{
@@ -854,7 +815,7 @@ float: right;
 }
 
 /*/////feature front page//////*/
-#whole-map-feature{  
+#whole-map-feature{
   transition: all 0.4s ease-in-out;
 }
 #whole-map-feature:hover{
@@ -863,7 +824,7 @@ float: right;
 .map-feature{
   fill:blue;
   transition: all 0.4s ease-in-out;
-} 
+}
 .map-feature:hover{
   fill:green
   transform: rotate(7deg);
