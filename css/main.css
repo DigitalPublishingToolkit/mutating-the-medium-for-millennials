@@ -738,6 +738,11 @@ form .pass-mail{
    ==========================================================================
    */
 
+#fischliweiss{
+  margin: 0 auto;
+
+}
+
 #bindi, #search, #trolley, #fischliweiss{
       transition: all 0.4s ease-in-out;
 }
@@ -929,7 +934,8 @@ transform: rotate(-3deg);
 
   .navbar-brand{
     margin-left: -20px;
-    width: 50%;
+    /*width: 50%;*/
+    max-width: 50%;
   }
 
   #myNavBar{
