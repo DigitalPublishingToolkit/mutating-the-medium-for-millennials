@@ -28,6 +28,12 @@
 
 $(document).ready(function(){
 
+  //last-minute ugly hack to 'fix' navbar mobile :////
+  var mobWidth = $(window).width();
+  if(mobWidth < 767){
+    $('#main_top').css('width',mobWidth);
+  }
+
 
 	//code
 	$('.search-bar').on("click", function(){
@@ -77,7 +83,7 @@ $(document).ready(function(){
 
   $('.comment-section').on('click', function(){
         $('html, body').animate({
-            scrollTop: $('#comment-section').offset().top 
+            scrollTop: $('#comment-section').offset().top
         }, 'slow');
     });
 
@@ -97,11 +103,11 @@ $(document).ready(function(){
 
 
 // mobile article icons
-		
+
 
 		var isAnimationDone = true;
 
-		    $(".mobile-hidden-icons").click(function(){ 
+		    $(".mobile-hidden-icons").click(function(){
 		      if(isAnimationDone == true){
 		       $(".mobile-hidden-icons").animate({left: '50px'});
 		       isAnimationDone = false;
@@ -110,7 +116,7 @@ $(document).ready(function(){
 		       isAnimationDone = true;
 		     }
 		    });
-	
+
 	//w175 ml135
 
 });
