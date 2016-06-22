@@ -934,6 +934,12 @@ transform: rotate(-3deg);
   body{
     padding-top: 0;
   }
+.article-text{
+  font-size: 16px;
+}
+.comment-avatar img {
+    width: 180%;
+}
 
   .navbar-brand{
     margin-left: -20px;
