@@ -521,8 +521,9 @@ footer {
 }
 
 #main_top{
-/*  background-color:  #FAFAFA;
-*/}
+/*  background-color:  #FAFAFA;*/
+width: 100vw;
+}
 
 /* ==========================================================================
   Boostrap overwritten rules
