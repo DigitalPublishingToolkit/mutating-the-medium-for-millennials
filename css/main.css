@@ -872,14 +872,12 @@ float: right;
       width: 92px;
   }
 .fullnav > li.uneven {
-    float: none; }
-
-  .main-menu a:hover{
-/*figure out*/
+    /*float: none; */
   }
 
+
 li.menu-box ul {
-  border: none;
+  border: 1px solid #0C2443;
 }
 
 #myNavBar {
@@ -943,6 +941,12 @@ transform: rotate(-3deg);
     max-width: 50%;
   }
 
+  .fSidebar-left, .fSidebar{
+    position: static;
+    padding-left: 0;
+  }
+  .meta_article{text-align: left;}
+
   #myNavBar{
     background-color: #FAFAFA;
     border-bottom: solid #0C2443 2px;
@@ -974,6 +978,13 @@ li.menu-box ul {
   display: none;
 }
 */
+.fullnav > li.uneven {
+    float: none; 
+  }
+
+li.menu-box ul {
+  border: none;
+}
 .horizontal-article{
     padding-left: 15px;
     padding-right: 15px;
@@ -1000,7 +1011,10 @@ li.menu-box ul {
 /*    transform: rotate(-2deg);
 */  }
 
+#comment{float: none;}
+
 }/* end max-width 767 */
+
 .navbar-toggle{
   margin-right: 0;
 }
