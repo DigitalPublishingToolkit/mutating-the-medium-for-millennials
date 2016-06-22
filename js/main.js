@@ -28,11 +28,6 @@
 
 $(document).ready(function(){
 
-  //last-minute ugly hack to 'fix' navbar mobile :////
-  var mobWidth = $(window).width();
-  if(mobWidth < 767){
-    $('#main_top').css('width',mobWidth);
-  }
 
 
 	//code
