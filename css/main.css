@@ -132,7 +132,7 @@ width: auto;
 
 .article-text{
   font-size: 18.5px;
-  line-height: 1.36em;
+  line-height: 1.4em;
   font-family: "freight-text-pro";
   margin-top: 20px;
   opacity: .8;
@@ -963,6 +963,11 @@ transform: rotate(-3deg);
   width: 100%;
 }
 
+li.menu-box ul img {
+    width: 50px;
+  
+  }
+
 #gray-box {
     background-color: #FAFAFA;
     height: 60px;
@@ -1019,7 +1024,7 @@ li.menu-box ul {
 
 #comment{float: none;}
 
-}/* end max-width 767 */
+
 
 .navbar-toggle{
   margin-right: 0;
@@ -1027,3 +1032,26 @@ li.menu-box ul {
 .navbar-nav{
   margin:0;
 }
+.feature-title-shop{
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding-top: 40px;
+}
+
+.features-shop{
+  margin-bottom:130px;
+}
+
+.add-to-trolley{
+  width: 28%;
+  margin-left: 10px;
+}
+
+.features-shop img{
+  width: 50%;
+
+}
+
+}/* end max-width 767 */

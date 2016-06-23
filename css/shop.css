@@ -1,3 +1,5 @@
+/*also local map page */
+
 .add-to-trolley a img{
     /*margin-top: -43px;*/
     height: auto;
@@ -9,4 +11,28 @@
 
 .quantity a{
 padding: 15px;
+}
+
+.feature-title-shop{
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 10px;
+}	
+/*
+.map iframe{
+float: right;
+}*/
+
+.filter-box{
+	height: 300px;
+	border: 1px solid #0C2443;
+	overflow: scroll;
+}
+
+.map-categ li{
+	list-style: none;
+	font-size: 16px;
+	padding-top:15px;
+	font-weight:700; 
 }
