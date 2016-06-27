@@ -928,6 +928,10 @@ transform: rotate(-3deg);
   margin-bottom: 10px;
 }
 
+/*.features-shop img{
+  min-width: 120px !important;
+}*/
+
 }/* end max-width 991 */
 
 @media screen and (max-width:767px){
@@ -965,7 +969,7 @@ transform: rotate(-3deg);
 
 li.menu-box ul img {
     width: 50px;
-  
+
   }
 
 #gray-box {
@@ -990,7 +994,7 @@ li.menu-box ul {
 }
 */
 .fullnav > li.uneven {
-    float: none; 
+    float: none;
   }
 
 li.menu-box ul {
@@ -1032,6 +1036,7 @@ li.menu-box ul {
 .navbar-nav{
   margin:0;
 }
+/* shouldn't this be in shop.css? ;) */
 .feature-title-shop{
     font-size: 24px;
     font-weight: 600;
@@ -1050,8 +1055,9 @@ li.menu-box ul {
 }
 
 .features-shop img{
-  width: 50%;
-
+  /*width: 50%;*/ /* not needed if you use BS classes */
+  /*height: 120px;
+  width: auto;*/
 }
 
 }/* end max-width 767 */
