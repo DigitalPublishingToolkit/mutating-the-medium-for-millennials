@@ -39,7 +39,7 @@ float: right;
 }*/
 
 .filter-box{
-	height: 300px;
+	height: 430px;
   width: 100%;
 	border: 1px solid #0C2443;
 	overflow: scroll;
@@ -83,4 +83,8 @@ padding-left: 0;
 
 .map-title{
   font-weight: 700;
+}
+
+.map-categ li img{
+  width: 50px;
 }

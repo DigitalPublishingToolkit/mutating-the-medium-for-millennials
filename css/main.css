@@ -1059,5 +1059,11 @@ li.menu-box ul {
   /*height: 120px;
   width: auto;*/
 }
+.article_icons {
+margin-top: 60px;
+}
+
+.article_icons li{
+align-content: center;}
 
 }/* end max-width 767 */

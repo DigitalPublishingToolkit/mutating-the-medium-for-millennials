@@ -41,7 +41,7 @@ $(document).ready(function(){
 	"articlegreenery.html",
 	"articleghanaian.html",
 	"articledoctor.html",
-	"articleconflict.html",
+	"localmap.html",
 	"articlecook.html"
 
 
